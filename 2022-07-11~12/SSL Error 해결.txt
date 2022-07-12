@@ -1,0 +1,21 @@
+SSL 인증서 Error 해결방법
+
+1) SSL 인증서를 확인하지 않는 방법
+
+아래 위치 이동 후, 해당 파일 열고 
+ex)
+\Lib\site-packages\pip\_vendor\requests\sessions.py
+
+control+F 후, 아래 내용 검색 후, 
+검색할 내용--- #: SSL Verification default.
+
+self.verify = False  로 변경
+
+
+2)인증된 Host 등록방법
+pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org pip setuptools 실행
+
+3)pip 패키지 설치 시 일시 오류 해결방법
+$ pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org 설치할패키지이름
+or
+$ python3 -m pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org 설치할패키지이름
