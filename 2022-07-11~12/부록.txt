@@ -19,6 +19,13 @@ python pip-22.1.2-py3-none-any.whl/pip install --no-index --find-links ./ -r ./r
 
 pip가 이미 설치되어 있다면)
 pip install --no-index --find-links ./ -r ./requirements.txt
+
+<requirements.txt>
+pandas
+configparser
+openpyxl
+bs4
+pip
 ********************************************************
 
 emailParser 프로젝트 실행은 
