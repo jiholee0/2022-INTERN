@@ -34,8 +34,10 @@
 
 <h3>3주차</h3> 
 
+> #### 개발 환경 세팅
+> BXM, ORACLE 설치 및 네트워크 연결
 > #### 온라인 실태표 작성 페이지(OOO회사 계열 전용) 개발
 > 1. 기존 온라인 실태표 작성 페이지를 참고하여 OOO회사 계열 전용으로 하는 신규 페이지 개발.
-> 2. 사용 언어 : html/css, backbone.js, java, oracle
+> 2. 사용 언어 : html, backbone.js, java, oracle
 > 3. 사용 프레임워크 : BXM
 > 
