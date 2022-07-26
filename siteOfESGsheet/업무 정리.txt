@@ -1,0 +1,11 @@
+[목표] 
+온라인 ESG 실태표 작성 페이지(SK 이노베이션 계열 전용) 개발
+
+[사용 언어] 
+html/css, Backbone.js, java 
+
+[사용 프레임워크]
+BXM
+
+[데이터베이스]
+ORACLE
