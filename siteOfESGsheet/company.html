@@ -1,0 +1,925 @@
+<!--  본문수정 2022-07-15 -->
+<div class="tab-box mt40">
+    <ul class="tab">
+		<li class="active"><a href="#" class="moveStep1"><span>기업개요</span></a></li>
+		<li><a href="#" class="moveStep2"><span>환경(Environmental)</span></a></li>
+		<li><a href="#" class="moveStep3"><span>사회(Social)</span></a></li>
+		<li><a href="#" class="moveStep4"><span>지배구조(Governance)</span></a></li>
+    </ul>
+</div>
+
+<!-- 인터뷰담당자 타이틀  -->
+<div class="cnt-title"> 인터뷰담당자</div>
+<!-- //인터뷰담당자 타이틀  -->
+
+<div class="text-right"><label><input class="mr5" name="chrgReg" id="" type="checkbox" value="" /><strong>신청담당자정보 가져오기</strong></label></div>
+
+<!-- table  -->
+<div class="table-container mt10">
+	<table class="table situation-table" >
+		<colgroup>
+			<col width="8%" />
+			<col width="15%" />
+			<col width="8%" />
+			<col width="30%" />
+			<col width="8%" />
+			<col width="" />
+			<col width="" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>담당자 <span class="red">*</span></th>
+				<td><input name="chrgNm" id="" value=""  type="text" class="layer-12 form-control" placeholder="" maxlength="25"/></td>
+				<th>TEL <span class="red">*</span></th>
+				<td>
+					<div class="phone-form">
+						<input class="first-num numberonly" name="chrgTel1" id="" value=""  type="text" maxlength="4"/>
+						<span>-</span>
+						<input class="second-num numberonly" name="chrgTel2" id="" value=""  type="text" maxlength="4" />
+						<span>-</span>
+						<input class="third-num numberonly" name="chrgTel3" id="" value=""  type="text" maxlength="4" />
+					</div>
+				</td>
+				<th>H.P <span class="red">*</span></th>
+				<td colspan="2">
+					<div class="phone-form">
+						<input class="first-num numberonly" name="chrgHp1" id="" value=""  type="text" maxlength="4" />
+						<span>-</span>
+						<input class="second-num numberonly" name="chrgHp2" id="" value=""  type="text" maxlength="4"/>
+						<span>-</span>
+						<input class="third-num numberonly" name="chrgHp3" id="" value=""  type="text" maxlength="4" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>부서/직급</th>
+				<td><input name="chrgDepNm" id="" value=""  type="text" class="layer-12 form-control" placeholder="" maxlength="25"/></td>
+				<th>FAX</th>
+				<td>
+					<div class="phone-form">
+						<input class="first-num numberonly" name="chrgFax1" id="" value=""  type="text" maxlength="4"/>
+						<span>-</span>
+						<input class="second-num numberonly" name="chrgFax2" id="" value=""  type="text" maxlength="4" />
+						<span>-</span>
+						<input class="third-num numberonly" name="chrgFax3" id="" value=""  type="text" maxlength="4" />
+					</div>
+				</td>
+				<th>Email</th>
+				<td colspan="2">
+					<div class="mail-form">
+						<input class="form-control mail-account" name="chrgEmail1" id="" value=""  type="text" placeholder="이메일" style="width:30%" maxlength="25"/>
+						<span>@</span>
+						<input class="form-control mail-url" name="chrgEmail2" id="" value=""  type="text" placeholder="" style="width:30%" />
+						<select class="form-control mail-kind" id="r_domain" name="emailDomain"  style="width:34%; vertical-align:middle;height:28px;border:1px solid #aaa;border-radius:3px;">
+							<option value="">선택</option>
+						</select>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- /table  -->
+
+<!-- 기업실태표 타이틀  -->
+<div class="cnt-tbl-title mt30"><span class="process-num2">1</span>기업체 개요 <span class="red p12 ">(*는 필수 항목)</span></div>
+<div class="clear-both"></div>
+<!-- /기업실태표 타이틀  -->
+
+<!-- table  -->
+<div class="table-container mt10">
+	<section class="form-cmpInfo" id="esgrptCmpOtl-list-id">
+		<table class="table cscenter-list-table table300" >
+			<colgroup>
+				<col width="15%" />
+				<col width="35%" />
+				<col width="15%" />
+				<col width="35%" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>사업자번호 <span class="red">*</span></th>
+					<td>
+						<div class=" biz-num-form">
+							<input class="first-num numberonly" name="bzno1" id="" value=""  type="text" data-form-param="bzno1" maxlength="3" disabled="true"/>
+							<span>-</span>
+							<input class="second-num numberonly" name="bzno2" id="" value=""  type="text" data-form-param="bzno2" maxlength="2" disabled="true"/>
+							<span>-</span>
+							<input class="third-num numberonly" name="bzno3" id="" value=""  type="text" data-form-param="bzno3" maxlength="5" disabled="true"/>
+						</div>
+						<div class="clear-both"></div>
+					</td>
+					<th>법인등록번호</th>
+					<td>
+						<div class=" biz-num-form-02">
+							<input class="first-num numberonly" name="corpRegNo1" id="" value=""  type="text"data-form-param="corpRegNo1" maxlength="6" />
+							<span>-</span>
+							<input class="second-num numberonly" name="corpRegNo2" id="" value=""  type="text"  data-form-param="corpRegNo2" maxlength="7" />
+						</div>
+						<div class="clear-both"></div>
+					</td>
+				</tr>
+
+				<tr>
+					<th>기업명(국문) <span class="red">*</span></th>
+					<td><div class="layer-12"><input name="cmpHnm" id="cmpHnm" value=""  type="text" class="layer-12 form-control" placeholder="기업명을 국문으로 입력해주세요." data-form-param="cmpHnm" maxlength="50"/></div></td>
+					<th>기업명(영문) <span class="red">*</span></th>
+					<td><div class="layer-12"><input name="cmpEnm" id="" value=""  type="text" class="layer-12 form-control" placeholder="기업명을 영문으로 입력해주세요." data-form-param="cmpEnm" maxlength="50"/></div></td>
+				</tr>
+				<tr>
+					<th>사업시작일</th>
+					<td>
+						<div class="calendar-box">
+							<div class="wrapper"><input name="eymd" id="" value=""  type="text" class="inp-date datepicker dateinput" readonly="readonly" placeholder="우측버튼을 클릭하여 설립일을 선택해주세요." data-form-param="eymd" /></div>
+							<!-- <a href="#link" title="날짜선택" class="btn-calendar"><i class="fa fa-calendar fa-0" aria-hidden="true"></i></a> -->
+						</div>
+						<!-- <div class="layer-12"><input name="eymd" id="" value=""  type="text" class="layer-12 form-control"  data-form-param="eymd"/></div></td> -->
+					<th>홈페이지 주소</th>
+					<td><div class="layer-12"><input name="homepgUrl" id="" value=""  type="text" class="layer-12 form-control" placeholder="홈페이지 주소를 입력해주세요." data-form-param="homepgUrl" maxlength="100"/></div></td>
+				</tr>
+				<tr>
+					<th>법인시작일</th>
+					<td>
+						<div class="calendar-box" >
+							<div class="wrapper" ><input name="corpSymd"  value="{{corpSymd}}"  type="text" class="inp-date datepicker" readonly="readonly" placeholder="우측버튼을 클릭하여 법인설립일을 선택해주세요." data-form-param="corpSymd"  />
+							</div>
+							<!-- <a href="#link" title="날짜선택" class="btn-calendar"><i class="fa fa-calendar fa-0" aria-hidden="true"></i></a> -->
+							
+						</div>
+					</td>
+					<td colspan="2"  class="text-left"><div class="wrapper"><input class="mr5" name="corpChgYn" id="corpChgYn" type="checkbox" value="Y" {{checkYn}}/><strong>법인전환 해당업체</strong></div>
+					</td>
+				</tr>
+				<tr>
+					<th>주요제품(사업) <span class="red">*</span></th>
+					<td><div class="layer-12"><input name="mainIndNm" id="" value=""  type="text" class="layer-12 form-control"  data-form-param="mainIndNm" maxlength="250" /></div></td>
+					<th>산업코드 <span class="red">*</span></th>
+					<td>
+						<div class="biz-code-form">
+							<div class="code">
+								<input type="text" class="form-control post-input" id="" name="ksic" value="" readonly="" data-form-param="ksic"/>
+								<span>
+									<button type="button" class="post-button" id="poptest"> 검색 <!-- <i class="fa fa-search fa-0" aria-hidden="true"></i>  --></button>
+								</span>
+							</div>
+							<div class="code-input">
+								<input class="form-control" type="text" id="" name="ksicNm" value="" data-form-param="ksicNm"/>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>기업형태 <span class="red">*</span></th>
+					<td>
+						<select class="form-control select-form" id="" name="cmpFormCd" data-form-param="cmpFormCd" value="">
+							<option value="">선택</option>
+						</select>
+					</td>
+					<th>기업규모 <span class="red">*</span></th>
+					<td>
+						<select class="form-control select-form" id="" name="cmpScaleCd" data-form-param="cmpScaleCd" value="">
+							<option value="">선택</option>
+						</select>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</section>	
+</div>
+
+<script type="text/x-handlebars-template" id="esgrptCmpOtl-sbmt-tmp">
+	{{#esgrptCmpOtl}}
+	<table class="table cscenter-list-table table300" >
+		<colgroup>
+			<col width="15%" />
+			<col width="35%" />
+			<col width="15%" />
+			<col width="35%" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>사업자번호 <span class="red">*</span></th>
+				<td>
+					<div class=" biz-num-form">
+						<input class="first-num numberonly" name="bzno1" id="" value="{{bzno1}}"  type="text" data-form-param="bzno1" maxlength="3" disabled="true"/>
+						<span>-</span>
+						<input class="second-num numberonly" name="bzno2" id="" value="{{bzno2}}"  type="text" data-form-param="bzno2" maxlength="2" disabled="true" />
+						<span>-</span>
+						<input class="third-num numberonly" name="bzno3" id="" value="{{bzno3}}"  type="text" data-form-param="bzno3" maxlength="5" disabled="true"/><input type="hidden"  value="{{cprptNo}}" data-form-param="cprptNo"/>
+					</div>
+					<div class="clear-both"></div>
+				</td>
+				<th>법인등록번호</th>
+				<td>
+					<div class=" biz-num-form-02">
+						<input class="first-num numberonly" name="corpRegNo1" id="" value="{{corpRegNo1}}"  type="text"data-form-param="corpRegNo1" maxlength="6"/>
+						<span>-</span>
+						<input class="second-num numberonly" name="corpRegNo2" id="" value="{{corpRegNo2}}"  type="text"  data-form-param="corpRegNo2" maxlength="7"/>
+					</div>
+					<div class="clear-both"></div>
+				</td>
+			</tr>
+			<tr>
+				<th>기업명(국문) <span class="red">*</span></th>
+				<td><div class="layer-12"><input name="cmpHnm" id="cmpHnm" value="{{cmpHnm}}"  type="text" class="layer-12 form-control" placeholder="기업명을 국문으로 입력해주세요." data-form-param="cmpHnm" maxlength="50"/></div></td>
+				<th>기업명(영문) <span class="red">*</span></th>
+				<td><div class="layer-12"><input name="cmpEnm" id="" value="{{cmpEnm}}"  type="text" class="layer-12 form-control" placeholder="기업명을 영문으로 입력해주세요." data-form-param="cmpEnm" maxlength="50"/></div></td>
+			</tr>
+			<tr>
+				<th>사업시작일</th>
+				<td>
+					<div class="calendar-box">
+						<div class="wrapper"><input name="eymd" id="" value="{{eymd}}"  type="text" class="inp-date datepicker" readonly="readonly" placeholder="우측버튼을 클릭하여 사업시작일을 선택해주세요." data-form-param="eymd" /></div>
+					</div>
+				</td>
+				<th>홈페이지 주소</th>
+				<td><div class="layer-12"><input name="homepgUrl" id="" value="{{homepgUrl}}"  type="text" class="layer-12 form-control" placeholder="홈페이지 주소를 입력해주세요." data-form-param="homepgUrl" maxlength="100"/></div></td>
+			</tr>
+			<tr>
+				<th>법인시작일</th>
+				<td >
+					<div class="calendar-box" >
+						<div class="wrapper" ><input name="corpSymd"  value="{{corpSymd}}"  type="text" class="inp-date datepicker" readonly="readonly" placeholder="우측버튼을 클릭하여 법인설립일을 선택해주세요." data-form-param="corpSymd"  />
+						</div>						
+					</div>
+				</td>
+				<td colspan="2"  class="text-left"><div class="wrapper"><input class="mr5" name="corpChgYn" id="corpChgYn" type="checkbox" value="Y" {{checkYn}}/><strong>법인전환 해당업체</strong></div>
+				</td>
+			</tr>
+			<tr>
+				<th>주요제품(사업) <span class="red">*</span></th>
+				<td><div class="layer-12"><input name="mainIndNm" id="" value="{{mainIndNm}}"  type="text" class="layer-12 form-control"  data-form-param="mainIndNm" maxlength="250"/></div></td>
+				<th>산업코드 <span class="red">*</span></th>
+				<td>
+					<div class="biz-code-form">
+						<div class="code">
+							<input type="text" class="form-control post-input" id="" name="ksic" value="{{ksic}}" readonly="" data-form-param="ksic"/>
+							<span>
+								<button type="button" class="post-button" id="poptest"> 검색 <!-- <i class="fa fa-search fa-0" aria-hidden="true"></i>  --></button>
+							</span>
+						</div>
+						<div class="code-input">
+							<input class="form-control" type="text" id="" name="ksicNm" value="{{ksicNm}}" data-form-param="ksicNm"/>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>기업형태 <span class="red">*</span></th>
+				<td>
+					<select class="form-control select-form" id="" name="cmpFormCd" data-form-param="cmpFormCd" value="{{cmpFormCd}}">
+						<option value="">선택</option>
+						<option value="">선택1</option>
+					</select>
+				</td>
+				<th>기업규모 <span class="red">*</span></th>
+				<td>
+					<select class="form-control select-form" id="" name="cmpScaleCd" data-form-param="cmpScaleCd" >
+						<!-- <option value="{{cmpScaleCd}}">선택</option> -->
+					</select>
+				</td>
+			</tr>
+		</tbody>		
+	</table>
+	{{/esgrptCmpOtl}}
+</script>
+<!-- /table  -->
+
+<div class="cnt-tbl-title mt30"><span class="process-num2">2</span>소재지</div>
+<div class="clear-both"></div>
+<div class="guide-box-02 mt10">
+	※ 본사: 법인 등기부등본(법인) 또는 사업자등록증(개인기업) 상사업장 <br>
+	※ 기타 사업장: 공장, 영업소 등 본사 이외의 주 사업장 정보. 복수의 사업장에서 유사한 품목 취급 시 대표 사업장만 기재<br>
+	※ 주업무: 해당 사업장에서 수행하는 주된 업무(사무, 생산, 유통 등)<br>
+	※ 주요품목: 해당 사업장에서 생산, 서비스, 유통하는 주요 품목
+</div>
+
+<!-- table  -->
+<div class="table-container mt10">
+	<section class="form-cmpInfo" id="esgrptWkpInfo0-list-id">
+    <div class="sub-title">본사 <span class="red p12 ">(필수 항목)</span></div>
+	<table class="table cscenter-list-table table300">
+    <colgroup>
+        <col width="15%">
+        <col width="35%">
+        <col width="15%">
+        <col width="35%">
+    </colgroup>
+    <tbody>
+        <tr>
+            <th>본사 주소 <span class="red">*</span></th>
+            <td colspan="3" class="text-left nor no-right-line">
+                <div class="address-form">
+                    <div class="post">
+                        <input type="text" class="form-control post-input" id="wkpZpcd_0" name="wkpZpcd_0" value="" readonly="" data-form-param="wkpZpcd_0">
+                        <span>
+                            <button type="button" class="post-button" id="btn-post-pop-open" value="0">우편번호</button>
+                        </span>
+                    </div>
+                    <div class="address">
+                        <input class="add-01 form-control mr10" type="text" id="wkpAddr_0" name="wkpAddr_0" value="" data-form-param="wkpAddr_0">
+                        <input class="add-02 form-control" type="text" id="wkpDtlAddr_0" name="wkpDtlAddr_0" value="" style="width:39.1%" data-form-param="wkpDtlAddr_0" maxlength="100">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>본사 전화번호 <span class="red">*</span></th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpTel1" id="" value="" type="text" data-form-param="wkpTel1" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpTel2" id="" value="" type="text" data-form-param="wkpTel2" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpTel3" id="" value="" type="text" data-form-param="wkpTel3" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+            <th>본사 팩스번호</th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpFax1" id="" value="" type="text" data-form-param="wkpFax1" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpFax2" id="" value="" type="text" data-form-param="wkpFax2" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpFax3" id="" value="" type="text" data-form-param="wkpFax3" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="border-right">주요수행업무<span class="red">*</span></th>
+            
+            <td colspan="3" style="text-align: left;">
+                <div class="select-box3">
+                    <span>주업무 1</span>
+                    <select class="form-control form-select" id="" name="mnWrk1" data-form-param="mnWrk1" value="">
+                        <option value="">선택</option>
+                    </select>
+                </div>
+                <div class="select-box3">
+					<span>주업무 2</span>
+					<select class="form-control" id="" name="mnWrk2" data-form-param="mnWrk2" value="">
+						<option value="">선택</option>
+					</select>
+				</div>
+                <div class="select-box3">
+					<span>주업무 3</span>
+					<select class="form-control" id="" name="mnWrk3" data-form-param="mnWrk3" value="">
+						<option value="">선택</option>
+					</select>
+				</div>
+			</td>
+		</tr>
+    </tbody>
+    </table>
+</section>	
+</div>
+
+<script type="text/x-handlebars-template" id="esgrptWkpInfo-sbmt-tmp0">
+	{{#esgrptWkpInfo}}
+	<table class="table cscenter-list-table table300">
+        <colgroup>
+        	<col width="15%">
+        	<col width="35%">
+        	<col width="15%">
+        	<col width="35%">
+    	</colgroup>
+    	<tbody>
+	        <tr>
+            	<th>본사 주소 <span class="red">*</span></th>
+            	<td colspan="3" class="text-left nor no-right-line">
+	                <div class="address-form">
+                    	<div class="post">
+	                        <input type="text" class="form-control post-input" id="wkpZpcd_0" name="wkpZpcd_0" value="{{wkpZpcd}}" readonly="" data-form-param="wkpZpcd_0">
+                        	<span>
+	                            <button type="button" class="post-button" id="btn-post-pop-open" value="0">우편번호</button>
+                        	</span>
+                    	</div>
+                    	<div class="address">
+	                        <input class="add-01 form-control mr10" type="text" id="wkpAddr_0" name="wkpAddr_0" value="{{wkpAddr}}" data-form-param="wkpAddr_0">
+                        	<input class="add-02 form-control" type="text" id="wkpDtlAddr_0" name="wkpDtlAddr_0" value="{{wkpDtlAddr}}" style="width:39.1%" data-form-param="wkpDtlAddr_0" maxlength="100">
+                    	</div>
+                	</div>
+            	</td>
+        	</tr>
+        	<tr>
+	            <th>본사 전화번호 <span class="red">*</span></th>
+            	<td>
+                <div class=" phone-form">
+	                    <input class="first-num numberonly" name="wkpTel1" id="" value="{{wkpTel1}}" type="text" data-form-param="wkpTel1" maxlength="4">
+                    	<span>-</span>
+                    	<input class="second-num numberonly" name="wkpTel2" id="" value="{{wkpTel2}}" type="text" data-form-param="wkpTel2" maxlength="4">
+                    	<span>-</span>
+                    	<input class="third-num numberonly" name="wkpTel3" id="" value="{{wkpTel3}}" type="text" data-form-param="wkpTel3" maxlength="4">
+                	</div>
+                	<div class="clear-both"></div>
+            	</td>
+            	<th>본사 팩스번호</th>
+            	<td>
+	                <div class=" phone-form">
+                    	<input class="first-num numberonly" name="wkpFax1" id="" value="{{wkpFax1}}" type="text" data-form-param="wkpFax1" maxlength="4">
+                    	<span>-</span>
+                    	<input class="second-num numberonly" name="wkpFax2" id="" value="{{wkpFax2}}" type="text" data-form-param="wkpFax2" maxlength="4">
+                    	<span>-</span>
+                    	<input class="third-num numberonly" name="wkpFax3" id="" value="{{wkpFax3}}" type="text" data-form-param="wkpFax3" maxlength="4">
+                	</div>
+                <div class="clear-both"></div>
+            	</td>
+        	</tr>
+        	<tr>
+	            <th class="border-right">주요수행업무<span class="red">*</span></th>
+            	
+            	<td colspan="3" style="text-align: left;">
+                    <div class="select-box3">
+                        <span>주업무 1</span>
+						{{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk1 'mnWrk1' '선택'}}
+                    </div>
+                    <div class="select-box3">
+	                    <span>주업무 2</span>
+						{{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk2 'mnWrk2' '선택'}}
+	                </div>
+                    <div class="select-box3">
+	                    <span>주업무 3</span>
+						{{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk3 'mnWrk3' '선택'}}
+	                </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	{{/esgrptWkpInfo}}
+</script>
+
+<div class="table-container mt10">
+    <section class="form-cmpInfo" id="esgrptWkpInfo1-list-id">
+        <div class="sub-title sub-title-1">사업장 1
+            <select class="form-control form-select" id="" name="wkpGbcd_1" data-form-param="wkpGbcd_1" value="">
+	            <option value="">선택</option>
+	        </select>
+        	<span class="red p12 ">(선택항목 : 본사 외 사업장. 복수의 사업장에서 유사한 품목 취급 시 대표 사업장 기재)</span>
+        </div>
+	    <table class="table cscenter-list-table table300">
+	        <colgroup>
+	            <col width="15%">
+	            <col width="35%">
+	            <col width="15%">
+	            <col width="35%">
+	        </colgroup>
+	        <tbody>
+	            <tr>
+	                <th>사업장 1 주소</th>
+	                <td colspan="3" class="text-left nor no-right-line">
+	                    <div class="address-form">
+	                        <div class="post">
+	                            <input type="text" class="form-control post-input" id="wkpZpcd_1" name="wkpZpcd_1" value="" readonly="" data-form-param="wkpZpcd_1">
+	                            <span>
+	                                <button type="button" class="post-button" id="btn-post-pop-open" value="1">우편번호</button>
+	                            </span>
+	                        </div>
+	                        <div class="address">
+	                            <input class="add-01 form-control mr10" type="text" id="wkpAddr_1" name="wkpAddr_1" value="" data-form-param="wkpAddr_1">
+	                            <input class="add-02 form-control" type="text" id="wkpDtlAddr_1" name="wkpDtlAddr_1" value="" style="width:39.1%" data-form-param="wkpDtlAddr_1" maxlength="100">
+		                    </div>
+		                </div>
+		            </td>
+		        </tr>
+		        <tr>
+		            <th>사업장 1 전화번호</th>
+		            <td>
+		                <div class=" phone-form">
+		                    <input class="first-num numberonly" name="wkpTel1_1" id="" value="" type="text" data-form-param="wkpTel1_1" maxlength="4">
+		                    <span>-</span>
+		                    <input class="second-num numberonly" name="wkpTel2_1" id="" value="" type="text" data-form-param="wkpTel2_1" maxlength="4">
+		                    <span>-</span>
+		                    <input class="third-num numberonly" name="wkpTel3_1" id="" value="" type="text" data-form-param="wkpTel3_1" maxlength="4">
+		                </div>
+		                <div class="clear-both"></div>
+		            </td>
+		            <th>사업장 1 팩스번호</th>
+		            <td>
+		                <div class=" phone-form">
+		                    <input class="first-num numberonly" name="wkpFax1_1" id="" value="" type="text" data-form-param="wkpFax1_1" maxlength="4">
+		                    <span>-</span>
+		                    <input class="second-num numberonly" name="wkpFax2_1" id="" value="" type="text" data-form-param="wkpFax2_1" maxlength="4">
+		                    <span>-</span>
+		                    <input class="third-num numberonly" name="wkpFax3_1" id="" value="" type="text" data-form-param="wkpFax3_1" maxlength="4">
+		                </div>
+		                <div class="clear-both"></div>
+		            </td>
+		        </tr>
+		        <tr>
+		            <th class="border-right">주요수행업무</th>
+		            <td colspan="3" style="text-align: left;">
+	                    <div class="select-box3">
+	                        <span>주업무 1</span>
+	                        <select class="form-control form-select" id="" name="mnWrk1_1" data-form-param="mnWrk1_1" value="">
+	                            <option value="">선택</option>
+	                        </select>
+	                    </div>
+	                    <div class="select-box3">
+		                    <span>주업무 2</span>
+		                    <select class="form-control" id="" name="mnWrk2_1" data-form-param="mnWrk2_1" value="">
+		                        <option value="">선택</option>
+		                    </select>
+		                </div>
+	                    <div class="select-box3">
+		                    <span>주업무 3</span>
+		                    <select class="form-control" id="" name="mnWrk3_1" data-form-param="mnWrk3_1" value="">
+		                        <option value="">선택</option>
+		                    </select>
+		                </div>
+					</td>		
+	            </tr>
+	        </tbody>
+	    </table>
+	</section>	
+</div>
+
+<script type="text/x-handlebars-template" id="esgrptWkpInfo-sbmt-tmp1">
+	{{#esgrptWkpInfo}}
+	<div class="sub-title sub-title-1">사업장 1
+		{{selectFromCode ../wkpGbcd.WKP_GBCD wkpGbcd 'wkpGbcd_1' '선택'}}
+		<span class="red p12 ">(선택항목 : 본사 외 사업장. 복수의 사업장에서 유사한 품목 취급 시 대표 사업장 기재)</span>
+	</div>
+	<table class="table cscenter-list-table table300">
+        <colgroup>
+            <col width="15%">
+            <col width="35%">
+            <col width="15%">
+            <col width="35%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>사업장 1 주소</th>
+                <td colspan="3" class="text-left nor no-right-line">
+                    <div class="address-form">
+                        <div class="post">
+                            <input type="text" class="form-control post-input" id="wkpZpcd_1" name="wkpZpcd_1" value="{{wkpZpcd}}" readonly="" data-form-param="wkpZpcd_1">
+                            <span>
+                                <button type="button" class="post-button" id="btn-post-pop-open" value="1">우편번호</button>
+                            </span>
+                        </div>
+                        <div class="address">
+                            <input class="add-01 form-control mr10" type="text" id="wkpAddr_1" name="wkpAddr_1" value="{{wkpAddr}}" data-form-param="wkpAddr_1">
+                            <input class="add-02 form-control" type="text" id="wkpDtlAddr_1" name="wkpDtlAddr_1" value="{{wkpDtlAddr}}" style="width:39.1%" data-form-param="wkpDtlAddr_1" maxlength="100">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>사업장 1 전화번호</th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpTel1_1" id="" value="{{wkpTel1}}" type="text" data-form-param="wkpTel1_1" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpTel2_1" id="" value="{{wkpTel2}}" type="text" data-form-param="wkpTel2_1" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpTel3_1" id="" value="{{wkpTel3}}" type="text" data-form-param="wkpTel3_1" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+            <th>사업장 1 팩스번호</th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpFax1_1" id="" value="{{wkpFax1}}" type="text" data-form-param="wkpFax1_1" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpFax2_1" id="" value="{{wkpFax2}}" type="text" data-form-param="wkpFax2_1" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpFax3_1" id="" value="{{wkpFax3}}" type="text" data-form-param="wkpFax3_1" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="border-right">주요수행업무</th>
+            
+            <td colspan="3" style="text-align: left;">
+                    <div class="select-box3">
+                        <span>주업무 1</span>
+						{{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk1 'mnWrk1_1' '선택'}}
+                    </div>
+                    <div class="select-box3">
+	                    <span>주업무 2</span>
+	                    {{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk2 'mnWrk2_1' '선택'}}
+	                </div>
+                    <div class="select-box3">
+	                    <span>주업무 3</span>
+	                    {{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk3 'mnWrk3_1' '선택'}}
+	                </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	{{/esgrptWkpInfo}}
+</script>
+
+<div class="table-container mt10">
+    <section class="form-cmpInfo" id="esgrptWkpInfo2-list-id">
+    <div class="sub-title sub-title-1">사업장 2
+        <select class="form-control form-select" id="" name="wkpGbcd_2" data-form-param="wkpGbcd_2" value="">
+            <option value="">선택</option>
+        </select>
+    </div>
+    <table class="table cscenter-list-table table300">
+        <colgroup>
+            <col width="15%">
+            <col width="35%">
+            <col width="15%">
+            <col width="35%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>사업장 2 주소</th>
+                <td colspan="3" class="text-left nor no-right-line">
+                    <div class="address-form">
+                        <div class="post">
+                            <input type="text" class="form-control post-input" id="wkpZpcd_2" name="wkpZpcd_2" value="" readonly="" data-form-param="wkpZpcd_2">
+                            <span>
+                                <button type="button" class="post-button" id="btn-post-pop-open" value="2">우편번호</button>
+                            </span>
+                        </div>
+                        <div class="address">
+                            <input class="add-01 form-control mr10" type="text" id="wkpAddr_2" name="wkpAddr_2" value="" data-form-param="wkpAddr_2">
+                            <input class="add-02 form-control" type="text" id="wkpDtlAddr_2" name="wkpDtlAddr_2" value="" style="width:39.1%" data-form-param="wkpDtlAddr_2" maxlength="100">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>사업장 2 전화번호</th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpTel1_2" id="" value="" type="text" data-form-param="wkpTel1_2" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpTel2_2" id="" value="" type="text" data-form-param="wkpTel2_2" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpTel3_2" id="" value="" type="text" data-form-param="wkpTel3_2" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+            <th>사업장 2 팩스번호</th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpFax1_2" id="" value="" type="text" data-form-param="wkpFax1_2" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpFax2_2" id="" value="" type="text" data-form-param="wkpFax2_2" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpFax3_2" id="" value="" type="text" data-form-param="wkpFax3_2" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="border-right">주요수행업무</th>
+            
+            <td colspan="3" style="text-align: left;">
+                    <div class="select-box3">
+                        <span>주업무 1</span>
+                        <select class="form-control form-select" id="" name="mnWrk1_2" data-form-param="mnWrk1_2" value="">
+                            <option value="">선택</option>
+                        </select>
+                    </div>
+                    <div class="select-box3">
+	                    <span>주업무 2</span>
+	                    <select class="form-control" id="" name="mnWrk2_2" data-form-param="mnWrk2_2" value="">
+	                        <option value="">선택</option>
+	                    </select>
+	                </div>
+                    <div class="select-box3">
+	                    <span>주업무 3</span>
+	                    <select class="form-control" id="" name="mnWrk3_2" data-form-param="mnWrk3_2" value="">
+	                        <option value="">선택</option>
+	                    </select>
+	                </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>	
+</div>
+
+<script type="text/x-handlebars-template" id="esgrptWkpInfo-sbmt-tmp2">
+	{{#esgrptWkpInfo}}
+    <div class="sub-title sub-title-1">사업장 2
+		{{selectFromCode ../wkpGbcd.WKP_GBCD wkpGbcd 'wkpGbcd_2' '선택'}}
+    </div>
+	<table class="table cscenter-list-table table300">
+        <colgroup>
+            <col width="15%">
+            <col width="35%">
+            <col width="15%">
+            <col width="35%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <th>사업장 2 주소</th>
+                <td colspan="3" class="text-left nor no-right-line">
+                    <div class="address-form">
+                        <div class="post">
+                            <input type="text" class="form-control post-input" id="wkpZpcd_2" name="wkpZpcd_2" value="{{wkpZpcd}}" readonly="" data-form-param="wkpZpcd_2">
+                            <span>
+                                <button type="button" class="post-button" id="btn-post-pop-open" value="2">우편번호</button>
+                            </span>
+                        </div>
+                        <div class="address">
+                            <input class="add-01 form-control mr10" type="text" id="wkpAddr_2" name="wkpAddr_2" value="{{wkpAddr}}" data-form-param="wkpAddr_2">
+                            <input class="add-02 form-control" type="text" id="wkpDtlAddr_2" name="wkpDtlAddr_2" value="{{wkpDtlAddr}}" style="width:39.1%" data-form-param="wkpDtlAddr_2" maxlength="100">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>사업장 2 전화번호</th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpTel1_2" id="" value="{{wkpTel1}}" type="text" data-form-param="wkpTel1_2" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpTel2_2" id="" value="{{wkpTel2}}" type="text" data-form-param="wkpTel2_2" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpTel3_2" id="" value="{{wkpTel3}}" type="text" data-form-param="wkpTel3_2" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+            <th>사업장 2 팩스번호</th>
+            <td>
+                <div class=" phone-form">
+                    <input class="first-num numberonly" name="wkpFax1_2" id="" value="{{wkpFax1}}" type="text" data-form-param="wkpFax1_2" maxlength="4">
+                    <span>-</span>
+                    <input class="second-num numberonly" name="wkpFax2_2" id="" value="{{wkpFax2}}" type="text" data-form-param="wkpFax2_2" maxlength="4">
+                    <span>-</span>
+                    <input class="third-num numberonly" name="wkpFax3_2" id="" value="{{wkpFax3}}" type="text" data-form-param="wkpFax3_2" maxlength="4">
+                </div>
+                <div class="clear-both"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="border-right">주요수행업무</th>
+            
+            <td colspan="3" style="text-align: left;">
+                    <div class="select-box3">
+                        <span>주업무 1</span>
+						{{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk1 'mnWrk1_2' '선택'}}
+                    </div>
+                    <div class="select-box3">
+	                    <span>주업무 2</span>
+						{{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk2 'mnWrk2_2' '선택'}}
+	                </div>
+                    <div class="select-box3">
+	                    <span>주업무 3</span>
+	                    {{selectFromCode ../mnWrkCd.MN_WRK_CD mnWrk3 'mnWrk3_2' '선택'}}
+	                </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	{{/esgrptWkpInfo}}
+</script>
+
+<!-- page-button -->			 
+<div class="btn-box mt50">
+	<button class="process-large blue-grn" type="button" name="step1Save">임시저장 <span class="glyphicon glyphicon-ok"></span></button>
+	<button class="process-large ml10" type="button" name="step1Next">다음 <span class="glyphicon glyphicon-chevron-right"></span></button>   
+</div>
+<!-- /page-button -->
+
+<!-- 페이지 하단 여백 -->
+<div class="mt50"></div>
+<!-- /페이지 하단 여백 -->
+
+<script>
+	$( "#btn-post-pop-close" ).click(function() {
+		$( "#post-wrap" ).hide();
+	});
+	
+	//산업코드
+	$("#btn-ksic-pop-close").click(function() {
+		$( "#ksic-wrap" ).hide();
+	});
+	//숫자만 입력 가능 
+	function keyCheck(){
+		//←(백스패이스) = 8
+		//TAB = 9
+		//END = 35
+		//HOME =36 
+		//← = 37
+		//→  = 39
+		//INSERT = 45
+		//DELETE = 46
+		//NUMLOCK = 144
+		var key = event.keyCode;
+		if(!(key==8||key==9||key==13||key==16||key==18||key==35||key==36||key==37||key==39||key==45||key==46||key==144||(key>=48&&key<=57)||(key>=96&&key<=105)||key==110||key==190)){
+			alert('숫자만 입력 가능합니다.');
+			event.returnValue = false;
+		}
+	}
+</script>
+<div id="post-wrap" style="display:none;" chrgGbcd="">
+<div class="modal-width-max"> 
+	<div class="detail-view-container popup_mobile">
+	<div class="popup-title">우편번호 찾기 <a class="right" name="hidePostPop" id="btn-post-pop-close"><img src="images/button/close.png" title="닫기" /></a></div>
+		<div class="detail-view-contents">
+
+			<div class="post-search-box">
+				<strong>도로명, 건물명, 지번에 대해 통합검색이 가능합니다.</strong>
+				<div class="search-form">
+					<input type="text" name="postSrchText" class="postSrchText"><button name="btnSrchPost">검색</button>
+				</div>
+				<p class="example">(예: 마포대로, 아현동, 크레디트센터)</p>
+			</div>
+
+			<div class="post-search-notice">
+				<i class="fa fa-exclamation-circle fa-4" aria-hidden="true"></i>
+				<div class="notice-info-text">
+					<p>도로명(지역명)과 지번/건물명을 붙여서 검색하면 빠르게 결과를 찾을 수 있습니다.</p>
+					<ul>
+						<li><em>도로명 + 건물번호</em> (예: 마포대로 217)</li>
+						<li><em>지역명 + (동/읍/면/리) + 지번</em> (예: 아현동 686)</li>
+						<li><em>건물명(아파트명)</em> (예: 크레디트센터)</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 검색결과 -->
+			<div class="post-search-result">
+				<table>
+					<colgroup>
+						<col width="80%">
+						<col width="20%">
+					</colgroup>
+					<tbody id="postList">
+								
+					</tbody>
+				</table>
+			</div>
+			<section class="result-table1" style="text-align: center">        
+				<div class="footer"></div>
+			</section>	
+		</div>
+	
+</div><!--// detail-view-container -->
+</div><!--// modal-width-max -->
+</div>
+<!-- 우편번호 -->
+<script type="text/x-handlebars-template" id="postListTmp">
+
+	{{#each postList}}
+
+	<tr>
+		<td style="width:100%" name="setBtnPost">
+			<ul class="search-address-info" style="cursor:pointer">
+				<li class="road"><span>도로명</span>{{kor}}</li>
+				<li class="lot-num"><span>지번</span>{{korSub}}</li>
+			</ul>
+		</td>
+		<td>{{zipCd}}</td>
+		<input class="mr5" name="zip" type="hidden" value="{{zip}}" data-zip-cd="{{zipCd}}" data-zip-seq="{{zipSeq}}" data-kor="{{kor}}">
+	</tr>
+	{{else}}
+	<tr> 
+		<td coslpan="2" style="width:100%">
+				<ul class="search-address-info">
+					<li>검색 된 도로명, 건물명, 지번 주소가 없습니다.</li>		
+				</ul>
+		</td>
+	</tr>
+{{/each}}
+</script>
+
+<!-- 산업코드 팝업 -->
+<div class="modal-popup"  id="itemCdPop">
+	<div class="modal-width-max">
+		<!-- detail-view-container -->
+		<div class="detail-view-container">
+			<div class="popup-title">산업코드 검색<a href="#" class="right" name="closeItemCd"><img src="images/button/close.png" title="닫기" /></a></div>
+			<div class="detail-view-contents" style="overflow-y: hidden">
+				<!--  검색영역-->
+				<div class="industry-srchbox">
+					<input type="text" name="srchNm" placeholder="분류항목명을 입력해 주세요">
+				</div>
+				<!--// 검색영역 -->
+				<!-- 트리영역 -->
+				<div class="industry-treebox">
+					<div class="inner" id="codeList" style="height:300px;">
+
+					</div>
+				</div>
+				<!--// 트리영역 -->
+				<!-- 버튼 -->
+				<div class="btn-box">
+					<button class="gray" name="closeItemCd">닫기</button>
+					<button name="selectedItemCd">선택</button>
+				</div>
+				<!--// 버튼 -->
+			</div>
+		</div>
+		<!--// detail-view-container -->
+	</div>
+</div>
+
+<!--//  산업코드 리스트  -->
+<script type="text/x-handlebars-template" id="codeListTmp">
+	<li itemCd="{{item.id}}" class="{{cls}}">
+		<a href="#" name="itemCd" itemCd="{{item.id}}" parentCd="{{item.parent}}" itemNm="{{item.text}}" itemNm2="{{item.nm}}">{{item.text}}</a>
+	</li>
+</script>
