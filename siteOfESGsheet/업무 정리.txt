@@ -7,5 +7,5 @@ html/css, Backbone.js, java
 [사용 프레임워크]
 BXM
 
-[데이터베이스]
+[DBMS]
 ORACLE
