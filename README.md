@@ -56,6 +56,6 @@
  * 운영 서버 테스트
   #### ✔ Internet Explorer 종료 알림 배너 개발
  * Internet Explorer로 접속 시 IE 종료 알림 배너 개발
- * 오늘 하루 동안 열지 않음 버튼 클릭 시 쿠키를 설정하여 쿠키가 삭제될 때까지 배너 hide
+ * 오늘 하루 동안 열지 않음 버튼 클릭 시 쿠키를 설정하여 하루 동안 배너를 숨긴다.
  * 사용 언어 : html, css, JavaScript
  </details>
