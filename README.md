@@ -45,6 +45,8 @@
       - 팝업창 close 버튼 작동 안되는 오류 : 단순 이벤트 처리 함수를 추가하여 해결
       - 버튼의 이미지 클릭 시 작동 안되는 오류 : 이미지에도 동일한 name 값을 주어 해결
       - 일부 데이터가 render 시 초기화되는 오류 : 코드를 수정하여 해결
+ * ScreenShot<br>
+ ![Title](https://user-images.githubusercontent.com/42367169/182604676-24552c7e-930b-45f1-b0ca-38c3cd1c613e.png)
  </details>
   
  <details>
