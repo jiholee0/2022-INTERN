@@ -55,4 +55,7 @@
  * 추가 수정 요건 반영
  * 배포 및 실제 서비스 운영
  * 운영 서버 테스트
+  #### ✔ Internet Explorer 종료 배너 개발
+ * Internet Explorer로 접속 시 IE가 종료되었다는 메세지의 배너 개발
+ * 오늘 하루동안 열지 않음 버튼 클릭 시 쿠키를 설정하여 배너 close
   </details>
