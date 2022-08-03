@@ -5,7 +5,6 @@
 <details>
 <summary><b>07.01~07.07</b></summary>
 
- 
  ####  ✔ 업무 환경 및 개발 환경 세팅
  * 사내 메신저, 자료 교환, 그룹웨어 등 계정 생성 및 승인.
  * 관리망과 인터넷망에 개발 환경 세팅(PYCHARM, Intellij, JAVA, Python 등 설치)
@@ -46,9 +45,9 @@
       - 팝업창 close 버튼 작동 안되는 오류 : 단순 이벤트 처리 함수를 추가하여 해결
       - 버튼의 이미지 클릭 시 작동 안되는 오류 : 이미지에도 동일한 name 값을 주어 해결
       - 일부 데이터가 render 시 초기화되는 오류 : 코드를 수정하여 해결
-  </details>
+ </details>
   
-  <details>
+ <details>
 <summary><b>08.01~08.07</b></summary>
  
  #### ✔ 온라인 ESG 실태표 작성 페이지(SK이노베이션 계열 전용) 운영 및 문의 대응
@@ -58,4 +57,5 @@
   #### ✔ Internet Explorer 종료 알림 배너 개발
  * Internet Explorer로 접속 시 IE 종료 알림 배너 개발
  * 오늘 하루 동안 열지 않음 버튼 클릭 시 쿠키를 설정하여 쿠키가 삭제될 때까지 배너 hide
-  </details>
+ * 사용 언어 : html, css, JavaScript
+ </details>
