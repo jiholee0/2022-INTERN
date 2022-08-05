@@ -64,4 +64,7 @@
  * '오늘 하루 동안 열지 않음' 버튼 클릭 시 쿠키를 설정하여 하루 동안 배너 숨김 처리.
  * 사용 언어 : html/css, JavaScript
  * 사용 프레임워크 : BXM
+ * ScreenShot<br>
+ ![IE Browser Banner](https://user-images.githubusercontent.com/42367169/182975544-4d8da600-df3d-421c-9b59-561b6d009d74.PNG)
+
  </details>
