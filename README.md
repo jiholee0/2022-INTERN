@@ -16,8 +16,8 @@
  * 사용 언어 : JAVA
  * 사용 자료 구조 : 이중 리스트, 해시맵
  * 데이터 셋 : A(400만), B(20만), C, D
- * 결과물 : A의 키워드와 B의 키워드를 각각 정제한 후, 각 키워드를 토대로 매핑(일치 또는 포함)한다. 매핑 결과 output을 csv 형식으로 출력하고, 이외의 필요한 정보는 C, D에서 추출한다.
-</details><br>
+ * 결과물 : A의 키워드와 B의 키워드를 각각 정제한 후, 각 키워드를 토대로 매핑(일치 또는 포함)한다. 매핑 결과 output을 csv 형식으로 출력하고, 이외의 필요한 정보는 C, D에서 추출한다.<br>
+<br></details>
  
 <details>
 <summary><b>07.08~07.14</b></summary>
@@ -31,8 +31,8 @@
  * 결과물 : *.eml 을 email.parser를 이용하여 데이터를 딕셔너리 식으로 저장한 후, 주어진 경로의 엑셀 파일로 출력한다.
  * 특징 : 해당 프로젝트는 오프라인 환경에서 실행되어야 하므로, 사용한 패키지의 *.whl, *.gz 파일을 다운로드 한 후, 실행 환경에서 패키지를 설치하였다.
  #### ✔ 매핑 추가 작업
- * 품목DB와의 추가 매핑.
-</details><br>
+ * 품목DB와의 추가 매핑.<br>
+<br></details>
  
 <details>
 <summary><b>07.15~07.29</b></summary>
@@ -49,8 +49,8 @@
       - 버튼의 이미지 클릭 시 작동 안되는 오류 : 이미지에도 동일한 name 값을 주어 해결
       - 일부 데이터가 render 시 초기화되는 오류 : 코드를 수정하여 해결
  * ScreenShot<br>
- ![Title](https://user-images.githubusercontent.com/42367169/182604676-24552c7e-930b-45f1-b0ca-38c3cd1c613e.png)
- </details><br>
+ ![Title](https://user-images.githubusercontent.com/42367169/182604676-24552c7e-930b-45f1-b0ca-38c3cd1c613e.png)<br>
+ <br></details>
   
  <details>
 <summary><b>08.01~08.07</b></summary>
@@ -65,14 +65,14 @@
  * 사용 언어 : html/css, JavaScript
  * 사용 프레임워크 : BXM
  * ScreenShot<br>
- ![IE Browser Banner](https://user-images.githubusercontent.com/42367169/182975544-4d8da600-df3d-421c-9b59-561b6d009d74.PNG)
- </details><br>
+ ![IE Browser Banner](https://user-images.githubusercontent.com/42367169/182975544-4d8da600-df3d-421c-9b59-561b6d009d74.PNG)<br>
+ <br></details>
    
  <details>
 <summary><b>08.08~08.15</b></summary>
  
- #### ✔ 코로나-19 확진으로 인한 휴가
- <br><br></details><br>
+ #### ✔ 코로나-19 확진으로 인한 휴가<br>
+<br></details>
  
   <details>
 <summary><b>08.16~08.21</b></summary>
@@ -131,5 +131,5 @@
   ```
    #### ✔ 온라인 ESG 실태표 작성 페이지 오류 해결
    * 유효하지 않은 데이터임에도 경고 문구 출력 후 다음 단계로 넘어가는 오류, 저장 후에도 임시저장을 해야 한다는 문구가 출력되는 오류, 데이터 무결성 오류 등 기존 실태표 사이트 전반에서 발생하는 오류들 해결
-   * 본인이 작성하지 않은 코드에서의 오류를 해결하며 코드 분석 능력, 문제 해결 능력, 의사소통 능력을 키움.
- </details><br>
+   * 본인이 작성하지 않은 코드에서의 오류를 해결하며 코드 분석 능력, 문제 해결 능력, 의사소통 능력을 키움.<br>
+ <br></details>
