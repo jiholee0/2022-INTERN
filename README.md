@@ -68,3 +68,63 @@
  ![IE Browser Banner](https://user-images.githubusercontent.com/42367169/182975544-4d8da600-df3d-421c-9b59-561b6d009d74.PNG)
 
  </details>
+ 
+  <details>
+<summary><b>08.16~08.21</b></summary>
+ 
+ #### ✔ 온라인 ESG 실태표 작성 페이지(SK이노베이션 계열 전용) 데드락 문제 해결
+ * 한 페이지의 데이터를 연달아 두 번 저장하는 과정에서 데드락 발생
+ * 여러 명의 사용자가 동시에 하나의 테이블에 접근해서 DML문으로 데이터베이스를 변경하면 오라클은 특정 사용자가 자원을 독점하지 못하게 하기 위해서 락(잠금)을 발생시킨다. 서로 락을 풀어주기 전까지 대기 상태에 놓이며 데드락(교착 상태)가 발생한다.
+ * 따라서 동시에 DB에 접근하지 않게끔 처리하였다.   
+ 
+  <b>[ 수정 전 - 데드락 발생 ]</b>
+  ```javascript
+  // 임시저장(설문 답변 DB 접근)
+  that.insertGovAnsr(true); 
+  
+  // 각 STEP별 데이터 유효성 검사
+  if(that.parent.isValid("STEP1")){ 
+      commonUtil.redirectRoutePage("MENUSD0700SK/STEP1");
+      return false;
+  }
+  if(that.parent.isValid("STEP2")){
+      commonUtil.redirectRoutePage("MENUSD0700SK/STEP2");
+      return false;
+  }
+  if(that.parent.isValid("STEP3")){
+      commonUtil.redirectRoutePage("MENUSD0700SK/STEP3");
+      return false;
+  }
+  
+  // 데이터가 모두 유효한 경우 설문 답변 모두 저장(설문 답변 DB 접근)
+  that.insertStepAll();
+  ```
+  <b>[ 수정 후 - 데드락 발생 X ]</b>
+  ```javascript
+  // 각 STEP별 데이터 유효성 검사
+  if(that.parent.isValid("STEP1")){ 
+      // 임시저장(설문 답변 DB 접근)
+      that.insertGovAnsr(true); 
+      commonUtil.redirectRoutePage("MENUSD0700SK/STEP1");
+      return false;
+  }
+  if(that.parent.isValid("STEP2")){
+      // 임시저장(설문 답변 DB 접근)
+      that.insertGovAnsr(true); 
+      commonUtil.redirectRoutePage("MENUSD0700SK/STEP2");
+      return false;
+  }
+  if(that.parent.isValid("STEP3")){
+      // 임시저장(설문 답변 DB 접근)
+      that.insertGovAnsr(true);
+      commonUtil.redirectRoutePage("MENUSD0700SK/STEP3");
+      return false;
+  }
+  
+  // 데이터가 모두 유효한 경우 설문 답변 모두 저장(설문 답변 DB 접근)
+  that.insertStepAll();
+  ```
+   #### ✔ 온라인 ESG 실태표 작성 페이지 오류 해결
+   * 유효하지 않은 데이터임에도 경고 문구 출력 후 다음 단계로 넘어가는 오류, 저장 후에도 임시저장을 해야 한다는 문구가 출력되는 오류, 데이터 무결성 오류 등 기존 실태표 사이트 전반에서 발생하는 오류들 해결
+   * 본인이 작성하지 않은 코드에서의 오류를 해결하며 코드 분석 능력, 문제 해결 능력, 의사소통 능력을 키움.
+ </details>
