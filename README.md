@@ -68,6 +68,13 @@
  ![IE Browser Banner](https://user-images.githubusercontent.com/42367169/182975544-4d8da600-df3d-421c-9b59-561b6d009d74.PNG)
 
  </details>
+   
+ <details>
+<summary><b>08.08~08.15</b></summary>
+ 
+ #### ✔ 코로나-19 확진으로 인한 휴가
+
+ </details>
  
   <details>
 <summary><b>08.16~08.21</b></summary>
