@@ -140,3 +140,14 @@
    * 행정표준코드관리시스템(https://www.code.go.kr/stdcode/roadCodeL.do)에서 행정구역(광역시도, 시군구명) 데이터 입수
    * 입수한 데이터를 DB에 INSERT하고, 하드코딩으로 되어 있던 소스코드 수정.<br>
  <br></details>
+ 
+   <details>
+<summary><b>08.22~08.29</b></summary>
+ 
+ #### ✔ 만족도조사 반응형 웹페이지 개발
+  * 기존 PC 한정 만족도조사 페이지를 반응형 웹페이지로 수정하여 모바일에서도 사용 가능하게끔 한다.
+  * 별도의 링크가 알림톡(카카오톡)으로 전송되고, 해당 링크에 접속하면 로그인 -> 만족도조사 -> 완료 순으로 진행된다.
+  * 사용 언어 : html/CSS, backbone.js, JAVA, sql
+  * DBMS : Oracle
+<br>
+ <br></details>
