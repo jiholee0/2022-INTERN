@@ -1,4 +1,4 @@
- * Bxm Object Message Mapping(OMM)
+ /* Bxm Object Message Mapping(OMM) */
    
 import bxm.omm.root.IOmmObject;
 import com.fasterxml.jackson.annotation.JsonProperty;
