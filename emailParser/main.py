@@ -8,9 +8,11 @@ from email.header import decode_header
 import ctypes
 from bs4 import BeautifulSoup
 import openpyxl
-from datetime import date
+from openpyxl.styles import Alignment, PatternFill, Font, Border, Side
+from openpyxl.utils import get_column_letter
 import pandas as pd
 import configparser  # config.ini 파일을 불러와서 입출력 경로를 사용자가 설정할 수 있게 하기 위한 라이브러리
+import datetime
 
 # email내의 정보들을 추출하는 함수
 def extract_info(target_eml):
@@ -49,8 +51,11 @@ def extract_info(target_eml):
                     info_dic["Inquiry Date"] = info_date
 
                     # ref
-                    info_ref = thirdTrs[1].select('td')[1].text.split('(')[0].replace("\xa0", "")
-                    info_dic["Ref"] = info_ref
+                    # info_ref = thirdTrs[1].select('td')[1].text.split('(')[0].replace("\xa0", "")
+                    info_ref = thirdTrs[1].select('td')[1].text.split('-').replace("\xa0", "")
+                    info_ref = test.split('-')
+                    info_dic["Ref"] = '-'.join([info_ref[0].replace("\xa0", ""),info_ref[1].replace("\xa0", ""),info_ref[2].replace("\xa0", "")])
+                    print(info_dic["Ref"])
 
                     #status
                     info_status = thirdTrs[2].select('td')[1].text.replace("\xa0", "")
@@ -65,7 +70,7 @@ def extract_info(target_eml):
                     info_dic["Client"] = final_client
 
                     # Subject
-                    info_subject = thirdTrs[0].select('td')[1].text.replace("\xa0", "")
+                    info_subject = thirdTrs[3].select('td')[1].text.replace("\xa0", "")
                     info_dic["Subject"] = info_subject
 
                     # Nation
@@ -108,7 +113,15 @@ def extract_info(target_eml):
 
 def main(email_dir, output_file_name, nation_code_path, output_dir):
     # 국가 코드표 불러오기
-    dataframeXlsx = pd.read_excel(nation_code_path, sheet_name="Sheet1")
+    # dataframeXlsx = pd.read_xlsx(nation_code_path, engine='openpyxl')
+    nationList = []
+    with open(nation_code_path, "rt", encoding='UTF8') as nationFile:
+        while True:
+            line = nationFile.readline()
+            if not line:
+                break
+            nationStr = line.strip().split('\t')
+            nationList.append(nationStr)
 
     count = 0
     for root, dirs, files in os.walk(email_dir):
@@ -120,36 +133,56 @@ def main(email_dir, output_file_name, nation_code_path, output_dir):
                              ,  "ADDRESS", "PRES", "TEL", "FAX", "E-mail", "Homepage"
                              , "Registration Number", "Vat Number", "Person in Charge", "Remark"
                           ])
-            wb.save(output_dir + output_file_name)
+            # 열 너비
+            for cols in range(1,21):
+                sheet.column_dimensions[get_column_letter(cols)].width = 13
+            for rows in sheet["A1":"T1"]:
+                for cell in rows:
+                    # 셀 배경색
+                    cell.fill = PatternFill(patternType="solid", fgColor="FFD400")
+                    # 굵게
+                    cell.font = Font(bold=True)
+                    # 셀 테두리
+                    side = Side("thin",color="000000")
+                    cell.border = Border(left=side, right=side, top=side, bottom=side)
+        wb.save(output_dir + output_file_name)
         excel = openpyxl.load_workbook(output_dir + output_file_name)
+
+
         for file in files:
             excel_ws = excel.active
             target = f"{root}\{file}"
-            fnm_txt = f"{root}\{file}_info.txt"
             list_dic = extract_info(target)
             unit = ""
             nation_code = ""
 
             # 실제 코드
-            # nation_code.xslx의 ref와 code가 일치하는 index를 찾아 해당 국가의 국가명 = nation, 유닛 = unit으로 한다.
-
-            for index, row in dataframeXlsx.iterrows():
-                if int(list_dic["Ref"][0:3]) == row["국가코드"]:
-                    nation_code = row["국가영문명(DBIA)"]
-                    unit = row["유닛"]
+            # nation_code.xslx의 ref와 code가 일치하는 국가의 국가명 = nation, 유닛 = unit으로 한다.
+            for nation in nationList:
+                if int(list_dic["Ref"][0:3]) == nation[1]:
+                    nation_code = nation[2]
+                    if (len(nation) == 3):
+                        unit = ''
+                    else:
+                        unit = nation[3]
                     break
 
             # *는 불러오지 않은 정보.
-            # *"Delivery Date", "Inquiry No", "Inquiry Date", *"Investigation Date", "Status(DBIA)", "Ref", "Units", "Client", "Subject", "Nation"
+            # *"Delivery Date", "Inquiry No", "Inquiry Date", *"Investigation Date", *"Status(DBIA)", "Ref", "Units", "Client", "Subject", "Nation"
             # "Remark", "ADDRESS", "PRES", *"TEL", *"FAX", *"E-mail", *"Homepage", "Registration Number", "Vat Number", "Person in Charge"
-            excel_ws.append(["", list_dic["Inquiry No"], list_dic["Inquiry Date"], "", list_dic["Status(DBIA)"], list_dic["Ref"], unit,
+            excel_ws.append(["", list_dic["Inquiry No"], list_dic["Inquiry Date"], "", "", list_dic["Ref"], unit,
                              list_dic["Client"], list_dic["Subject"], nation_code, list_dic["ADDRESS"], list_dic["PRES"], "", "", "", "",
                              list_dic["Registration Number"], list_dic["Vat Number"], list_dic["Person in Charge"], list_dic["Remark"]])
             excel.save(output_dir + output_file_name)
             count += 1
 
 if __name__ == "__main__":
-    properties = configparser.ConfigParser()  # 클래스 객체 생성
-    properties.read('./config.ini')  # 파일 읽기
-    PATH = properties["PATH"]  # 섹션 선택
-    main(PATH["email_dir"], PATH["output_file_name"], PATH["nation_code_path"], PATH["output_dir"])
+    properties = configparser.ConfigParser()    # 클래스 객체 생성
+    properties.read('./config.ini')             # 파일 읽기
+    PATH = properties["PATH"]                   # 섹션 선택
+
+    # 결과 파일명을 현재 날짜로
+    dateformat = "%Y%m%d"
+    current = datetime.datetime.now()
+    output_file_name = "오더변환파일_"+current.strftime(dateformat)+".xlsx"
+    main(PATH["email_dir"], output_file_name, PATH["nation_code_path"], PATH["output_dir"])
