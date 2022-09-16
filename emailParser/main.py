@@ -113,6 +113,7 @@ def main(email_dir, output_file_name, nation_code_path, output_dir):
     # 국가 코드표 불러오기
     # dataframeXlsx = pd.read_xlsx(nation_code_path, engine='openpyxl')
     nationList = []
+    # 프로그램 실행 PC의 보안 문제로 인해 EXCEL 직접 접근 대신 TXT 파일의 데이터 불러오게끔 수정
     with open(nation_code_path, "rt", encoding='UTF8') as nationFile:
         while True:
             line = nationFile.readline()
@@ -137,7 +138,7 @@ def main(email_dir, output_file_name, nation_code_path, output_dir):
             for rows in sheet["A1":"T1"]:
                 for cell in rows:
                     # 셀 배경색
-                    cell.fill = PatternFill(patternType="solid", fgColor="FFD400")
+                    cell.fill = PatternFill(patternType="solid", fgColor="d3d3d3")
                     # 굵게
                     cell.font = Font(bold=True)
                     # 셀 테두리
@@ -170,7 +171,6 @@ def main(email_dir, output_file_name, nation_code_path, output_dir):
             excel_ws.append(["", list_dic["Inquiry No"], list_dic["Inquiry Date"], "", "", list_dic["Ref"], unit,
                              list_dic["Client"], list_dic["Subject"], nation_code, list_dic["ADDRESS"], list_dic["PRES"], "", "", "", "",
                              list_dic["Registration Number"], list_dic["Vat Number"], list_dic["Person in Charge"], list_dic["Remark"]])
-            excel_ws.columns
             excel.save(output_dir + output_file_name)
             count += 1
 
