@@ -53,9 +53,7 @@ def extract_info(target_eml):
                     # ref
                     # info_ref = thirdTrs[1].select('td')[1].text.split('(')[0].replace("\xa0", "")
                     info_ref = thirdTrs[1].select('td')[1].text.split('-').replace("\xa0", "")
-                    info_ref = test.split('-')
                     info_dic["Ref"] = '-'.join([info_ref[0].replace("\xa0", ""),info_ref[1].replace("\xa0", ""),info_ref[2].replace("\xa0", "")])
-                    print(info_dic["Ref"])
 
                     #status
                     info_status = thirdTrs[2].select('td')[1].text.replace("\xa0", "")
@@ -148,7 +146,6 @@ def main(email_dir, output_file_name, nation_code_path, output_dir):
         wb.save(output_dir + output_file_name)
         excel = openpyxl.load_workbook(output_dir + output_file_name)
 
-
         for file in files:
             excel_ws = excel.active
             target = f"{root}\{file}"
@@ -173,6 +170,7 @@ def main(email_dir, output_file_name, nation_code_path, output_dir):
             excel_ws.append(["", list_dic["Inquiry No"], list_dic["Inquiry Date"], "", "", list_dic["Ref"], unit,
                              list_dic["Client"], list_dic["Subject"], nation_code, list_dic["ADDRESS"], list_dic["PRES"], "", "", "", "",
                              list_dic["Registration Number"], list_dic["Vat Number"], list_dic["Person in Charge"], list_dic["Remark"]])
+            excel_ws.columns
             excel.save(output_dir + output_file_name)
             count += 1
 
