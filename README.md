@@ -196,11 +196,11 @@
  <br></details>
  
   <details>
- <summary><b>10.04~10.07</b></summary>
+ <summary><b>10.04~10.14</b></summary>
+ 
  #### ✔ Internet Explorer 브라우저 지원 종료 안내 팝업 개발
  * Internet Explorer로 접속 시 뜨는 IE 브라우저 지원 종료 안내 페이지 개발
  * 기존 배너 형식에서 페이지 전환 방식으로 수정
  * 사용 언어 : html/css, JavaScript
- * 사용 프레임워크 : BXM
-- IE 브라우저 판별은 아래 코드로 수행하였다. <br>
+ * 사용 프레임워크 : BXM <br>
  <br></details>
