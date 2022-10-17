@@ -1,0 +1,16 @@
+[목표] 
+Internet Explorer 브라우저 서비스 종료에 따른 안내 페이지 개발
+
+[사용 언어] 
+html/css, JavaScript
+
+[사용 프레임워크]
+BXM
+
+[특징]
+- Internet Explorer 브라우저로 해당 사이트에 접속한 경우, IE 브라우저 서비스가 종료되었다는 페이지로 이동한다.
+- 나머지 브라우저(크롬, Edge 등)로 접속한 경우에는 아무 처리도 .
+- IE 브라우저 판별은 아래 코드로 수행하였다.
+  var agent = navigator.userAgent.toLowerCase();
+  if((navigator.appName=='Netscape' && navigator.userAgent.search('Trident')!=-1) || (agent.indexOf("msie")!=-1)){ // IE 브라우저 }
+  else{ // IE 외의 브라우저 }
