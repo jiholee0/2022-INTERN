@@ -1,0 +1,12 @@
+<!-- 2022.10.12 ie 브라우저 지원 종료  -->
+<script type="text/javascript">
+var agent = navigator.userAgent.toLowerCase();
+
+if((navigator.appName=='Netscape' && navigator.userAgent.search('Trident')!=-1) || (agent.indexOf("msie")!=-1)){ 		
+	// Internet Explorer
+	var url = "./popup-ieSupportEnd.html"
+	location.replace(url);
+}else{
+	// Not Internet Explorer
+}
+</script>
