@@ -1,0 +1,763 @@
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicerefirm.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicerefirm.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+houserating.kr  nameserver = ns.gabia.co.kr
+houserating.kr  nameserver = ns.gabia.net
+houserating.kr  nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicetips2.co.kr nameserver = ns1.gabia.co.kr
+nicetips2.co.kr nameserver = ns.gabia.net
+nicetips2.co.kr nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+aptrating.co.kr nameserver = ns1.gabia.co.kr
+aptrating.co.kr nameserver = ns.gabia.co.kr
+aptrating.co.kr nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicegate.co.kr  nameserver = ns.gabia.net
+nicegate.co.kr  nameserver = ns1.gabia.co.kr
+nicegate.co.kr  nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) credit-manager.co.kr을(를) 찾을 수 없습니다. Server failed
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) ntcb.co.kr을(를) 찾을 수 없습니다. Server failed
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+crin.co.kr      nameserver = ns.gabia.co.kr
+crin.co.kr      nameserver = ns.gabia.net
+crin.co.kr      nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+hooverskorea.com        nameserver = ns.hooverskorea.com
+hooverskorea.com        nameserver = ns2.hooverskorea.com
+hooverskorea.com        nameserver = ns.nice.co.kr
+hooverskorea.com        nameserver = ns2.nice.co.kr
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+ratingg2b.co.kr nameserver = ns1.gabia.co.kr
+ratingg2b.co.kr nameserver = ns.gabia.co.kr
+ratingg2b.co.kr nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) niceinfo.biz을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+aptrating.kr    nameserver = ns.gabia.co.kr
+aptrating.kr    nameserver = ns.gabia.net
+aptrating.kr    nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+datashop.biz    nameserver = ns1.uniregistrymarket.link
+datashop.biz    nameserver = ns2.uniregistrymarket.link
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+speedspeed.net  nameserver = ns.gabia.net
+speedspeed.net  nameserver = ns1.gabia.co.kr
+speedspeed.net  nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) ppsloan.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nice-report.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+pploan.com      nameserver = dns27.hichina.com
+pploan.com      nameserver = dns28.hichina.com
+
+dns27.hichina.com       internet address = 39.96.153.39
+dns27.hichina.com       internet address = 39.96.153.59
+dns27.hichina.com       internet address = 47.118.199.199
+dns27.hichina.com       internet address = 47.118.199.219
+dns27.hichina.com       internet address = 120.76.107.39
+dns27.hichina.com       internet address = 120.76.107.59
+dns27.hichina.com       internet address = 139.224.142.99
+dns27.hichina.com       internet address = 139.224.142.109
+dns28.hichina.com       internet address = 39.96.153.37
+dns28.hichina.com       internet address = 39.96.153.62
+dns28.hichina.com       internet address = 47.118.199.197
+dns28.hichina.com       internet address = 47.118.199.221
+dns28.hichina.com       internet address = 120.76.107.37
+dns28.hichina.com       internet address = 120.76.107.62
+dns28.hichina.com       internet address = 139.224.142.102
+dns28.hichina.com       internet address = 139.224.142.107
+dns27.hichina.com       AAAA IPv6 address = 2408:4009:501::35
+dns28.hichina.com       AAAA IPv6 address = 2408:4009:501::36
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+gotcb.co.kr     nameserver = ns.gabia.co.kr
+gotcb.co.kr     nameserver = ns1.gabia.co.kr
+gotcb.co.kr     nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+DNS request timed out.
+    timeout was 2 seconds.
+권한 없는 응답:
+ca-credit.com   nameserver = ns72.domaincontrol.com
+ca-credit.com   nameserver = ns71.domaincontrol.com
+
+ns71.domaincontrol.com  internet address = 97.74.105.46
+ns72.domaincontrol.com  internet address = 173.201.73.46
+ns71.domaincontrol.com  AAAA IPv6 address = 2603:5:2194::2e
+ns72.domaincontrol.com  AAAA IPv6 address = 2603:5:2294::2e
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+2508.co.kr      nameserver = ns.gabia.co.kr
+2508.co.kr      nameserver = ns.gabia.net
+2508.co.kr      nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicers.co.kr    nameserver = ns.gabia.net
+nicers.co.kr    nameserver = ns1.gabia.co.kr
+nicers.co.kr    nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicerefirm.or.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicedocu.com    nameserver = ns.nice.co.kr
+nicedocu.com    nameserver = ns2.nice.co.kr
+nicedocu.com    nameserver = ns.nicedocu.com
+nicedocu.com    nameserver = ns2.nicedocu.com
+
+ns2.nice.co.kr  internet address = 203.234.212.1
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+aaarating.co.kr nameserver = ns.gabia.co.kr
+aaarating.co.kr nameserver = ns.gabia.net
+aaarating.co.kr nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+ca-rating.com   nameserver = ns.gabia.net
+ca-rating.com   nameserver = ns1.gabia.co.kr
+ca-rating.com   nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+creport.co.kr   nameserver = ns.gabia.co.kr
+creport.co.kr   nameserver = ns1.gabia.co.kr
+creport.co.kr   nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+g2brating.com   nameserver = ns.gabia.co.kr
+g2brating.com   nameserver = ns.gabia.net
+g2brating.com   nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicereport.net  nameserver = ns1.gabia.co.kr
+nicereport.net  nameserver = ns.gabia.co.kr
+nicereport.net  nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+2408.co.kr      nameserver = ns.gabia.net
+2408.co.kr      nameserver = ns1.gabia.co.kr
+2408.co.kr      nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicereport.co.kr        nameserver = ns.gabia.co.kr
+nicereport.co.kr        nameserver = ns1.gabia.co.kr
+nicereport.co.kr        nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+DNS request timed out.
+    timeout was 2 seconds.
+권한 없는 응답:
+g2b-rating.co.kr        nameserver = ns.gabia.co.kr
+g2b-rating.co.kr        nameserver = ns.gabia.net
+g2b-rating.co.kr        nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) primec.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) ca-credit.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+dunsnumber.kr   nameserver = dns2.safenames.net
+dunsnumber.kr   nameserver = dns1.safenames.com
+dunsnumber.kr   nameserver = dns3.safenames.org
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicegpac.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicegsa.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+DNS request timed out.
+    timeout was 2 seconds.
+권한 없는 응답:
+dnbkorea.co.kr  nameserver = ns1.gabia.co.kr
+dnbkorea.co.kr  nameserver = ns.gabia.co.kr
+dnbkorea.co.kr  nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicegpac.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+sales-manager.co.kr     nameserver = ns1.gabia.co.kr
+sales-manager.co.kr     nameserver = ns.gabia.co.kr
+sales-manager.co.kr     nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) dnbduns.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+2550.co.kr      nameserver = ns.gabia.net
+2550.co.kr      nameserver = ns1.gabia.co.kr
+2550.co.kr      nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicebid4apt.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) cakrating.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) cacredit.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicetips.com    nameserver = ns2.sedoparking.com
+nicetips.com    nameserver = ns1.sedoparking.com
+
+ns1.sedoparking.com     internet address = 3.130.216.63
+ns1.sedoparking.com     internet address = 91.195.241.8
+ns2.sedoparking.com     internet address = 34.211.188.210
+ns2.sedoparking.com     internet address = 91.195.240.8
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicebid4apt.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+DNS request timed out.
+    timeout was 2 seconds.
+*** kns.kornet.net이(가) opencredit.co.kr을(를) 찾을 수 없습니다. Server failed
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicednb.com     nameserver = ns.gabia.co.kr
+nicednb.com     nameserver = ns1.gabia.co.kr
+nicednb.com     nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicereport.com  nameserver = ns1.gabia.co.kr
+nicereport.com  nameserver = ns.gabia.co.kr
+nicereport.com  nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+carating.co.kr  nameserver = ns1.gabia.co.kr
+carating.co.kr  nameserver = ns.gabia.co.kr
+carating.co.kr  nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicetips.biz을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicednb.co.kr   nameserver = ns.gabia.co.kr
+nicednb.co.kr   nameserver = ns.gabia.net
+nicednb.co.kr   nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) pploan.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+2536.co.kr      nameserver = ns1.gabia.co.kr
+2536.co.kr      nameserver = ns.gabia.net
+2536.co.kr      nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+dnbreport.co.kr nameserver = ns.gabia.co.kr
+dnbreport.co.kr nameserver = ns1.gabia.co.kr
+dnbreport.co.kr nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+g2bcredit.or.kr nameserver = ns1.gabia.co.kr
+g2bcredit.or.kr nameserver = ns.gabia.net
+g2bcredit.or.kr nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) worldbase.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+biztool.co.kr   nameserver = ns259.dnsever.com
+biztool.co.kr   nameserver = ns231.dnsever.com
+biztool.co.kr   nameserver = ns85.dnsever.com
+biztool.co.kr   nameserver = ns84.dnsever.com
+biztool.co.kr   nameserver = ns18.dnsever.com
+
+ns18.dnsever.com        internet address = 151.80.120.8
+ns85.dnsever.com        internet address = 149.56.189.111
+ns231.dnsever.com       internet address = 158.69.189.75
+ns259.dnsever.com       internet address = 91.134.247.168
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nsbrating.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicetradeinfo.com       nameserver = ns.gabia.co.kr
+nicetradeinfo.com       nameserver = ns1.gabia.co.kr
+nicetradeinfo.com       nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) webtips.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+dnbrating.co.kr nameserver = ns.gabia.co.kr
+dnbrating.co.kr nameserver = ns1.gabia.co.kr
+dnbrating.co.kr nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+creditnews.co.kr        nameserver = ns.gabia.net
+creditnews.co.kr        nameserver = ns.gabia.co.kr
+creditnews.co.kr        nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+ca-bank.co.kr   nameserver = ns.gabia.net
+ca-bank.co.kr   nameserver = ns.gabia.co.kr
+ca-bank.co.kr   nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicetips.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) click1.co.kr을(를) 찾을 수 없습니다. Server failed
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) onicednb.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+ppsrating.co.kr nameserver = ns1.gabia.co.kr
+ppsrating.co.kr nameserver = ns.gabia.co.kr
+ppsrating.co.kr nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) govbizmall.com을(를) 찾을 수 없습니다. Server failed
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+ncredit.co.kr   nameserver = ns1.cafe24.co.kr
+ncredit.co.kr   nameserver = ns2.cafe24.com
+ncredit.co.kr   nameserver = ns2.cafe24.co.kr
+ncredit.co.kr   nameserver = ns1.cafe24.com
+
+ns1.cafe24.co.kr        internet address = 112.175.246.232
+ns1.cafe24.co.kr        internet address = 112.175.246.233
+ns1.cafe24.co.kr        internet address = 175.125.93.136
+ns1.cafe24.co.kr        internet address = 175.125.93.137
+ns1.cafe24.com  internet address = 112.175.246.230
+ns1.cafe24.com  internet address = 112.175.246.231
+ns1.cafe24.com  internet address = 116.126.143.242
+ns1.cafe24.com  internet address = 175.125.93.134
+ns1.cafe24.com  internet address = 175.125.93.135
+ns2.cafe24.co.kr        internet address = 112.175.247.232
+ns2.cafe24.co.kr        internet address = 112.175.247.233
+ns2.cafe24.co.kr        internet address = 175.125.93.146
+ns2.cafe24.co.kr        internet address = 175.125.93.147
+ns2.cafe24.com  internet address = 1.226.85.4
+ns2.cafe24.com  internet address = 1.234.0.4
+ns2.cafe24.com  internet address = 112.175.11.4
+ns2.cafe24.com  internet address = 112.175.12.4
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+ppscredit.com   nameserver = ns1.gabia.co.kr
+ppscredit.com   nameserver = ns.gabia.co.kr
+ppscredit.com   nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) govbizall.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) sourcinglink.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) nicereport.biz을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) creportrm.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) ppsloan.com을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+ppscredit.co.kr nameserver = ns.gabia.co.kr
+ppscredit.co.kr nameserver = ns.gabia.net
+ppscredit.co.kr nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+clipq.co.kr     nameserver = ns.gabia.co.kr
+clipq.co.kr     nameserver = ns1.gabia.co.kr
+clipq.co.kr     nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+g2b-rating.com  nameserver = ns.gabia.co.kr
+g2b-rating.com  nameserver = ns1.gabia.co.kr
+g2b-rating.com  nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+*** kns.kornet.net이(가) dunsnumber.co.kr을(를) 찾을 수 없습니다. Non-existent domain
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+sbrating.com    nameserver = ns1.gabia.co.kr
+sbrating.com    nameserver = ns.gabia.co.kr
+sbrating.com    nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+houserating.co.kr       nameserver = ns.gabia.co.kr
+houserating.co.kr       nameserver = ns.gabia.net
+houserating.co.kr       nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicetips2.com   nameserver = ns1.gabia.co.kr
+nicetips2.com   nameserver = ns.gabia.co.kr
+nicetips2.com   nameserver = ns.gabia.net
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nbi.co.kr       nameserver = ns1.parkingcrew.net
+nbi.co.kr       nameserver = ns2.parkingcrew.net
+
+ns1.parkingcrew.net     internet address = 13.248.158.159
+ns2.parkingcrew.net     internet address = 76.223.21.9
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+g2brating.co.kr nameserver = ns.gabia.net
+g2brating.co.kr nameserver = ns1.gabia.co.kr
+g2brating.co.kr nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+creditnote.co.kr        nameserver = ns.gabia.net
+creditnote.co.kr        nameserver = ns.gabia.co.kr
+creditnote.co.kr        nameserver = ns1.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+nicedocu.co.kr  nameserver = ns.nicedocu.co.kr
+nicedocu.co.kr  nameserver = ns2.nicedocu.co.kr
+nicedocu.co.kr  nameserver = ns.nice.co.kr
+nicedocu.co.kr  nameserver = ns2.nice.co.kr
+서버:    kns.kornet.net
+Address:  168.126.63.1
+
+권한 없는 응답:
+sbrating.co.kr  nameserver = ns.gabia.net
+sbrating.co.kr  nameserver = ns1.gabia.co.kr
+sbrating.co.kr  nameserver = ns.gabia.co.kr
+
+ns.gabia.co.kr  internet address = 211.234.118.50
+ns.gabia.net    internet address = 110.45.166.50
+ns1.gabia.co.kr internet address = 121.78.117.39
