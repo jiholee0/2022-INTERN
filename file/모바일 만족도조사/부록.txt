@@ -1,0 +1,21 @@
+[새로 추가]
+rm-0223-tpl.html
+rm-0223.js	
+rm-0224-tpl.html
+rm-0224.js	
+
+image 4개 : 
+	./images/main 에 추가
+
+[수정]
+css :
+	css/nicednb.css (덮어쓰기 하시면 됩니다)
+omm :
+	DRM02ApPubQstnrOutDto.omm 	String | connGb | 접속구분 | 2 | 0 추가
+	SRM01ApPubQstnrInDto.omm 	String | connGb | 접속구분 | 2 | 0 추가
+dbio :
+	DRM02ApRegCcrInfo.insertApPubQstnr 		sql 수정
+	DRM02ApRegCcrInfo.selectOneApPubQstnr 	sql 수정
+db table :
+	CONN_GB 추가 addColumn(connGb).sql	
+	

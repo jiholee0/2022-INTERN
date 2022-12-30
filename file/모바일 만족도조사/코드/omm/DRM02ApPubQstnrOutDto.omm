@@ -1,0 +1,36 @@
+OMM nice.em.rm01.online.dbio.dto.DRM02ApPubQstnrOutDto
+<description="평가관리-설문조사">
+{
+	BigDecimal apNo<length=10 description="신청번호">;
+	String apSvcGbcd<length=4 description="신청서비스구분코드">;
+	String dtlSeq<length=5 description="상세순번">;
+	String qstnrYmd<length=8 description="설문일자">;
+	String qustn1Yn<length=1 description="질문1여부">;
+	String qustn1Cnts<length=500 description="질문1내용">;
+	String qustn2Yn<length=1 description="질문2여부">;
+	String qustn2Cnts<length=500 description="질문2내용">;
+	String qustn3Yn<length=1 description="질문3여부">;
+	String qustn3Cnts<length=500 description="질문3내용">;
+	String modiId<length=16 description="수정자ID">;
+	Date modiDt<length=7 description="수정일시">;
+	String fstRegId<length=16 description="최초등록자ID">;
+	Date fstRegDt<length=7 description="최초등록일시">;
+	String rsptNm<length=50 description="응답자명">;
+	String rsptTel<length=16 description="응답자전화번호">;
+	String rspnsStatCd<length=20 description="응답상태코드">;
+	String qstr1<length=1 description="질문1">;
+	String qstr2<length=1 description="질문2">;
+	String qstr3<length=1 description="질문3">;
+	String qstr4<length=1 description="질문4">;
+	String qstr5<length=1 description="질문5">;
+	String qstr6<length=1 description="질문6">;
+	String qstr7<length=1 description="질문7">;
+	String qstr8<length=1 description="질문8">;
+	String qstr9<length=1 description="질문9">;
+	String qstr10<length=1 description="질문10">;
+	String qstr11<length=1 description="질문11">;
+	String optQstr1<length=500 description="선택문항1">;
+	String optQstr2<length=500 description="선택문항2">;
+	String giftAyn<length=1 description="사은품약관동의">;
+	String connGb<length=2 description="접속구분">;
+}

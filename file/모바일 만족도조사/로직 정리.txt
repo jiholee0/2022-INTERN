@@ -1,0 +1,45 @@
+로직 정리
+
+페이지 이동 [로그인] -> [만족도조사] -> [완료]
+
+[로그인]
+
+	id, pwd 입력하고 로그인 버튼 클릭 시 goLogin()
+
+	goLogin(){
+	
+		아이디와 pwd 비교해서 로그인
+		YM0401U001 callLoginOperation
+		
+		성공 시 addSurvey()
+	}
+
+	addSurvey(){
+		getAp() : 전역변수 ap_no와 g_date 설정
+		
+		ap_no로 기존 만족도조사 조회
+		RM0201R030 getApPubQstnr
+		
+		응답 연기(80) 90일 이내이거나 처음인 경우 [만족도조사] 페이지로 이동 : location.href='pop.html#MENURM0224?apNo='+apNo+'&apSvcGbcd=2111&dtlSeq='+dtlSeq;
+		그렇지 않은 경우 alert
+	}
+
+	getAp(){
+		전역변수 ap_no와 g_date 설정
+		공공평가결과 조회
+		RM0201R009 getApRegCcr2Info20
+	}
+
+
+[만족도조사]
+
+	모든 값 입력 후 완료 버튼 클릭 시 step5Next()
+
+	step5Next(){
+		param = {}
+		
+		<데이터 추가>
+		RM0201R031 createApPubQstnr
+		
+		완료되면 [완료] 페이지로 이동
+	}

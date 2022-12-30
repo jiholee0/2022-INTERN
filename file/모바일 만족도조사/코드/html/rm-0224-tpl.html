@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/style.css">  
+<link rel="stylesheet" href="./css/swiper.css">
+<link rel="stylesheet" href="./css/slick.css">
+<link rel="stylesheet" href="./css/nicednb.css">
+<script> var console = window.console || {log:function(){}};</script>
+</head>
+<body>
+    <div class="satisfaction_survey_container">
+        <div class = "satisfaction_survey_wrap">
+            <div class = "survey_title">
+                <p>조달청/공공기관 입찰용</p>
+                <h2>평가 만족도조사 설문지</h2>
+                <div class="text-centre">
+                     <span class = "star_ex">※ 설문조사 문항</span>
+                     <span class = "best">( 우수_<span style="color:#ffe373">★★★★★ </span> / </span>
+                     <span class = "good">양호_<span style="color:#ffe373">★★★★</span><span style="color:#ccc">★</span>  / </span><br>
+                     <span class = "normal">보통_<span style="color:#ffe373">★★★</span><span style="color:#ccc">★★</span>  /</span>
+                     <span class = "bad">미흡_<span style="color:#ffe373">★★</span><span style="color:#ccc">★★★</span>  / </span>
+                     <span class = "worst">불만_<span style="color:#ffe373">★</span><span style="color:#ccc">★★★★</span> )</span>
+                </div>
+            </div>
+            <div class="survey_content_first survey_content">
+                <h2>신청업무 (1/4)</h2>
+                <ul>
+                    <li>사이트의 평가신청 및 입금기능은 이해하기 쉽고, 편리하게 구현되어 있습니까?</li>
+                    <li class="star_rating star_rating_q1" style="border: 0px;">
+                        <a href="#" name="qstr1" class="on" id="star1_q1" value="1">★</a>
+                        <a href="#" name="qstr1" class="on" id="star2_q1" value="2">★</a>
+                        <a href="#" name="qstr1" class="on" id="star3_q1" value="3">★</a>
+                        <a href="#" name="qstr1" class="" id="star4_q1" value="4">★</a>
+                        <a href="#" name="qstr1" class="" id="star5_q1" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>평가신청과 관련된 상담원(CS)안내는 성실하고, 정확하게 이루어졌습니까?</li>
+                    <li class="star_rating star_rating_q2" style="border: 0px;">
+                        <a href="#" name="qstr2" class="on" id="star1_q2" value="1">★</a>
+                        <a href="#" name="qstr2" class="on" id="star2_q2" value="2">★</a>
+                        <a href="#" name="qstr2" class="on" id="star3_q2" value="3">★</a>
+                        <a href="#" name="qstr2" class="" id="star4_q2" value="4">★</a>
+                        <a href="#" name="qstr2" class="" id="star5_q2" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>평가신청 기능은 전산오류(장애) 또는 지연없이 적절히 작동했습니까?</li>
+                    <li class="star_rating star_rating_q3" style="border: 0px;">
+                        <a href="#" name="qstr3" class="on" id="star1_q3" value="1">★</a>
+                        <a href="#" name="qstr3" class="on" id="star2_q3" value="2">★</a>
+                        <a href="#" name="qstr3" class="on" id="star3_q3" value="3">★</a>
+                        <a href="#" name="qstr3" class="" id="star4_q3" value="4">★</a>
+                        <a href="#" name="qstr3" class="" id="star5_q3" value="5">★</a>
+                    </li>
+                </ul>
+                <div class="btn-box moblie_bt_group moblie_bt_group1">
+                    <!-- //비활성  버튼  : 활성 시 off 클래스 제거  <button class="process-large dim off" type="button"><span class="glyphicon glyphicon-chevron-left"></span> 이전</button>   -->
+                    <button class="process-large step1Next NextBtn" type="button" name="step1Next">다음<span class="glyphicon glyphicon-chevron-right"></span></button>                                
+                </div>
+            </div>
+            <div class="survey_content_second survey_content">
+                <h2>제출업무 (2/4)</h2>
+                <ul>
+                    <li>자료입력/전송/서류제출 과정에서 상담원(CS)의 안내는 성실하고, 정확하게 이루어졌습니까?</li>
+                    <li class="star_rating star_rating_q1" style="border: 0px;">
+                        <a href="#" name="qstr4" class="on" id="star1_q4" value="1">★</a>
+                        <a href="#" name="qstr4" class="on" id="star2_q4" value="2">★</a>
+                        <a href="#" name="qstr4" class="on" id="star3_q4" value="3">★</a>
+                        <a href="#" name="qstr4" class="" id="star4_q4" value="4">★</a>
+                        <a href="#" name="qstr4" class="" id="star5_q4" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>자료입력/전송/서류제출 기능은 절차상 이해하기 쉽고, 편리하게 구현되어 있습니까?</li>
+                    <li class="star_rating star_rating_q2" style="border: 0px;">
+                        <a href="#" name="qstr5" class="on" id="star1_q5" value="1">★</a>
+                        <a href="#" name="qstr5" class="on" id="star2_q5" value="2">★</a>
+                        <a href="#" name="qstr5" class="on" id="star3_q5" value="3">★</a>
+                        <a href="#" name="qstr5" class="" id="star4_q5" value="4">★</a>
+                        <a href="#" name="qstr5" class="" id="star5_q5" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>자료입력/전송/서류제출 기능은 전산오류(장애) 또는 지연없이 적절히 작동했습니까?</li>
+                    <li class="star_rating star_rating_q3" style="border: 0px;">
+                        <a href="#" name="qstr6" class="on" id="star1_q6" value="1">★</a>
+                        <a href="#" name="qstr6" class="on" id="star2_q6" value="2">★</a>
+                        <a href="#" name="qstr6" class="on" id="star3_q6" value="3">★</a>
+                        <a href="#" name="qstr6" class="" id="star4_q6" value="4">★</a>
+                        <a href="#" name="qstr6" class="" id="star5_q6" value="5">★</a>
+                    </li>
+                </ul>
+                <div class="btn-box moblie_bt_group moblie_bt_group2">
+                    <button class="process-large step2Prev PrevBtn" type="button" name="step2Prev"><span class="glyphicon glyphicon-chevron-left"></span> 이전</button>
+                    <button class="process-large step2Next NextBtn" type="button" name="step2Next">다음<span class="glyphicon glyphicon-chevron-right"></span></button>                                
+                </div>
+            </div>
+            <div class="survey_content_third survey_content">
+                <h2>평가업무 (3/4)</h2>
+                <ul>
+                    <li>평가진행 담당연구원은 관련 업무 전문성을 보유하고 상담 요청시 적절하게 응대하였습니까?</li>
+                    <li class="star_rating star_rating_q1" style="border: 0px;">
+                        <a href="#" name="qstr7" class="on" id="star1_q7" value="1">★</a>
+                        <a href="#" name="qstr7" class="on" id="star2_q7" value="2">★</a>
+                        <a href="#" name="qstr7" class="on" id="star3_q7" value="3">★</a>
+                        <a href="#" name="qstr7" class="" id="star4_q7" value="4">★</a>
+                        <a href="#" name="qstr7" class="" id="star5_q7" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>평가진행 과정에서 사전에 안내 받은 완료예정일, 완료예정시간을 준수하였습니까?</li>
+                    <li class="star_rating star_rating_q2" style="border: 0px;">
+                        <a href="#" name="qstr8" class="on" id="star1_q8" value="1">★</a>
+                        <a href="#" name="qstr8" class="on" id="star2_q8" value="2">★</a>
+                        <a href="#" name="qstr8" class="on" id="star3_q8" value="3">★</a>
+                        <a href="#" name="qstr8" class="" id="star4_q8" value="4">★</a>
+                        <a href="#" name="qstr8" class="" id="star5_q8" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>스스로 판단할 때, 평가 등급은 합리적인 기준에 의하여 적정하게 산정되었습니까?</li>
+                    <li class="star_rating star_rating_q3" style="border: 0px;">
+                        <a href="#" name="qstr9" class="on" id="star1_q9" value="1">★</a>
+                        <a href="#" name="qstr9" class="on" id="star2_q9" value="2">★</a>
+                        <a href="#" name="qstr9" class="on" id="star3_q9" value="3">★</a>
+                        <a href="#" name="qstr9" class="" id="star4_q9" value="4">★</a>
+                        <a href="#" name="qstr9" class="" id="star5_q9" value="5">★</a>
+                    </li>
+                </ul>
+                <div class="btn-box moblie_bt_group moblie_bt_group3">
+                    <button class="process-large step3Prev PrevBtn" type="button" name="step3Prev"><span class="glyphicon glyphicon-chevron-left"></span> 이전</button>
+                    <button class="process-large step3Next NextBtn" type="button" name="step3Next">다음<span class="glyphicon glyphicon-chevron-right"></span></button>                                
+                </div>
+            </div>
+            <div class="survey_content_fourth survey_content">
+                <h2>후속업무 (4/4)</h2>
+                <ul>
+                    <li>평가완료 후, 입찰에 활용하기 위한 등급서 조회/출력/전송 등의 기능은 신속/정확하게 진행되었습니까?</li>
+                    <li class="star_rating star_rating_q1" style="border: 0px;">
+                        <a href="#" name="qstr10" class="on" id="star1_q10" value="1">★</a>
+                        <a href="#" name="qstr10" class="on" id="star2_q10" value="2">★</a>
+                        <a href="#" name="qstr10" class="on" id="star3_q10" value="3">★</a>
+                        <a href="#" name="qstr10" class="" id="star4_q10" value="4">★</a>
+                        <a href="#" name="qstr10" class="" id="star5_q10" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>평가완료 후, 후속조치에 있어서 상담원(CS)의 응대는 성실하고 정확하게 이루어 졌습니까?</li>
+                    <li class="star_rating star_rating_q2" style="border: 0px;">
+                        <a href="#" name="qstr11" class="on" id="star1_q11" value="1">★</a>
+                        <a href="#" name="qstr11" class="on" id="star2_q11" value="2">★</a>
+                        <a href="#" name="qstr11" class="on" id="star3_q11" value="3">★</a>
+                        <a href="#" name="qstr11" class="" id="star4_q11" value="4">★</a>
+                        <a href="#" name="qstr11" class="" id="star5_q11" value="5">★</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>다음 평가시에도 당사에게 신용평가를 의뢰하시겠습니까?</li>
+                    <li class = "radio_qustn"><label for="qustn12Y"><input type="radio" name="qustn12Yn" id="qustn12Y" class="radio" value="Y" checked>예</label></li>
+                    <li class = "radio_qustn on"><label for="qustn12N"><input type="radio" name="qustn12Yn" id="qustn12N" class="radio" value="N">아니오</label></li>
+                    <li class = "reaseon"><textarea name="qustn12No" id="qustn12No" rows="4" placeholder ="'아니오'를 선택하신 경우 관련 내용을 기재하여 주시기 바랍니다."></textarea></li>
+                </ul>
+                <ul>
+                    <li>평가진행 전 과정에서 부적절한 금품 및 향응 또는 강압적인 상품판매 요구 등을 받으신 적이 있었습니까?</li>
+                    <li class = "radio_qustn on"><label for="qustn13Y"><input type="radio" name="qustn13Yn" id="qustn13Y" class="radio" value="Y">예</label></li>
+                    <li class = "radio_qustn"><label for="qustn13N"><input type="radio" name="qustn13Yn" id="qustn13N" class="radio" value="N" checked>아니오</label></li>
+                    <li class = "reaseon"><textarea name="qustn13Yes" id="qustn13Yes" rows="4" placeholder ="'예'를 선택하신 경우 금품 또는 강압적인 상품 판매 등의 부적절한 요구를 받은 실제 사례와 관련 직원명 등을 자세하게 기입하여 주시기 바랍니다.해당 사실이 없다면 '아니오'를 체크하여 주세요."></textarea></li>
+                </ul>
+                <div class = "option_title">선택문항 <span style  = "color:#6fb4d4;">(필수응답사항 X)</span></div>
+                <ul class = "option_qustn">
+                    <li>※ 기타 의견/불만사항/제안 자유롭게 작성</li>
+                    <li><textarea name="opt_qstr1" id="opt_qstr1" rows="4"></textarea></li>
+                </ul>
+                <ul class = "option_qustn">
+                    <li>※ 칭찬사항 또는 나이스디앤비 직원 추천 </li>
+                    <li><textarea name="opt_qstr2" id="opt_qstr2" rows="4"></textarea></li>
+                </ul>
+                <div class="btn-box moblie_bt_group moblie_bt_group4">
+                    <button class="process-large step4Prev PrevBtn" type="button" name="step4Prev"><span class="glyphicon glyphicon-chevron-left"></span> 이전</button>
+                    <button class="process-large step4Next NextBtn" type="button" name="step4Next">다음<span class="glyphicon glyphicon-chevron-right"></span></button>                                
+                </div>
+            </div>
+            <div class="survey_content_five survey_content">
+                <h2>응답자 정보입력 및 동의</h2>
+                    <div class = "userInfo_title" style ="border:none;">응답자 정보 입력<span style="color:#ff0101;">[필수]</span></div>
+                    <div class = "userInfo_tb_wrap">
+                        <table class = "userInfo_tb">
+                            <colgroup>
+                                <col width = "20%">
+                                <col width = "80%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>고객명(성명)</th>
+                                    <td>
+                                        <input type = "text" id = "user_name" class = "user_name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>휴대폰번호</th>
+                                    <td>
+                                        <div class="tel-field">
+                                            <input type="tel" id="user-tel1" class="text-field usrTel1 numberonly" maxlength="3">
+                                            <span>-</span>
+                                            <input type="tel" id="user-tel2" class="text-field usrTel2 numberonly" maxlength="4">
+                                            <span>-</span>
+                                            <input type="tel" id="user-tel3" class="text-field usrTel3 numberonly" maxlength="4">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class = "userInfo_title">개인정보의 제3자 제공 동의<span style ="color:#2a87ef;">[선택]</span></div>
+                    <div class="agree-wrap">
+                        <div class="agree-content">
+                            <dl>
+                                <dt>1.개인정보를 제공받는 자</dt>
+                                <dd>티아이모바일, 원큐브, (주)모바일이앤엠애드, 예스이십사(주), 케이비드(주), (주)케이티엠하우스</dd>
+            
+                                <dt>2.개인정보를 제공받는 자의 개인정보 이용 목적</dt>
+                                <dd>티아이모바일, 원큐브, (주)모바일이앤엠애드, 예스이십사(주) , 케이비드(주), (주)케이티엠하우스 등은 모바일기프트, 영화예매권, 서적, 기타 사은품 구매 및    제공대행을 목적으로 개인정보를 수집합니다.</dd>
+                                
+                                <dt>3.제공하는 개인정보의 항목</dt>
+                                <dd>고객명(성명), 휴대폰 번호, 이메일, 주소 등의 개인정보</dd>
+            
+                                <dt>4.개인정보를 제공받는 자의 개인정보 보유 및 이용 기간</dt>
+                                <dd>모바일기프트, 영화예매권, 서적, 기타 사은품 구매 및 제공대행에 대한 목적이 달성된 후 6개월까지 단, 모바일기프트, 영화예매권, 기타 사은품의 발송이후 해당상품의 재전송, 사업안내 등의 CS 목적 및 업무적 필요로 사용하기 위한 경우, 그리고 별도의 "대행서비스"제공을 위한 경우는 명시된 보유기간 외에도 추가적으로 이용기간을 연장할 수 있으며 목적이 달성된 후에는 5영업일이내에 개인정보를 파기합니다</dd>
+            
+                                <dt>5.동의를 거부할 권리가 있다는 사실 및 동의 기부에 따른 불이익이 있는 경우 그 불이익의 내용</dt>
+                                <dd>개인정보의 제3자 제공 미 동의 시 모바일기프트, 영화예매권, 서적, 기타 사은품 등의 사은품혜택을 제공받을 수 없습니다.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class = "userInfo_title">사은품 지급 관련 주의사항 동의<span style ="color:#2a87ef;">[선택]</span></div>
+                    <div class="agree-wrap">
+                        <div class="agree-content">
+                            <dl>
+                                <dt>사은품(모바일 상품권 등) 지급 관련 주의사항을 반드시 확인하시기 바라며 주의사항 미 동의 시 사은품 혜택을 제공받을 수 없습니다.</dt>
+
+                                <dd>1.사은품은 만족도설문 <span style="color:#ff0101;">응답완료일 기준 최대 2개월 내 지급</span>됩니다. </dd>
+                                <dd>2.사은품은 <span style="color:#ff0101;">핸드폰번호 당 월 1회(응답완료일 기준) 응모제한이 적용</span>됩니다. </dd>
+                                <dd>3.사은품 지급 시 당사 또는 대행업체 사정에 의해 상품이 사전고지 없이 변경될 수 있으며, 타인 양도는 불가능합니다. </dd>
+                                <dd>4.지급된 사은품(모바일 발송 등)에 대하여 개인 귀책사유(모바일 상품권 삭제, 유효기간 만료, 수신거부, 번호차단 등)로 인한 문제에 대해서는 책임지지 않습니다. </dd>
+                                <dd>5.담당자정보 불일치, 오기 등으로 인한 미지급 사유에 대해서는 사은품 제공이 취소 또는 제한될 수 있습니다. </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class = "agree_qustn"><label for="agreeY"><input type="radio" name="agreeYn" id="agreeY" class="radio" value="Y">동의합니다</label></li>
+                        <li class = "agree_qustn"><label for="agreeN"><input type="radio" name="agreeYn" id="agreeN" class="radio" value="N" checked>동의하지 않습니다</label></li>
+                    </ul>
+                <div class="btn-box moblie_bt_group moblie_bt_group5">
+                    <button class="process-large step5Prev PrevBtn" type="button" name="step5Prev"><span class="glyphicon glyphicon-chevron-left"></span> 이전</button>
+                    <button class="process-large surveySubmit NextBtn" type="button" name="surveySubmit">완료<span class="glyphicon glyphicon-chevron-right"></span></button>                                
+                </div>
+            </div>
+            <div class="survey_content_last survey_content">
+                <h2>설문조사 완료</h2>
+                    <div class = "userInfo_title">설문에 응해주셔서 감사드립니다. </div>
+                <!-- <div class="btn-box moblie_bt_group moblie_bt_groupLast">
+                    <button class="process-large LastStepBt" type="button" name="LaststepBt">나가기</button>                           
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

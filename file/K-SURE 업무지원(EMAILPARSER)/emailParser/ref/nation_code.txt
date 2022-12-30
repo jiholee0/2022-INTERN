@@ -1,0 +1,267 @@
+대한민국	100	Republic of Korea	2
+북한	104	Democratic People's Republic of Korea	100
+아프가니스탄	110	AFGHANISTAN	3
+방글라데시	115	People's Republic of Bangladesh	3
+부탄	116	Kingdom of Bhutan	3
+미얀마	117	Republic of the Union of Myanmar	3
+브루나이	118	BRUNEI DARUSSALAM	3
+대만	120	Taiwan	3
+중국	121	People's Republic of China	2.5
+괌	125	Territory of Guam	2.5
+홍콩	130	HONG KONG	2.7
+인도	135	Republic of India	2.3
+인도네시아	136	INDONESIA	2.5
+영국령 인도양지역	137	British Indian Ocean Territory	3
+일본	140	JAPAN	2.7
+라오스	145	Laos	3
+마카오	150	Macau	3
+말레이시아	151	Malaysia	2.3
+몰디브	152	MALDIVE	3
+북마리아나 군도	153	Commonwealth of the Northern Mariana Islands	2.5
+몽골	154	Mongolian Peoples's Republic	100
+네팔	155	Kingdom of Nepal	3
+파키스탄	160	Islamic Republic of Pakistan	3
+필리핀	165	PHILIPPINES	3
+시킴	170	SIKKIM	
+싱가포르	171	SINGAPORE	2.3
+스리랑카	175	Democratic Socialist Republic of Sri Lanka	3
+베트남	176	Sociallist Republic of Vietnam	3
+태국	180	Thailand	2.5
+캄보디아	181	Cambodia	3
+바레인	210	Kingdom of Bahrain	3
+사이프러스	215	Republic of Cyprus	3
+이란	220	Islamic Republic of Iran	3
+이라크	221	Republic of Iraq	3
+이스라엘	223	Israel	2.7
+요르단	230	Hashemite Kingdom of Jordan	3
+쿠웨이트	235	State of Kuwait	3
+레바논	240	Lebanese Republic	3
+오만	245	Sultanate of Oman	3
+팔레스타인	248	PALESTINE	2.7
+카타르	250	Qatar	3
+사우디아라비아	255	Saudi Arabia	3
+시리아	259	Syrian Arab Republic	3
+터키	275	Republic of Turkey	2.7
+아랍에미리트 연합	280	United Arab Emirates	3
+예멘	285	Republic of Yemen	3
+알바니아	305	Republic of Albania	3
+아르메니아	306	Republic of Armenia	3
+아제르바이잔	307	Republic of Azerbaijan	3
+안도라	310	Andorra	2
+오스트리아	311	Austria	2
+크로아티아	312	Republic of Croatia	3
+보스니아-헤르체코비나	313	Republic of Bosnia and Herzegovina	3
+불가리아	314	Republic of Bulgaria	3
+벨기에	315	Belgium	1.5
+벨라루스	316	Republic of Belarus	3
+덴마크	317	Denmark	2
+체코	318	Czech Republic	3
+슬로바키아	319	Slovak Republic	3
+핀란드	320	Finland	2
+프랑스	321	France	1.5
+에스토니아	322	Republic of Estonia	3
+조지아	323	Georgia	3
+독일	325	Federal Republic of Germany	1.5
+지브랄타	326	Gibraltar	2
+그리스	327	Greece	2
+헝가리	328	Republic of Hungary	3
+그린랜드	329	Greenland	3
+아이슬란드	330	Iceland	2
+아일랜드	331	Ireland	1.5
+이탈리아	332	Italy	1.5
+카자흐스탄	333	Republic of Kazakhstan	3
+키르기즈공화국	334	Kyrgyz Republic	3
+맨섬	335	Isle of Man	2
+리히텐슈타인	338	Liechtenstein	2
+라트비아	339	Republic of Latvia	3
+룩셈부르크	340	Luxembourg	2
+리투아니아	341	Republic of Lithuania	3
+북마케도니아	343	Republic of North Macedonia	3
+몰타	345	Malta	2
+몰도바	346	Republic of Moldova	3
+모나코	347	Monaco	2
+네덜란드	349	Netherlands	1.5
+노르웨이	350	Norway	2
+폴란드	351	Republic of Poland	3
+포르투갈	352	Portugal	1.5
+루마니아	353	Romania	3
+산 마리노	354	San Marino	2
+스페인	355	Spain	1.5
+세르비아	356	Republic of Serbia	3
+스웨덴	357	Sweden	2
+스위스	358	Swiss	2
+영국	360	United Kingdom	1
+러시아	361	Russian Federation	2.7
+바티칸	362	Vatican City State	2
+차넬군도(저지)	363	Bailiwick of Jersey	2
+타지키스탄	364	Republic of Tajikistan	3
+투르크메니스탄	365	Turkmenistan	3
+우크라이나	366	Ukraine	2.7
+우즈베키스탄	367	Republic of Uzbekistan	3
+차넬군도(건지)	368	Bailiwick of Guernsey	2
+슬로베니아	370	Republic of Slovenia	3
+알랜드아일랜드	371	ALAND ISLANDS	2
+스발바드	372	SVALBARD AND JAN MAYEN	2
+잔메이엔	373	JAN MAYEN	2
+몬테네그로	375	Republic of Montenegro	3
+코소보	376	Republic of Kosovo	3
+캐나다	410	Canada	1.5
+미국	450	United States of America	1.5
+세인트 피에르 미켈론	490	Territorial collectivity of St. Pierre and Miquelon	1.5
+앵귈라	501	Anguilla	2.5
+아르헨티나	503	Argentine	2.5
+앤티가 바부다	504	Antigua and Barbuda	2.5
+아루바	505	Aruba	2.5
+영국령 버진군도	506	British Virgin Isalnds	2.5
+바하마	507	Commonwealth of the Bahamas	2.5
+바베이도스	508	Barbados	2.5
+버뮤다	509	Bermuda	2.5
+볼리비아	510	Plurinational State of Bolivia	2.5
+브라질	511	Brazil	2.5
+벨리즈	512	Belize	2.5
+케이만군도	513	Cayman Islands	2.5
+아조레스	514	Azores	
+칠레	516	Republic of Chile	2.5
+콜롬비아	517	Colombia	2.5
+코스타리카	518	Republic of Costa Rica	2.5
+쿠바	519	Republic of Cuba	2.5
+도미니카공화국	520	Dominican Republic	2.5
+도미니카 연방	521	Commonwealth of Dominica	2.5
+에콰도르	525	Ecuador	2.5
+엘살바도르	527	Republic of El Salvador	2.5
+포클랜드군도	528	Falkland Islands(Malvinas)	2.5
+프랑스령 기아나	529	FRENCH GUIANA	2.5
+과테말라	530	Republic of Guatemala	2.5
+그레나다	531	Grenada	2.5
+과달루프	532	Department of Guadeloupe	2.5
+가이아나	534	Cooperative Republic of Guyana	2.5
+아이티	540	Republic of Haiti	2.5
+온두라스	542	Republic of Honduras	2.5
+자메이카	544	Jamaica	2.5
+말티니크	547	Department of Martinique	2.5
+몬트세라트	548	Montserrat	2.5
+멕시코	550	Mexico	2.5
+니카라과	552	Republic of Nicaragua	2.5
+파나마	557	Republic of Panama	2.5
+파라과이	558	Republic of Paraguay	2.5
+페루	560	Republic of Peru	2.3
+푸에르토리코	562	Commonwealth of Puerto Rico	2.5
+세인트 키츠 네비스	563	Saint Kitts and Nevis	2.5
+세인트 루시아	566	Saint Lucia	2.5
+수리남	570	Republic of Suriname	2.5
+세인트 빈센트 그레나딘	571	Saint Vincent and the Grenadines	2.5
+트리니다드토바고	572	Republic of Trinidad and Tobago	2.5
+터크스 카이코스군도	573	Turks and Caicos Islands	2.5
+우루과이	575	Oriental Republic of Uruguay	2.5
+베네수엘라	580	Bolivarian Republic of Venezuela	2.5
+미국령 버진군도	581	United States Virgin Islands	2.5
+나바사섬	582	Navassa Island	2.5
+중남미 기타국가	599	-	
+알제리	602	People's Democratic Republic of Algeria	3
+앙골라	603	Angola	3
+베넹	605	Benin	3
+보츠와나	606	Botswana	3
+부룬디	607	Republic of Burundi	3
+코모로	608	Union of the Comoros	3
+남수단	609	The Republic of South Sudan	3
+카메룬	610	Cameroon	3
+카나리 군도	611	Canary Islands	
+카보베르데	612	Republic of Cape Verde	3
+중앙아프리카공화국	613	Central African Republic	3
+차드	614	Republic of Chad	3
+콩고	615	Republic of the Congo	3
+코트디부아르	616	COTE D'IVOIRE	3
+지부티	617	Djibouti	3
+이집트	618	Arab Republic of Egypt	3
+적도기니	619	Republic of Equatorial Guinea	3
+에티오피아	620	Ethiopia	3
+에리트리아	621	State of Eritrea	3
+부르키나파소	623	BURKINA FASO	3
+가봉	625	Gabonese Republic	3
+감비아	626	Gambia	3
+가나	627	Ghana	3
+기니	628	Guinea	3
+기니비사우	629	Republic of Guinea-Bissau	3
+케냐	630	Kenya	3
+레소토	635	Kingdom of Lesotho	3
+라이베리아	636	Liberia	3
+리비아	637	Great Socialist People's Libyan Arab Jamahiriya	3
+마다가스카르	638	Madagascar	3
+말라위	641	Malawi	3
+말리	642	Mali	3
+모리타니아	643	MAURITANIA	3
+모리셔스	644	MAURITIUS	3
+모로코	645	Morocco	3
+모잠비크	646	MOZAMBIQUE	3
+마요뜨	647	Department Collectivity of Mayotte	3
+니제르	650	Republic of Niger	3
+나이지리아	651	Nigeria	3
+나미비아	652	Namibia	3
+레위니옹	655	Reunion	3
+남아프리카공화국	657	SOUTH AFRICA	3
+르완다	659	Rwanda	3
+상투메프린시페	666	Democratic Republic of Sao Tome and Principe	3
+세네갈	667	Senegal	3
+세이셸	668	Seychelles	3
+시에라리온	669	Sierra Leone	3
+소말리아	670	Somalia	3
+수단	673	Republic of the Sudan	3
+에스와티니	674	Kingdom of Eswatini	3
+세인트헬레나	675	Saint Helena and Dependencies	3
+토고	680	Togo	3
+튀니지	681	Tunisian Republic	3
+트리스탄 다 쿠냐	683	Tristan Da Cunha	
+우간다	687	Uganda	3
+탄자니아	690	Tanzania	3
+콩고민주공화국	691	DRC Congo	3
+잠비아	692	Zambia	3
+짐바브웨	694	Zimbabwe	3
+세우타	695	Ceuta	3
+멜리야	696	Melilla	3
+호주	701	Australia	2.5
+피지	702	Republic of the Fiji Islands	2.5
+뉴질랜드	703	New Zealand	2.5
+뉴칼레도니아	704	Territory of New Caledonia and Dependencies	2.5
+호주남극속령	705	Australian Antarctic Territory	2.5
+베이커홀랜드섬	706	Baker and Howland Islands	2.5
+영국남극속령	707	British Antarctic Territory	2.5
+코랄섬	708	Coral Sea Islands Territory	2.5
+프랑스령 극남군도	709	French Southern and Antarctic Territory	2.5
+프랑스령 폴리네시아	711	Overseas Lands of French Polynesia	2.5
+허드섬	712	Heard Island and McDonald Islands	2.5
+미크로네시아	713	Federated States of Micronesia	2.5
+자비스섬	714	JARVIS(JAVIS) ISLAND	2.5
+마리아나 군도	715	Mariana Islands	
+킹맨리프	716	Kingman Reef	2.5
+미드웨이섬	717	Midway Island	2.5
+노르웨이속령	719	Norwegian Dependencies	2.5
+나우루	720	Republic of Nauru	2.5
+팔미라	721	Palmyra	2.5
+로스속령	722	Ross Dependency	2.5
+웨이크아일랜드	723	Wake Island	2.5
+팔라우	730	Republic of Palau	2.5
+파푸아뉴기니	732	Indepedent State of Papua New Guinea	3
+솔로몬제도	740	Solomon Islands	2.5
+남조지아.남샌드위치군도	741	South Georgia and South Sandwich Islands	2.5
+아쉬모아 카르티어 아일랜드	742	ASHMORE AND CARTIER ISLANDS	3
+크리스마스섬	743	CHRISTMAS ISLAND	3
+코코스 군도	744	Territory of Cocos (Keeling) Islands	3
+노포크 아일랜드	745	Territory of Norfolk Island	2.5
+통가	755	Kingdom of Tonga	2.5
+사모아	760	Independent State of Samoa	2.5
+미국령 사모아	761	Territory of American Samoa	2.5
+투발루	762	Tuvalu	2.5
+쿡제도	763	Cook Islands	2.5
+존스톤 아일랜드	764	Johnston ATOLL I.S.	2.5
+키리바시	765	Republic of Kiribati	2.5
+마샬군도	766	Marshall Islands	2.5
+니우에	768	Niue	2.5
+피트케안군도	769	Pitcairn Islands	2.5
+토켈라우	770	Tokelau	2.5
+바누아투	772	Republic of Vanuatu	2.5
+월리스푸투나제도	774	Territory of the Wallis and Futuna Islands	2.5
+페로군도	781	Faroe Islands	2
+동티모르	782	Democratic Republic of Timor-Leste	3
+퀴라소	012	CURACAO	
+프랑스령 생마르탱	013	Overseas Collectivity of Saint Martin	
+프랑스령 생바르텔레미	014	Collectivite de Saint Barthelemy	

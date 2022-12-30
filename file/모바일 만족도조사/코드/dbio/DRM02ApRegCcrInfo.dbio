@@ -1,0 +1,177 @@
+<select id="selectOneApPubQstnr" parameterType="nice.em.rm01.online.service.dto.SRM01ApPubQstnrInDto" resultType="nice.em.rm01.online.dbio.dto.DRM02ApPubQstnrOutDto">
+SELECT
+     AP_NO         AS apNo        /** 신청번호 */      
+    ,AP_SVC_GBCD   AS apSvcGbcd   /** 신청서비스구분코드 */ 
+    ,DTL_SEQ       AS dtlSeq      /** 상세순번 */      
+    ,QSTNR_YMD     AS qstnrYmd    /** 설문일자 */      
+    ,QUSTN_NO1     AS qstr1       /** Q1 */    
+    ,QUSTN_NO2     AS qstr2       /** Q2 */    
+    ,QUSTN_NO3     AS qstr3       /** Q3 */    
+    ,QUSTN_NO4     AS qstr4       /** Q4 */    
+    ,QUSTN_NO5     AS qstr5       /** Q5 */    
+    ,QUSTN_NO6     AS qstr6       /** Q6 */    
+    ,QUSTN_NO7     AS qstr7       /** Q7 */    
+    ,QUSTN_NO8     AS qstr8       /** Q8 */    
+    ,QUSTN_NO9     AS qstr9       /** Q9 */    
+    ,QUSTN_NO10    AS qstr10      /** Q10 */    
+    ,QUSTN_NO11    AS qstr11      /** Q11 */    
+    ,QUSTN_YN1     AS qustn1Yn    /** 질문12여부 */     
+    ,QUSTN_TEXT1   AS qustn1Cnts  /** 질문12내용 */     
+    ,QUSTN_YN2     AS qustn2Yn    /** 질문13여부 */     
+    ,QUSTN_TEXT2   AS qustn2Cnts  /** 질문13내용 */
+    ,ETC_TEXT1     AS optQstr1    /** 선택문항1 */
+    ,ETC_TEXT2     AS optQstr2    /** 선택문항2 */
+    ,MODI_ID       AS modiId      /** 수정자ID */     
+    ,MODI_DT       AS modiDt      /** 수정일시 */      
+    ,FST_REG_ID    AS fstRegId    /** 최초등록자ID */   
+    ,FST_REG_DT    AS fstRegDt    /** 최초등록일시 */    
+    ,RSPT_NM       AS rsptNm      /** 응답자명 */      
+    ,RSPT_TEL      AS rsptTel     /** 응답자전화번호 */   
+    ,RSPNS_STAT_CD AS rspnsStatCd /** 응답상태코드 */
+    ,AGREE_YN      AS giftAyn     /** 사은품약관동의여부 */
+    ,CONN_GB	     AS connGb     /** 접속구분 */
+FROM AP_PUB_QSTNR_NEW 
+WHERE 1=1
+  AND AP_NO = #{apNo, jdbcType=VARCHAR}
+  AND AP_SVC_GBCD = #{apSvcGbcd, jdbcType=VARCHAR}
+  UNION ALL
+SELECT
+     AP_NO         AS apNo        /** 신청번호 */      
+    ,AP_SVC_GBCD   AS apSvcGbcd   /** 신청서비스구분코드 */ 
+    ,DTL_SEQ       AS dtlSeq      /** 상세순번 */      
+    ,QSTNR_YMD     AS qstnrYmd    /** 설문일자 */      
+    ,NULL     AS qstr1       /** Q1 */    
+    ,NULL     AS qstr2       /** Q2 */    
+    ,NULL     AS qstr3       /** Q3 */    
+    ,NULL     AS qstr4       /** Q4 */    
+    ,NULL     AS qstr5       /** Q5 */    
+    ,NULL     AS qstr6       /** Q6 */    
+    ,NULL     AS qstr7       /** Q7 */    
+    ,NULL     AS qstr8       /** Q8 */    
+    ,NULL     AS qstr9       /** Q9 */    
+    ,NULL    AS qstr10      /** Q10 */    
+    ,NULL    AS qstr11      /** Q11 */    
+    ,NULL     AS qustn1Yn    /** 질문12여부 */     
+    ,NULL   AS qustn1Cnts  /** 질문12내용 */     
+    ,NULL     AS qustn2Yn    /** 질문13여부 */     
+    ,NULL   AS qustn2Cnts  /** 질문13내용 */
+    ,NULL     AS optQstr1    /** 선택문항1 */
+    ,NULL     AS optQstr2    /** 선택문항2 */
+    ,MODI_ID       AS modiId      /** 수정자ID */     
+    ,MODI_DT       AS modiDt      /** 수정일시 */      
+    ,FST_REG_ID    AS fstRegId    /** 최초등록자ID */   
+    ,FST_REG_DT    AS fstRegDt    /** 최초등록일시 */    
+    ,RSPT_NM       AS rsptNm      /** 응답자명 */      
+    ,RSPT_TEL      AS rsptTel     /** 응답자전화번호 */   
+    ,RSPNS_STAT_CD AS rspnsStatCd /** 응답상태코드 */
+    ,''      AS giftAyn     /** 사은품약관동의여부 */
+    ,NULL      AS connGb     /** 접속구분 */
+FROM AP_PUB_QSTNR
+ WHERE 1=1 
+  AND AP_NO = #{apNo, jdbcType=VARCHAR}
+  AND AP_SVC_GBCD = #{apSvcGbcd, jdbcType=VARCHAR}
+  ORDER BY QSTNRYMD DESC FETCH FIRST 1 ROW ONLY
+</select>
+<insert id="insertApPubQstnr" parameterType="nice.em.rm01.online.service.dto.SRM01ApPubQstnrInDto">
+MERGE INTO AP_PUB_QSTNR_NEW 
+USING DUAL 
+	ON (AP_NO = #{apNo,jdbcType=NUMERIC} 
+	AND AP_SVC_GBCD = #{apSvcGbcd,jdbcType=VARCHAR} 
+	<if test="dtlSeq != null and dtlSeq != ''">
+	AND DTL_SEQ = #{dtlSeq,jdbcType=VARCHAR} 
+	</if>)
+WHEN MATCHED THEN
+UPDATE SET 
+     QSTNR_YMD =  TO_CHAR(SYSDATE , 'YYYYMMDD')    /** 설문일자 */      
+    ,QUSTN_NO1	= #{qstr1, jdbcType=VARCHAR}    /** 질문1 */     
+    ,QUSTN_NO2	= #{qstr2, jdbcType=VARCHAR}    /** 질문2 */     
+    ,QUSTN_NO3	= #{qstr3, jdbcType=VARCHAR}    /** 질문3 */     
+    ,QUSTN_NO4	= #{qstr4, jdbcType=VARCHAR}    /** 질문4 */     
+    ,QUSTN_NO5	= #{qstr5, jdbcType=VARCHAR}    /** 질문5 */     
+    ,QUSTN_NO6	= #{qstr6, jdbcType=VARCHAR}    /** 질문6 */     
+    ,QUSTN_NO7	= #{qstr7, jdbcType=VARCHAR}    /** 질문7 */     
+    ,QUSTN_NO8	= #{qstr8, jdbcType=VARCHAR}    /** 질문8 */     
+    ,QUSTN_NO9	= #{qstr9, jdbcType=VARCHAR}    /** 질문9 */     
+    ,QUSTN_NO10	= #{qstr10, jdbcType=VARCHAR}   /** 질문10 */     
+    ,QUSTN_NO11	= #{qstr11, jdbcType=VARCHAR}   /** 질문11 */     
+    ,QUSTN_YN1    = #{qustn1Yn, jdbcType=VARCHAR}    /** 질문12여부 */     
+    ,QUSTN_TEXT1  = #{qustn1Cnts, jdbcType=VARCHAR}  /** 질문12내용 */     
+    ,QUSTN_YN2    = #{qustn2Yn, jdbcType=VARCHAR}    /** 질문13여부 */     
+    ,QUSTN_TEXT2  = #{qustn2Cnts, jdbcType=VARCHAR}  /** 질문13내용 */     
+    ,ETC_TEXT1	=  #{optQstr1, jdbcType=VARCHAR}  /** 선택문항1 */     
+    ,ETC_TEXT2 =  #{optQstr2, jdbcType=VARCHAR}  /** 선택문항2 */     
+    ,MODI_ID       = #{modiId, jdbcType=VARCHAR}      /** 수정자ID */     
+    ,MODI_DT       = SYSDATE          /** 수정일시 */         
+    ,RSPT_NM       = #{rsptNm, jdbcType=VARCHAR}      /** 응답자명 */      
+    ,RSPT_TEL      = #{rsptTel, jdbcType=VARCHAR}     /** 응답자전화번호 */   
+    ,RSPNS_STAT_CD = #{rspnsStatCd, jdbcType=VARCHAR} /** 응답상태코드 */
+    ,AGREE_YN	=  #{giftAyn, jdbcType=VARCHAR} /** 사은품약관동의 */
+    ,QUSTN_NO12 	=  #{optQstr1No, jdbcType=VARCHAR} /** 기타문항14 숫자 */
+    ,CONN_GB 	= #{connGb, jdbcType=VARCHAR} /** 접속구분 */
+WHEN NOT MATCHED THEN
+INSERT (
+     AP_NO         		/** 신청번호 */      
+    ,AP_SVC_GBCD   /** 신청서비스구분코드 */ 
+    ,DTL_SEQ      		/** 상세순번 */      
+    ,QSTNR_YMD     	/** 설문일자 */      
+    ,QUSTN_NO1		/** 질문1 */
+    ,QUSTN_NO2		/** 질문2 */
+    ,QUSTN_NO3		/** 질문3 */
+    ,QUSTN_NO4		/** 질문4 */
+    ,QUSTN_NO5		/** 질문5 */
+    ,QUSTN_NO6		/** 질문6 */
+    ,QUSTN_NO7		/** 질문7 */
+    ,QUSTN_NO8		/** 질문8 */
+    ,QUSTN_NO9		/** 질문9 */
+    ,QUSTN_NO10		/** 질문10 */
+    ,QUSTN_NO11		/** 질문11 */
+    ,QUSTN_YN1    	/** 질문1여부 */     
+    ,QUSTN_TEXT1    /** 질문1내용 */     
+    ,QUSTN_YN2    	/** 질문2여부 */     
+    ,QUSTN_TEXT2	    /** 질문2내용 */  
+    ,ETC_TEXT1   		/** 선택문항1 */  
+    ,ETC_TEXT2			/** 선택문항2 */  
+    ,FST_REG_ID    	/** 최초등록자ID */   
+    ,FST_REG_DT    	/** 최초등록일시 */    
+    ,RSPT_NM      		/** 응답자명 */      
+    ,RSPT_TEL      		/** 응답자전화번호 */   
+    ,RSPNS_STAT_CD /** 응답상태코드 */
+    ,AGREE_YN			/** 사은품약관동의 */
+    ,QUSTN_NO12    /** 기타문항14 숫자 */
+    ,CONN_GB			/** 접속구분  */
+)
+VALUES(
+     #{apNo,jdbcType=NUMERIC} /** 신청번호  */           
+    ,#{apSvcGbcd,jdbcType=VARCHAR} /** 신청서비스구분코드  */ 
+    ,(  SELECT NVL(MAX(DTL_SEQ),0)+1
+          FROM AP_PUB_QSTNR_NEW 
+         WHERE AP_NO = #{apNo,jdbcType=NUMERIC} 
+           AND AP_SVC_GBCD = #{apSvcGbcd,jdbcType=VARCHAR})  /** 상세순번  */          
+    ,TO_CHAR(SYSDATE , 'YYYYMMDD') /** 설문일자  */       
+    ,#{qstr1,jdbcType=VARCHAR} /** 질문1  */      
+    ,#{qstr2,jdbcType=VARCHAR} /** 질문2  */      
+    ,#{qstr3,jdbcType=VARCHAR} /** 질문3  */      
+    ,#{qstr4,jdbcType=VARCHAR} /** 질문4  */      
+    ,#{qstr5,jdbcType=VARCHAR} /** 질문5  */      
+    ,#{qstr6,jdbcType=VARCHAR} /** 질문6  */      
+    ,#{qstr7,jdbcType=VARCHAR} /** 질문7  */      
+    ,#{qstr8,jdbcType=VARCHAR} /** 질문8  */      
+    ,#{qstr9,jdbcType=VARCHAR} /** 질문9  */      
+    ,#{qstr10,jdbcType=VARCHAR} /** 질문10  */      
+    ,#{qstr11,jdbcType=VARCHAR} /** 질문11  */      
+    ,#{qustn1Yn,jdbcType=VARCHAR} /** 질문1여부  */      
+    ,#{qustn1Cnts,jdbcType=VARCHAR} /** 질문1내용  */    
+    ,#{qustn2Yn,jdbcType=VARCHAR} /** 질문2여부  */      
+    ,#{qustn2Cnts,jdbcType=VARCHAR} /** 질문2내용  */    
+    ,#{optQstr1,jdbcType=VARCHAR} /** 선택문항1  */    
+    ,#{optQstr2,jdbcType=VARCHAR} /** 선택문항2  */    
+    ,#{fstRegId,jdbcType=VARCHAR} /** 최초등록자ID  */    
+    ,SYSDATE /** 최초등록일시  */            
+    ,#{rsptNm,jdbcType=VARCHAR} /** 응답자명  */         
+    ,#{rsptTel,jdbcType=VARCHAR} /** 응답자전화번호  */     
+    ,#{rspnsStatCd,jdbcType=VARCHAR} /** 응답상태코드  */
+    ,#{giftAyn,jdbcType=VARCHAR} /** 사은품약관동의  */
+    ,#{optQstr1No,jdbcType=VARCHAR} /** 기타문항14 숫자 */
+    ,#{connGb, jdbcType=VARCHAR} /** 접속구분 */
+)
+</insert>

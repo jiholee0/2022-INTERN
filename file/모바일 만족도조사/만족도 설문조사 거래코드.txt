@@ -1,0 +1,18 @@
+만족도조사 등록 및 수정
+RM0201R031
+NceEvl-onl
+SRM0201
+createApPubQstnr
+
+만족도조사 조회
+RM0201R031
+NceEvl-onl
+SRM0201
+getApPubQstnr
+
+로그인
+YM0401U001
+NceCom-onl
+SYM0401
+callLoginOperation
+

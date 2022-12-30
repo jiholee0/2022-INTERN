@@ -1,0 +1,396 @@
+<!--MAIN CONTENTS AREA-->
+<section id="workspace" class="main-contents">
+	<section data-page="MENURI2142" class="on">
+		<!-- body-header-container -->
+		<div class="body-header-container head-img-01">
+			<ul class="current-nav">
+				<li><a href="###"><span class="glyphicon glyphicon-home"></span></a></li>
+				<li><span class="glyphicon glyphicon-menu-right"></span></li>
+				<li><a href="###">평가안내</a></li>
+				<li><span class="glyphicon glyphicon-menu-right"></span></li>
+				<li><a href="###">제출서류 안내</a></li>
+			</ul>
+			<!-- header text info -->
+			<dl>
+				<dt>공사계약실적 실태표 입력<span id="cnstYQ" style="font-size:2rem"></span></dt>
+				<dd>신청한 서비스에 맞게 서류를 확인하시고 제출서류를 온라인으로 업로드(제출)해주시기 바랍니다.</dd>
+			</dl>
+			<!--//header text info -->
+		</div>
+		<!-- /body-header-container -->
+		<section class="statusTable_wrap">
+			<div class="mb10 mt10">
+				<div style="float:left"><a href="/docs/ri/ri_sub_2142.pdf" target="_blank" title="" style="text-decoration:none"><button class="btn-danger">작성 매뉴얼 다운로드</button></a></div>
+				<div class="align-r"><button class="btn-danger btn-excel" style="background-color:#000; border-color:#000;">입력내용 일괄 다운로드</button></div>
+			</div>
+			<div class="attention-box">
+				<h5>
+					<i class="fa fa-info-circle" aria-hidden="true"></i> 주의사항
+				</h5>
+				<ul class="list-small-dot">
+					<li><b>작성 매뉴얼</b> 참고해 입력</li>
+					<li>입력일 기준 분기에 진행 중 또는 종료 되는 공사의 계약 정보를 모두 입력</li><br>					
+					<li><b>계약 삭제 : </b>선택된 행에서 작성된 계약내용 삭제</li>
+					<li><b>기본계약 추가 : </b>새로운 기본계약 입력 행 추가</li>
+					<li><b>변경계약 추가 : </b>해당 기본계약 행을 선택하신 후 [변경계약 추가] 클릭</li>
+					<li><b>단순 기성금액 변경 : </b>변경된 기성액 작성 후 클릭하면 잔여액 자동 계산됨</li>
+					<li><b>최종제출 : </b>최종 제출 후 변경이 어려우니, [입력내용 일괄 다운로드]를 통해 백업 필요<br>
+					&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;최종 제출 후 추가 변경은 유선 문의 &lt;고객센터&gt; 02-2122-2550</li>
+					<li>분기별 공사계약실적 업데이트 입력 안내는 부가세 신고기간(4/25, 7/25, 10/25, 1/25)에 맞춰 추후 안내 예정</li>
+				</ul>
+			</div>
+			<div class="upper_table_wrap mt30 mb50">
+				<div class="bt_wrap mb10">
+					<div class="left_bt_wrap">
+						<button style="text-decoration: none;"
+							class="table-btn01 delete-cntr">계약 삭제</button>
+						<button style="text-decoration: none;"
+							class="table-btn01 add-cntr-normal">기본계약 추가</button>
+						<button style="text-decoration: none;"
+							class="table-btn01 add-cntr-change">변경계약 추가</button>
+						<button style="text-decoration: none;"
+							class="table-btn01 update-cmpl">단순 기성금액 변경</button>
+					</div>
+					<div class="align-r">
+						<button style="text-decoration: none;" class="table-btn01 saveBt" name="saveBt" data-action="10">중간저장</button>
+						<button style="text-decoration: none;" class="table-btn01 submitBt" name="submitBt" data-action="20">최종제출</button>
+					</div>
+				</div>
+				<div class="table-container mt10"
+					style="height: 400px; width: 938px;">
+					<table class="table situation-table" id="cnstCntrTable"
+						style="width: 3000px;">
+						<colgroup>
+							<col width="1.5%">
+							<col width="1.6%">
+							<col width="2%">
+							<col width="3%">
+							<col width="3%">
+							<col width="6%">
+							<col width="4%">
+							<col width="3%">
+							<col width="8%">
+							<col width="8%">
+							<col width="6%">
+							<col width="6%">
+							<col width="7.3%">
+							<col width="5%">
+							<col width="5%">
+							<col width="5%">
+							<col width="5%">
+							<col width="5%">
+							<col width="5%">
+							<col width="2.5%">
+							<col width="2.5%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>선택</th>
+								<th>순번</th>
+								<th>제출단계</th>
+								<th>계약구분</th>
+								<th>분류</th>
+								<th>면허</th>
+								<th>광역시도</th>
+								<th>시</th>
+								<th>원도급 공사명</th>
+								<th>하도급 공사명</th>
+								<th>발주자명</th>
+								<th>원청사명</th>
+								<th>원청사 사업자번호</th>
+								<th>계약액(원)</th>
+								<th>기성액(원)</th>
+								<th>잔여액(원)</th>
+								<th>계약일</th>
+								<th>착공일</th>
+								<th>준공일</th>
+								<th>종료여부</th>
+								<th>기제출된서류</th>
+								<th>비고</th>
+							</tr>
+						</thead>
+						<tbody id="cnstCntrTable-list-id">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</section>
+</section>
+
+<script type="text/x-handlebars-template" id="cnstCntrTable-setting-tmp">
+{{#each cnstCntrList}}
+<tr id="cnstCntrTableRow{{seq}}_{{seqGb}}">
+	<td>
+		<input class="mr5 input_check" id="input_check" name="input_check" type="checkbox" value="">
+	</td>
+	{{#isEqual seqGb '0'}}
+	<td name="cnt" style="text-align:center;">{{seq}}</td>
+	{{else}}
+	<td name="cnt" style="text-align:center;">{{seq}}-{{seqGb}}</td>
+	{{/isEqual}}
+	<td name="cnstStatNm" style="text-align:center;">
+		{{#isEqual cnstStatCd '10'}}작성중{{else}}제출완료{{/isEqual}}
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_cntr_gb" name="input_cntr_gb" data-form-param="contractClassFm" value="{{cntrGb}}" disabled>
+		</select>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_cls" name="input_cls" data-form-param="classificationFm" value="{{cls}}" disabled>
+		</select>
+	</td>
+	<td class="nor">
+		<div class="layer-12">
+			<input class="tax-com-info post-input" id="input_lcns" name="prdItemCd" type="text" value="{{lcnsNm}}" prdCd="{{lcns}}" style="background:#eeeeee; :-ms-input-placeholder.form-control" disabled>
+			<button type="button" class="tax-com-btn post-button" name="poptest" disabled>검색</button>
+		</div>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_sido" name="input_sido" data-form-param="divisionFm" value="{{sido}}" disabled>
+		</select>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_si" name="input_si" data-form-param="cityFm" value="{{si}}" disabled>
+			<option value="">선택</option>
+		</select>
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_orgn_cntr" name="input_orgn_cntr" type="text" value="{{orgnCntr}}" maxlength="128" disabled>
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_scntr" name="input_scntr" type="text" value="{{scntr}}" maxlength="128" disabled>
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_ordpr_nm" name="input_ordpr_nm" type="text" value="{{ordprNm}}" maxlength="128" disabled>
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_pmcntr_org_nm" name="input_pmcntr_org_nm" type="text" value="{{pmcntrOrgNm}}" maxlength="128" disabled>
+	</td>
+	<td>
+		<div class="biz-num-form">
+			<div class="biz-content">
+				<input class="first-num numberonly form-control" id="input_bzno1" name="input_bzno1" type="text" value="{{pmcntrOrgBzno1}}" data-form-param="bzno1" maxlength="3" disabled>
+				<span>-</span>
+				<input class="second-num numberonly form-control" id="input_bzno2" name="input_bzno2"  type="text" value="{{pmcntrOrgBzno2}}" data-form-param="bzno2" maxlength="2" disabled>
+				<span>-</span>
+				<input class="third-num numberonly form-control" id="input_bzno3" name="input_bzno3"  type="text" value="{{pmcntrOrgBzno3}}" data-form-param="bzno3" maxlength="5" disabled>
+			</div>
+		</div>
+	</td>
+	<td>
+		<input class="layer-12 form-control text-right moneyinput" id="input_cntr_amt" name="input_cntr_amt" type="text" value="{{cntrAmt}}"  maxlength="19" disabled>
+	</td>
+	<td>
+		<input class="layer-12 form-control text-right moneyinput" id="input_cmpl_amt" name="input_cmpl_amt" type="text" value="{{cmplAmt}}" maxlength="19" disabled>
+	</td>
+	<td>
+		<input class="layer-12 form-control text-right moneyinput" id="input_bal" name="input_bal" type="text" value="{{bal}}" maxlength="19" disabled>
+	</td>
+	<td>
+		<div class="calendar-box small cntrDate">
+			<div class="wrapper">
+				<input class="inp-date-s datepicker dateinput form-control" id="" name="input_cntr_date" type="text" value="{{cntrDate}}" maxlength="10" placeholder="날짜선택"/>
+			</div>
+		</div>
+	</td>
+	<td>
+		<div class="calendar-box small stcsDate">
+			<div class="wrapper">
+				<input class="inp-date-s datepicker dateinput form-control" id="" name="input_stcs_date" type="text" value="{{stcsDate}}" maxlength="10" placeholder="날짜선택"/>
+			</div>
+		</div>
+	</td>
+	<td>
+		<div class="calendar-box small cmplcDate">
+			<div class="wrapper">
+				<input class="inp-date-s datepicker dateinput form-control" id="" name="input_cmplc_date" type="text" value="{{cmplcDate}}" maxlength="10" placeholder="날짜선택"/>
+			</div>
+		</div>
+	</td>
+	<td>
+
+		<select class="form-control select-form" id="input_end_yn" name="input_end_yn" data-form-param="consEndFm" value="{{endYn}}">
+			<option value="Y">Y</option>
+			<option value="N">N</option>
+		</select>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_bf_sbmt_doc_yn" name="input_bf_sbmt_doc_yn" data-form-param="submitDocFm" value="{{bfSbmtDocYn}}" disabled>
+			<option value="Y">Y</option>
+			<option value="N" selected>N</option>
+		</select>
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_note" name="input_note" type="text" value="{{note}}" maxlength="15" disabled>
+	</td>
+	<input class="layer-12 form-control" id="save_yn" name="save_yn" type="hidden" value="N" disabled>
+	<input class="layer-12 form-control" id="input_bf_cnst_stat_cd" name="input_bf_cnst_stat_cd" type="hidden" value="{{cnstStatCd}}" disabled>
+</tr>
+{{/each}}
+</script>
+
+<script type="text/x-handlebars-template" id="cnstCntrTable-add-tmp">
+<tr id="cnstCntrTableRow{{seqId}}_{{seqGbId}}">
+	<td>
+		<input class="mr5 input_check" id="input_check" name="input_check" type="checkbox" value="">
+	</td>
+	{{#isEqual seqGbId '0'}}
+	<td name="cnt" style="text-align:center;">{{seqId}}</td>
+	{{else}}
+	<td name="cnt" style="text-align:center;">{{seqId}}-{{seqGbId}}</td>
+	{{/isEqual}}
+	<td name="cnstStatNm" style="text-align:center;">작성중</td>
+	<td>
+		<select class="form-control select-form" id="input_cntr_gb" name="input_cntr_gb" data-form-param="contractClassFm" value="" disabled>
+		</select>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_cls" name="input_cls" data-form-param="classificationFm" value="">
+		</select>
+	</td>
+	<td class="nor">
+		<div class="layer-12">
+			<input class="tax-com-info post-input" id="input_lcns" name="prdItemCd" type="text" value="" prdCd=""
+			readonly="readonly" style="background:#eeeeee; :-ms-input-placeholder.form-control" disabled="true"/>
+			<button class="tax-com-btn post-button" name="poptest" type="button">검색</button>
+		</div>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_sido" name="input_sido" data-form-param="divisionFm" value="">
+		</select>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_si" name="input_si" data-form-param="cityFm" value="">
+			<option value="">선택</option>
+		</select>
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_orgn_cntr" name="input_orgn_cntr" type="text" value="" maxlength="128">
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_scntr" name="input_scntr" type="text" value="" maxlength="128">
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_ordpr_nm" name="input_ordpr_nm" type="text" value="" maxlength="128">
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_pmcntr_org_nm" name="input_pmcntr_org_nm" type="text" value="" maxlength="128">
+	</td>
+	<td>
+		<div class="biz-num-form">
+			<div class="biz-content">
+				<input class="first-num numberonly form-control" id="input_bzno1" name="input_bzno1" type="text" value=""  data-form-param="bzno1" maxlength="3">
+				<span>-</span>
+				<input class="second-num numberonly form-control" id="input_bzno2" name="input_bzno2" type="text" value=""  data-form-param="bzno2" maxlength="2">
+				<span>-</span>
+				<input class="third-num numberonly form-control"  id="input_bzno3" name="input_bzno3" type="text" value=""  data-form-param="bzno3" maxlength="5">
+			</div>
+		</div>
+	</td>
+	<td>
+		<input class="layer-12 form-control text-right moneyinput" id="input_cntr_amt" name="input_cntr_amt" type="text" value="" maxlength="19">
+	</td>
+	<td>
+		<input class="layer-12 form-control text-right moneyinput" id="input_cmpl_amt" name="input_cmpl_amt" type="text" value="" maxlength="19">
+	</td>
+	<td>
+		<input class="layer-12 form-control text-right moneyinput" id="input_bal" name="input_bal" type="text" value="" maxlength="19" readonly>
+	</td>
+	<td>
+		<div class="calendar-box small cntrDate">
+			<div class="wrapper">
+				<input class="inp-date-s datepicker dateinput form-control" id="" name="input_cntr_date" type="text" value="" placeholder="날짜선택" maxlength="10"/></div>
+		</div>
+	</td>
+	<td>
+		<div class="calendar-box small stcsDate">
+			<div class="wrapper">
+				<input class="inp-date-s datepicker dateinput form-control" id="" name="input_stcs_date" type="text" value="" placeholder="날짜선택" maxlength="10"/>
+			</div>
+		</div>
+	</td>
+	<td>
+		<div class="calendar-box small cmplcDate">
+			<div class="wrapper">
+				<input class="inp-date-s datepicker dateinput form-control" id="" name="input_cmplc_date" type="text" value="" placeholder="날짜선택" maxlength="10"/>
+			</div>
+		</div>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_end_yn" name="input_end_yn" data-form-param="consEndFm" value="">
+			<option value="Y">Y</option>
+			<option value="N" selected>N</option>
+		</select>
+	</td>
+	<td>
+		<select class="form-control select-form" id="input_bf_sbmt_doc_yn" name="input_bf_sbmt_doc_yn" data-form-param="submitDocFm" value="">
+			<option value="Y">Y</option>
+			<option value="N" selected>N</option>
+		</select>
+	</td>
+	<td>
+		<input class="layer-12 form-control" id="input_note" name="input_note" type="text" value="" maxlength="15">
+	</td>
+	<input class="layer-12 form-control" id="save_yn" name="save_yn" type="hidden" value="Y" disabled>
+	<input class="layer-12 form-control" id="input_bf_cnst_stat_cd" name="input_bf_cnst_stat_cd" type="hidden" value="" disabled>
+</tr>
+</script>
+<!-- 건설면허 팝업 -->
+<div class="modal-popup"  id="itemCdPop">
+	<div class="modal-width-max">
+		<!-- detail-view-container -->
+		<div class="detail-view-container">
+			<div class="popup-title">건설면허 검색<a href="#" class="right" name="closeItemCd"><img src="images/button/close.png" title="닫기" /></a></div>
+			<div class="detail-view-contents" style="overflow-y: hidden">
+				<!--  검색영역-->
+				<div class="industry-srchbox">
+					<input type="text" name="prdNm" placeholder="면허명을 입력해 주세요">
+				</div>
+				<!--// 검색영역 -->
+				<!-- 트리영역 -->
+				<div class="industry-treebox">
+					<div class="inner" id="codeList" style="height: 300px;">
+					</div>
+				</div>
+				<!--// 트리영역 -->
+				<!-- 선택된 항목 추가되는 박스 -->
+				<input name="input_select" id="input_select" value="" type="hidden" class="layer-12 form-control" placeholder="" maxlength=""  disabled>
+				<input name="input_select" id="input_select_code" value="" type="hidden" class="layer-12 form-control" placeholder="" maxlength="" disabled>
+
+				<div class="selected-box" id="selectedBoxList">
+				<ul id="selectedBoxUl" class="selectedBoxUl"></ul>
+				</div>
+				<div class="btn-box">
+					<button class="gray" name="closeItemCd">닫기</button>
+					<button name="selectedItemCd" rowid="">선택</button>
+				</div>
+				<!--// 버튼 -->
+			</div>
+		</div>
+		<!--// detail-view-container -->
+	</div>
+</div>
+<!--//  품목코드 리스트  -->
+<script type="text/x-handlebars-template" id="codeListTmp">
+<li class="liRow{{item.cd}}">
+	<a href="#" name="itemCd" prdCd="{{item.cd}}" prdNm="{{item.cdNm}}">
+		{{item.cdNm}}
+	</a>
+</li>
+</script>
+
+<!--//  추가되는 항목 리스트  -->
+<script type="text/x-handlebars-template" id="selectedCodeListTmp">
+<li id="td3Row{{prdCd}}">
+	<div class="layer-12">
+		<input class="layer-12 form-control" id="td1Row{{prdCd}}" name="mgrPst" type="text" value="{{prdNm}}" prdCd="{{prdCd}}" placeholder="" maxlength="20" style="border:0 solid black;"/>
+	</div>
+</li>
+<li class="text-center" id="td2Row{{prdCd}}">
+	<button class="circle-xsmall" name="delSelect" type="button" value ="" title="삭제">
+		<i class="fa fa-minus" aria-hidden="true" name="delRowMgr" value ="">
+		</i>
+	</button>
+</li>
+</script>

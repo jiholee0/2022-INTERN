@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html, body, div, table, img {margin: 0;	padding: 0;	border: 0;}
+		@keyframes IE_alert{  /*팝업 애니메이션 좌표*/
+			from{
+				margin-top:-50px;
+			}
+			to{
+				margin-top:0px;
+			}
+		}
+	</style>
+	<script language="javascript">
+		function setCookie( name, value, expiredays ) // 창 다시 열지 않기 위한 쿠키설정 함수
+		{
+		 var todayDate = new Date();
+		 todayDate.setDate( todayDate.getDate() + expiredays );
+		 document.cookie = name + "=" + escape( value ) + "; path=/;expires=" + todayDate.toGMTString() + ";"
+			 self.close();
+		} 
+	</script>
+</head>
+<body>
+	<div style=" margin:0 auto; padding: 12px 0; border: 0; text-align:center; width:100%; background:#cce0f1; font-size:17px; animation:IE_alert 1.5s ease-out;">
+		<img src="alert.png" style="margin-top:-3px; padding-right:5px; vertical-align: middle;" /><b>인터넷 익스플로러는 더 이상 지원되지 않습니다.</b>
+		<a  href="javascript:setCookie('IE_supportEnd_popup', 'done', 1 )" style = "text-decoration:none; padding-left:30px; font-size:12px; color:#666;">오늘 하루 보지 않기 X</a>
+	</div>
+</body>
+</html>

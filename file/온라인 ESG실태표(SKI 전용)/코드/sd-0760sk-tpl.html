@@ -1,0 +1,1405 @@
+<style>
+.radio-box.q-box {
+	margin-top: 5px;
+}
+</style>
+<!-- 팝업 사이즈 : width:980px / height:810px  -->
+
+<div class="wrap-online-paper" id="start"></div>
+
+<script type="text/x-handlebars-template" id="test">
+		<h2>온라인 ESG실태표(SK)</h2>
+		<div class="issue-date" style="top:20px">
+			<strong>작성일자</strong><span>{{#esgrpt}} <span class="dateinput">{{esgrptRymd}}</span> {{/esgrpt}}</span>
+		</div>
+
+		<!-- 기업개요 -->
+		<div class="step-cont-box">
+			<div class="step-title" style="margin-bottom:20px"><span>STEP 1</span>기업개요</div>
+
+			<div class="cnt-title" style="margin-top:20px"> 인터뷰담당자</div>
+
+			<!-- table  -->
+			{{#esgrpt}}
+			<div class="table-container mt10">
+				<table class="table situation-table" >
+					<colgroup>
+						<col width="8%" />
+						<col width="15%" />
+						<col width="8%" />
+						<col width="30%" />
+						<col width="8%" />
+						<col width="" />
+						<col width="" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>담당자</th>
+							<td>{{chrgNm}}</td>
+							<th>TEL </th>
+							<td>{{chrgTel}}</td>
+							<th>H.P</th>
+							<td colspan="2">{{chrgHp}}</td>
+						</tr>
+						<tr>
+							<th>부서/직급</th>
+							<td>{{chrgDepNm}}</td>
+							<th>FAX</th>
+							<td>{{chrgFax}}</td>
+							<th>Email</th>
+							<td colspan="2">{{chrgEmail}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			{{/esgrpt}}
+			<!-- /table  -->
+
+			<div class="cnt-tbl-title"><span class="process-num2">1</span>기업체 개요 </div>
+
+			<!-- table  -->
+			{{#esgrptCmpOtl}}
+			<div class="table-container mt10">
+				<table class="table situation-table table300" >
+					<colgroup>
+						<col width="15%" />
+						<col width="35%" />
+						<col width="15%" />
+						<col width="35%" />
+					</colgroup>
+
+					<tbody>
+						<tr>
+							<th>사업자번호</th>
+							<td class="bznoinput">{{bzno}}</td>
+							<th>법인등록번호</th>
+							<td class="corpinput">{{corpRegNo}}</td>
+						</tr>
+
+						<tr>
+							<th>기업명(국문)</th>
+							<td>{{cmpHnm}}</td>
+							<th>기업명(영문)</th>
+							<td>{{cmpEnm}}</td>
+						</tr>
+						<tr>
+							<th>사업시작일</th>
+							<td class="dateinput">{{eymd}}</td>
+							<th>홈페이지 주소</th>
+							<td>{{homepgUrl}}</td>
+						</tr>
+						<tr>
+							<th>법인시작일</th>
+							<td class="dateinput">{{corpSymd}}</td>
+							<th>법인전환 해당업체</th>
+ 							<td >{{checkYn}}</td>
+						</tr>
+						<tr>
+							<th>주요산업</th>
+							<td>{{mainIndNm}}</td>
+							<th>산업코드</th>
+							<td>({{ksic}}) {{ksicNm}}</td>
+						</tr>
+						<tr>
+							<th>기업형태</th>
+							<td>{{cmpFormCdNm}}
+							</td>
+							<th>기업규모</th>
+							<td>{{cmpScaleCdNm}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			{{/esgrptCmpOtl}}
+			<!-- /table  -->
+
+			<div class="cnt-tbl-title"><span class="process-num2">2</span>소재지</div>
+
+			{{#esgrptWkpInfo}}
+			<div class="table-container mt10">
+				<table class="table situation-table table300">
+					<colgroup>
+						<col width="15%">
+						<col width="35%">
+						<col width="15%">
+						<col width="35%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>{{wkpGbcdNm}} 주소</th>
+							<td colspan="3">[{{wkpZpcd}}] {{wkpAddr}}{{wkpDtlAddr}}</td>
+						</tr>
+						<tr>
+							<th>{{wkpGbcdNm}} 전화번호</th>
+							<td>{{wkpTel}}</td>
+							<th>{{wkpGbcdNm}} 팩스번호</th>
+							<td>{{wkpFax}}</td>
+						</tr>
+						<tr>
+							<th class="border-right">주요수행업무</th>
+
+							<td colspan="3" style="text-align: left;">
+								<div class="select-box3">
+									<span>주업무 1 : {{mnWrkNm1}}</span>
+								</div>
+								<div class="select-box3">
+									<span>주업무 2 : {{mnWrkNm2}}</span>
+								</div>
+								<div class="select-box3">
+									<span>주업무 3 : {{mnWrkNm3}}</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			{{/esgrptWkpInfo}}
+
+		<!-- 환경(Environmental) -->
+		<div class="step-cont-box">
+			<div class="step-title" style="margin-bottom:20px"><span>STEP 2</span>환경(Environmental)</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">1</span> 환경경영 핵심영역에 대한 목표를 수립하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="env001_01"><input type="radio" class="radio-env" id="env001_01" name="env001" value="01" disabled> 단기 및 중장기 목표 수립</label>
+    <label for="env001_02"><input type="radio" class="radio-env" id="env001_02" name="env001" value="02" disabled> 단기 목표 수립</label>
+    <label for="env001_03"><input type="radio" class="radio-env" id="env001_03" name="env001" value="03" disabled> 목표 수립하지 않았으나 환경경영 미션/비젼/지향점 제시</label>
+    <label for="env001_04"><input type="radio" class="radio-env" id="env001_04" name="env001" value="04" disabled> 목표 미수립 및 방행 미제시</label>
+</div>
+
+			<div class="cnt-tbl-title mt50"><span class="process-num2">2</span> 기업의 환경업무(온실가스, 폐기물, 에너지, 용수, 화학물질 등)를 전담하고 있는 독립조직을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env002_01"><input type="radio" class="radio-env" id="env002_01" name="env002" value="01" disabled> 그렇다</label>
+     <label for="env002_02"><input type="radio" class="radio-env" id="env002_02" name="env002" value="02" disabled> 그렇지 않다</label>
+</div>
+
+			<div id="env002_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">2-1</span> 해당 조직은 현황 점검/평가 시스템을 통해 과제 이행에 따라 구성원의 성과평가지표(KPIs) 반영하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env002_1_01"><input type="radio" class="radio-env" id="env002_1_01" name="env002_1" value="01" disabled> 그렇다</label>
+     <label for="env002_1_02"><input type="radio" class="radio-env" id="env002_1_02" name="env002_1" value="02" disabled> 그렇지 않다</label>
+	</div>
+</div>
+
+			<div id="env002_form_02" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">2-1</span> 환경 담당 조직이 없을 경우 환경 경영을 협의하기 위한 전사 차원의 점검체계를 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env002_2_01"><input type="radio" class="radio-env" id="env002_2_01" name="env002_2" value="01" disabled> 그렇다</label>
+     <label for="env002_2_02"><input type="radio" class="radio-env" id="env002_2_02" name="env002_2" value="02" disabled> 그렇지 않다</label>
+	</div>
+</div>
+
+		<div class="cnt-tbl-title mt50"><span class="process-num2">3</span> 귀사는 당해년도 환경 법규 위반으로 인한 시정명령, 경고, 과태료 등 처벌 사실이 존재합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env003_01"><input type="radio" class="radio-env" id="env003_01" name="env003" value="01" disabled> 그렇다</label>
+     <label for="env003_02"><input type="radio" class="radio-env" id="env003_02" name="env003" value="02" disabled> 그렇지 않다</label>
+</div>
+<div  id="env003_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">3-1</span> 법규 위반 재발 방지를 위하여 사후 개선조치를 시행하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env003_1_01"><input type="radio" class="radio-env" id="env003_1_01" name="env003_1" value="01" disabled> 그렇다</label>
+     <label for="env003_1_02"><input type="radio" class="radio-env" id="env003_1_02" name="env003_1" value="02" disabled> 그렇지 않다</label>
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">4</span> 전사업장에 요구되는 환경 관련 인허가를 취득하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	 <label for="env004_01"><input type="radio" class="radio-env" id="env004_01" name="env004" value="01" disabled> 전사업장 취득</label>
+     <label for="env004_02"><input type="radio" class="radio-env" id="env004_02" name="env004" value="02" disabled> 일부사업장 취득</label>
+     <label for="env004_03"><input type="radio" class="radio-env" id="env004_03" name="env004" value="03" disabled> 미취득</label>
+     <label for="env004_04"><input type="radio" class="radio-env" id="env004_04" name="env004" value="04" disabled> 해당사항 없음</label>
+</div>
+<div id="env004_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">4-1</span> 해당 인허가와 관련하여 규제 변화에 파악 및 대응하는 시스템을 갖추고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env004_1_01"><input type="radio" class="radio-env" id="env004_1_01" name="env004_1" value="01" disabled> 연 1회 규제동향 파악 및 반영</label>
+     <label for="env004_1_02"><input type="radio" class="radio-env" id="env004_1_02" name="env004_1" value="02" disabled> 환경법 설명회 등 참석</label>
+     <label for="env004_1_03"><input type="radio" class="radio-env" id="env004_1_03" name="env004_1" value="03" disabled> 미보유</label>
+	</div>
+</div>
+<div id="env004_form_02" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">4-1</span> 해당 인허가와 관련하여 규제 변화에 파악 및 대응하는 시스템을 갖추고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env004_2_01"><input type="radio" class="radio-env" id="env004_2_01" name="env004_2" value="01"> 연 1회 규제동향 파악 및 반영</label>
+     <label for="env004_2_02"><input type="radio" class="radio-env" id="env004_2_02" name="env004_2" value="02"> 환경법 설명회 등 참석</label>
+     <label for="env004_2_03"><input type="radio" class="radio-env" id="env004_2_03" name="env004_2" value="03" checked> 미보유</label>
+	</div>
+</div>
+
+<div class="cnt-tbl-title mt50"><span class="process-num2">5</span> 친환경 경영시스템을 구축하고 있는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env005_01"><input type="radio" class="radio-env" id="env005_01" name="env005" value="01" disabled> 그렇다
+        <div class="table-container mt10 mb10" id="env005_form_01" style="display:none">
+            <table class="table situation-table" id="env005_item_01">
+                <colgroup>
+                    <col width="5%">
+                    <col width="18%">
+                    <col width="14%">
+                    <col width="">
+                    <col width="15%">
+                    <col width="17%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>순번</th>
+                        <th>항목</th>
+                        <th>상태</th>
+                        <th>인증명</th>
+                        <th>인증번호</th>
+                        <th>유효기간</th>
+                    </tr>
+                </thead>
+                <tbody id="env005-list-id">
+								{{#esgrptCrtiStat}}
+								{{#isEqual qstCd 'ENV005'}}
+									<tr id="env005_crtiStatRow{{crtiSeq}}">
+										<td>{{crtiSeq}}</td>
+										<td>{{crtiKindCdNm}}</td>
+										<td>{{crtiStatCdNm}}</td>
+										<td>{{crtiNm}}</td>
+										<td>{{crtiNo}}</td>
+										<td class="dateinput">{{crtiValiEymd}}</td>
+									</tr>
+								{{/isEqual}}
+								{{/esgrptCrtiStat}}
+							</tbody>
+            </table>
+         </div>
+    </label>
+    <label for="env005_02"><input type="radio" class="radio-env" id="env005_02" name="env005" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">6</span> 친환경 제품, 서비스 등과 관련한 특허를 보유하고 있는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env006_01"><input type="radio" class="radio-env" id="env006_01" name="env006" value="01" disabled> 그렇다
+        <div class="table-container mt10 mb10" id="env006_form_01" style="display:none">
+            <table class="table situation-table" id="env006_item_01">
+                <colgroup>
+                    <col width="5%">
+                    <col width="18%">
+                    <col width="14%">
+                    <col width="">
+                    <col width="15%">
+                    <col width="17%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>순번</th>
+                        <th>항목</th>
+                        <th>상태</th>
+                        <th>인증명</th>
+                        <th>인증번호</th>
+                        <th>유효기간</th>
+                    </tr>
+                </thead>
+                <tbody id="env006-list-id">
+								{{#esgrptCrtiStat}}
+								{{#isEqual qstCd 'ENV006'}}
+									<tr id="env006_crtiStatRow{{crtiSeq}}">
+										<td>{{crtiSeq}}</td>
+										<td>{{crtiKindCdNm}}</td>
+										<td>{{crtiStatCdNm}}</td>
+										<td>{{crtiNm}}</td>
+										<td>{{crtiNo}}</td>
+										<td class="dateinput">{{crtiValiEymd}}</td>
+									</tr>
+								{{/isEqual}}
+								{{/esgrptCrtiStat}}
+							</tbody>
+            </table>
+         </div>
+    </label>
+    <label for="env006_02"><input type="radio" class="radio-env" id="env006_02" name="env006" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">7</span> 친환경 제품, 서비스 등의 개발을 위한 인증을 보유하고 있는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env007_01"><input type="radio" class="radio-env" id="env007_01" name="env007" value="01" disabled> 그렇다
+        <div class="table-container mt10 mb10" id="env007_form_01" style="display:none">
+            <table class="table situation-table" id="env007_item_01">
+                <colgroup>
+                    <col width="5%">
+                    <col width="18%">
+                    <col width="14%">
+                    <col width="">
+                    <col width="15%">
+                    <col width="17%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>순번</th>
+                        <th>항목</th>
+                        <th>상태</th>
+                        <th>인증명</th>
+                        <th>인증번호</th>
+                        <th>유효기간</th>
+                    </tr>
+                </thead>
+                <tbody id="env007-list-id">
+								{{#esgrptCrtiStat}}
+								{{#isEqual qstCd 'ENV007'}}
+									<tr id="env007_crtiStatRow{{crtiSeq}}">
+										<td>{{crtiSeq}}</td>
+										<td>{{crtiKindCdNm}}</td>
+										<td>{{crtiStatCdNm}}</td>
+										<td>{{crtiNm}}</td>
+										<td>{{crtiNo}}</td>
+										<td class="dateinput">{{crtiValiEymd}}</td>
+									</tr>
+								{{/isEqual}}
+								{{/esgrptCrtiStat}}
+							</tbody>
+            </table>
+         </div>
+    </label>
+     <label for="env007_02"><input type="radio" class="radio-env" id="env007_02" name="env007" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">8</span> 경영진 차원의 친환경 제품 확대 의지를 선언하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env008_01"><input type="radio" class="radio-env" id="env008_01" name="env008" value="01" disabled> 그렇다</label>
+     <label for="env008_02"><input type="radio" class="radio-env" id="env008_02" name="env008" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">9</span> 친환경 제품 및 서비스 매출을 구분하여 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env009_01"><input type="radio" class="radio-env" id="env009_01" name="env009" value="01" disabled> 그렇다
+      <div class="form-box" id="env009_form_01" style="display:none">
+            <div class="layer-xs-12">
+                <strong>친환경 제품 및 서비스 매출 비중(%) :</strong>
+                <input name="env009" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+     </label>
+     <label for="env009_02"><input type="radio" class="radio-env" id="env009_02" name="env009" value="02" disabled> 그렇지 않다</label>
+     <label for="env009_03"><input type="radio" class="radio-env" id="env009_03" name="env009" value="03" disabled> 해당사항 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">10</span> 온실가스 감축을 위하여 배출량 관리 및 측정을 시행하는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env010_01"><input type="radio" class="radio-env" id="env010_01" name="env010" value="01" disabled> 그렇다
+      <div class="form-box" id="env010_form_01" style="display:none">
+      <strong>Scope 1 배출량(tCO2eq)</strong><br>
+            <div class="layer-xs-12">
+            	&nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="10_thrYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="10_twoYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="10_oneYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        <br><strong>Scope 2 배출량(tCO2eq)</strong><br>
+            <div class="layer-xs-12">
+            	&nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="10_thrYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="10_twoYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="10_oneYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        <br><strong>배출량 3자 검증</strong><br>
+            <div class="layer-xs-12">
+            	&nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="10_thrYAgo01_3" id="" value="" type="text" class="width-90 height-22" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="10_twoYAgo01_3" id="" value="" type="text" class="width-90 height-22" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="10_oneYAgo01_3" id="" value="" type="text" class="width-90 height-22" maxlength="15" disabled>
+            </div>
+        </div>
+     </label>
+     <label for="env010_02"><input type="radio" class="radio-env" id="env010_02" name="env010" value="02" checked disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">11</span> 온실가스 배출 저감 및 에너지 사용 효율화를 위한 설비 또는 시스템을 도입하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env011_01"><input type="radio" class="radio-env" id="env011_01" name="env011" value="01" disabled> 전체 사업장에 대해 온실가스 배출량 저감을 위한 설비/시스템을 도입</label>
+     <label for="env011_02"><input type="radio" class="radio-env" id="env011_02" name="env011" value="02" disabled> 일부 사업장에 대해 온실가스 배출 저감 및 에너지 사용 효율화를 위한 설비/시스템을 도입</label>
+     <label for="env011_03"><input type="radio" class="radio-env" id="env011_03" name="env011" value="03" disabled> 미도입이나 경영진 차원에서 구체적이고 측정 가능한 온실가스 배출량 저감방법에 대한 계획 보유</label>
+     <label for="env011_04"><input type="radio" class="radio-env" id="env011_04" name="env011" value="04" disabled> 도입 계획 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">12</span> 소비유형별 에너지 사용량을 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box check-lbl mt10">
+	<div class="layer-xs-12">
+     <span style="width:70px; display:inline-block;"><strong>직접사용량</strong></span>
+	    <label for="env012_1_01"><input type="radio" id="env012_1_01" name="env012_1" value="01" disabled> 그렇다</label>
+     	<label for="env012_1_02"><input type="radio" id="env012_1_02" name="env012_1" value="02" disabled> 그렇지 않다</label><br>
+	 <span style="width:70px; display:inline-block;"><strong>간접사용량</strong></span>
+     	<label for="env012_2_01"><input type="radio" id="env012_2_01" name="env012_2" value="01" disabled> 그렇다</label>
+     	<label for="env012_2_02"><input type="radio" id="env012_2_02" name="env012_2" value="02" disabled> 그렇지 않다</label>
+     </div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">13</span> 최근 3개년 전력 사용량 또는 전기료를 측정하고 관리하는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env013_01"><input type="radio" class="radio-env" id="env013_01" name="env013" value="01" disabled> 전력량을 관리하고 있다 (KW)
+        <div class="form-box" id="env013_form_01" style="display:none">
+            <div class="layer-xs-12">
+                <strong>3년 전 :</strong>
+                <input name="13_thrYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="13_twoYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="13_oneYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+    </label>
+    <label for="env013_02"><input type="radio" class="radio-env" id="env013_02" name="env013" value="02" disabled> 전기료를 관리하고 있다 (천원)
+        <div class="form-box" id="env013_form_02" style="display:none">
+            <div class="layer-xs-12">
+                <strong>3년 전 :</strong>
+                <input name="13_thrYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="13_twoYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="13_oneYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+    </label>
+    <label for="env013_03"><input type="radio" class="radio-env" id="env013_03" name="env013" value="03" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">14</span> 에너지 사용량 절감을 위한 시스템을 도입하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env014_01"><input type="radio" class="radio-env" id="env014_01" name="env014" value="01" disabled> 전 사업장에 대해 에너지 사용량 절감을 위한 시스템을 도입</label>
+     <label for="env014_02"><input type="radio" class="radio-env" id="env014_02" name="env014" value="02" disabled> 일부 사업장에 대해 에너지 사용량 절감을 위한 시스템을 도입</label>
+     <label for="env014_03"><input type="radio" class="radio-env" id="env014_03" name="env014" value="03" disabled> 미도입이나 경영진 차원에서 구체적이고 측정 가능한 에너지 사용량 절감방법에 대한 계획 보유</label>
+     <label for="env014_04"><input type="radio" class="radio-env" id="env014_04" name="env014" value="04" disabled> 도입 계획 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">15</span> 재생에너지 사용량을 사용하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env015_01"><input type="radio" class="radio-env" id="env015_01" name="env015" value="01" disabled> 그렇다
+      <div class="form-box" id="env015_form_01" style="display:none">
+      		<strong> 신재생에너지 사용량(JW)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;<strong>3년 전 :</strong>
+                <input name="15_thrYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="15_twoYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="15_oneYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+
+     </label>
+     <label for="env015_02"><input type="radio" class="radio-env" id="env015_02" name="env015" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">16</span> 최근 3개년 폐기물 처리량 또는 폐기물 처리비를 측정하고 관리하는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env016_01"><input type="radio" class="radio-env" id="env016_01" name="env016" value="01" disabled> 폐기물 처리량 또는 위탁 처리량을 관리하고 있다
+        <div class="form-box" id="env016_form_01" style="display:none">
+        	<strong>일반폐기물 배출량(or 위탁처리량)(ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="16_thrYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="16_twoYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="16_oneYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <br><strong>지정폐기물(or 위탁처리량)(ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="16_thrYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="16_twoYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="16_oneYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <br><strong>건설폐기물(or 위탁처리량)(ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="16_thrYAgo01_3" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="16_twoYAgo01_3" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="16_oneYAgo01_3" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+    </label>
+    <label for="env016_02"><input type="radio" class="radio-env" id="env016_02" name="env016" value="02" disabled> 폐기물 처리비 또는 위탁 처리비를 관리하고 있다
+        <div class="form-box" id="env016_form_02" style="display:none">
+        	<strong>폐기물처리비(or 위탁처리비)(천원)</strong><br>
+            <div class="layer-xs-12">
+            	&nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="16_thrYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="16_twoYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="16_oneYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+    </label>
+     <label for="env016_03"><input type="radio" class="radio-env" id="env016_03" name="env016" value="03" disabled> 폐기물 처리량 또는 처리비를 관리하지 않는다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">17</span> 폐기물 배출량 절감을 위한 시스템을 도입하고 재활용 증진 활동을 실시하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env017_01"><input type="radio" class="radio-env" id="env017_01" name="env017" value="01" disabled> 전 사업장에 대해 폐기물의 배출량 절감을 위한 시스템을 도입</label>
+     <label for="env017_02"><input type="radio" class="radio-env" id="env017_02" name="env017" value="02" disabled> 일부 사업장에 대해 폐기물의 배출량 절감을 위한 시스템을 도입</label>
+ 	 <label for="env017_03"><input type="radio" class="radio-env" id="env017_03" name="env017" value="03" disabled> 미도입이나 경영진 차원에서 구체적이고 측정 가능한 폐기물 배출량 절감방법에 대한 계획 보유</label>
+     <label for="env017_04"><input type="radio" class="radio-env" id="env017_04" name="env017" value="04" disabled> 도입 계획 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">18</span> 폐기물 재활용량을 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env018_01"><input type="radio" class="radio-env" id="env018_01" name="env018" value="01" disabled> 그렇다
+     	<div class="form-box" id="env018_form_01" style="display:none">
+     	<strong>폐기물 재활용량(ton)</strong><br>
+            <div class="layer-xs-12">
+            	&nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="18_thrYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="18_twoYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="18_oneYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+     </label>
+     <label for="env018_02"><input type="radio" class="radio-env" id="env018_02" name="env018" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">19</span> 유해물질의 안전성 관리 및 점검 활동을 실시하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env019_01"><input type="radio" class="radio-env" id="env019_01" name="env019" value="01" disabled> 유해물질의 안전성 관리 기준에 따르며 취급 단계별(이동-저장-사용-폐기-재활용) 제3자 점검을 실시</label>
+     <label for="env019_02"><input type="radio" class="radio-env" id="env019_02" name="env019" value="02" disabled> 유해물질의 안전성 관리 기준을 따르며, 취급 단계별(이동-저장-사용-폐기-재활용) 자체 점검을 실시</label>
+     <label for="env019_03"><input type="radio" class="radio-env" id="env019_03" name="env019" value="03" disabled> 유해물질의 안전성 관리 기준을 수립</label>
+     <label for="env019_04"><input type="radio" class="radio-env" id="env019_04" name="env019" value="04" disabled> 유해물질 사용 또는 처리하나 안전성 관리 및 점검 활동 미실시</label>
+     <label for="env019_05"><input type="radio" class="radio-env" id="env019_05" name="env019" value="05" disabled> 해당사항 없음(유해물질 미취급)</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">20</span> 제품 함유물질에 대한 모니터링을 실시합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env020_01"><input type="radio" class="radio-env" id="env020_01" name="env020" value="01" disabled> 정기적으로 연 1회이상 모니터링을 실시하며, 모니터링 결과를 분석하여 개선활동을 실시</label>
+     <label for="env020_02"><input type="radio" class="radio-env" id="env020_02" name="env020" value="02" disabled> 정기적으로 연 1회이상 모니터링을 실시</label>
+     <label for="env020_03"><input type="radio" class="radio-env" id="env020_03" name="env020" value="03" disabled> 모니터링을 실시이력 보유</label>
+     <label for="env020_04"><input type="radio" class="radio-env" id="env020_04" name="env020" value="04" disabled> 모니터링 미실시</label>
+     <label for="env020_05"><input type="radio" class="radio-env" id="env020_05" name="env020" value="05" disabled> 해당사항 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">21</span> 공정상 배출되는 유해물질을 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env021_01"><input type="radio" class="radio-env" id="env021_01" name="env021" value="01" disabled> 그렇다</label>
+     <label for="env021_02"><input type="radio" class="radio-env" id="env021_02" name="env021" value="02" disabled> 그렇지 않다</label>
+     <label for="env021_03"><input type="radio" class="radio-env" id="env021_03" name="env021" value="03" disabled> 해당사항 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">22</span> 대기오염물질 배출량을 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env022_01"><input type="radio" class="radio-env" id="env022_01" name="env022" value="01" disabled> 그렇다
+     <div class="form-box" id="env022_form_01" style="display:none">
+     		<strong>NOx (ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;<strong>3년 전 :</strong>
+                <input name="22_thrYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="22_twoYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="22_oneYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <br><strong>SOx (ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;<strong>3년 전 :</strong>
+                <input name="22_thrYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="22_twoYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="22_oneYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+
+     </label>
+     <label for="env022_02"><input type="radio" class="radio-env" id="env022_02" name="env022" value="02" disabled> 그렇지 않다</label>
+</div>
+
+<div class="cnt-tbl-title mt50"><span class="process-num2">23</span> 대기오염물질 배출량을 저감하기 위한 설비 또는 시스템을 도입하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env023_01"><input type="radio" class="radio-env" id="env023_01" name="env023" value="01" disabled> 전체 사업장에 대해 대기오염물질 배출 저감을 위한 설비/시스템을 도입</label>
+     <label for="env023_02"><input type="radio" class="radio-env" id="env023_02" name="env023" value="02" disabled> 일부 사업장에 대해 대기오염물질 배출 저감 및 에너지 사용 효율화를 위한 설비/시스템을 도입</label>
+     <label for="env023_03"><input type="radio" class="radio-env" id="env023_03" name="env023" value="03" disabled> 미도입이나 경영진 차원에서 구체적이고 측정 가능한 대기오염물질 배출량 절감방법에 대한 계획을 보유</label>
+     <label for="env023_04"><input type="radio" class="radio-env" id="env023_04" name="env023" value="04" disabled> 도입계획 없음</label>
+     <label for="env023_05"><input type="radio" class="radio-env" id="env023_05" name="env023" value="05" disabled> 해당사항 없음(대기오염물질 미발생)</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">24</span> 사업장 인근 지역 생태계의 부정적인 영향 파악 및 모니터링 관리하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env024_01"><input type="radio" class="radio-env" id="env024_01" name="env024" value="01" disabled> 부정적인 영향 측정, 모니터링 및 관리</label>
+     <label for="env024_02"><input type="radio" class="radio-env" id="env024_02" name="env024" value="02" disabled> 부정적인 영향 측정하나 모니터링 미실시</label>
+     <label for="env024_03"><input type="radio" class="radio-env" id="env024_03" name="env024" value="03" disabled> 부정적인 영향을 인지하고 있으나 측정 및 모니터링 미실시</label>
+     <label for="env024_04"><input type="radio" class="radio-env" id="env024_04" name="env024" value="04" disabled> 관리하고 있지 않음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">25</span> 원자재 재활용량을 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env025_01"><input type="radio" class="radio-env" id="env025_01" name="env025" value="01" disabled> 그렇다
+        <div class="form-box" id="env025_form_01" style="display:none">
+     		<strong>재활용 원자재 사용량 (ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="25_thrYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="25_twoYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="25_oneYAgo01" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+    </label>
+     <label for="env025_02"><input type="radio" class="radio-env" id="env025_02" name="env025" value="02" disabled> 그렇지 않다</label>
+     <label for="env025_03"><input type="radio" class="radio-env" id="env025_03" name="env025" value="03" disabled> 해당사항 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">26</span> 원자재 사용량 절감을 위한 시스템을 도입하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env026_01"><input type="radio" class="radio-env" id="env026_01" name="env026" value="01" disabled> 전 사업장에 대해 원자재 사용량 절감을 위한 시스템을 도입</label>
+     <label for="env026_02"><input type="radio" class="radio-env" id="env026_02" name="env026" value="02" disabled> 일부 사업장에 대해 원자재 사용량 절감을 위한 시스템을 도입</label>
+     <label for="env026_03"><input type="radio" class="radio-env" id="env026_03" name="env026" value="03" disabled> 미도입이나 경영진 차원에서 구체적이고 측정 가능한 원자재 사용량 절감방법에 대한 계획을 보유</label>
+     <label for="env026_04"><input type="radio" class="radio-env" id="env026_04" name="env026" value="04" disabled> 도입계획 없음</label>
+     <label for="env026_05"><input type="radio" class="radio-env" id="env026_05" name="env026" value="05" disabled> 해당사항 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">27</span>  용수 단계별(취수량, 재활용량, 방류량) 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="env027_01"><input type="radio" class="radio-env" id="env027_01" name="env027" value="01" disabled> 용수 사용량을 관리하고 있다
+        <div class="form-box" id="env027_form_01" style="display:none">
+        	<strong>용수 취수량 (ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="27_thrYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="27_twoYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="27_oneYAgo01_1" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <br><strong>용수 재활용량 (ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="27_thrYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="27_twoYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="27_oneYAgo01_2" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <br><strong>오폐수 방류량 (ton)</strong><br>
+            <div class="layer-xs-12">
+                &nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="27_thrYAgo01_3" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="27_twoYAgo01_3" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="27_oneYAgo01_3" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+    </label>
+    <label for="env027_02"><input type="radio" class="radio-env" id="env027_02" name="env027" value="02" disabled> 용수 사용료를 관리하고 있다
+        <div class="form-box" id="env027_form_02" style="display:none">
+        	<strong>용수 사용료(수도료) (천원)</strong><br>
+            <div class="layer-xs-12">
+            	&nbsp;&nbsp;&nbsp;
+                <strong>3년 전 :</strong>
+                <input name="27_thrYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">재작년 :</strong>
+                <input name="27_twoYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+            <div class="layer-xs-12">
+                <strong class="ml10">작년 :</strong>
+                <input name="27_oneYAgo02" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="15" disabled>
+            </div>
+        </div>
+    </label>
+     <label for="env027_03"><input type="radio" class="radio-env" id="env027_03" name="env027" value="03" disabled> 관리하지 않는다</label>
+</div>
+
+<div class="cnt-tbl-title mt50"><span class="process-num2">28</span> 용수 사용량 절감을 위한 설비 또는 시스템을 도입하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env028_01"><input type="radio" class="radio-env" id="env028_01" name="env028" value="01" disabled> 전체 사업장에 대해 용수 사용량 절감을 위한 설비/시스템을 도입</label>
+     <label for="env028_02"><input type="radio" class="radio-env" id="env028_02" name="env028" value="02" disabled> 일부 사업장에 대해 용수 사용량 절감을 위한 시스템을 도입</label>
+     <label for="env028_03"><input type="radio" class="radio-env" id="env028_03" name="env028" value="03" disabled> 미도입이나 경영진 차원에서 구체적이고 측정 가능한 용수 사용량 절감방법에 대한 계획을 보유</label>
+     <label for="env028_04"><input type="radio" class="radio-env" id="env028_04" name="env028" value="04" disabled> 도입계획 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">29</span> 폐수 방출/폐기시 수질오염물질 처리를 위한 시스템을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="env029_01"><input type="radio" class="radio-env" id="env029_01" name="env029" value="01" disabled> 전체 사업장에 대해 수질오염물질 처리 관련 시스템을 보유 또는 적정 수질로 방류되도록 위탁처리</label>
+     <label for="env029_02"><input type="radio" class="radio-env" id="env029_02" name="env029" value="02" disabled> 일부 사업장에 대해 수질오염물질 처리 관련 시스템을 보유</label>
+     <label for="env029_03"><input type="radio" class="radio-env" id="env029_03" name="env029" value="03" disabled> 미도입이나 경영진 차원에서 수질오염물질 처리를 위한 계획을 보유</label>
+     <label for="env029_04"><input type="radio" class="radio-env" id="env029_04" name="env029" value="04" disabled> 도입계획 없음</label>
+     <label for="env029_05"><input type="radio" class="radio-env" id="env029_05" name="env029" value="05" disabled> 해당사항 없음</label>
+</div>
+
+		<!-- 사회(Social) -->
+		<div class="step-cont-box">
+			<div class="step-title" style="margin-bottom:20px"><span>STEP 3</span>사회(Social)</div>
+
+<div class="cnt-tbl-title mt50"><span class="process-num2">1</span> 사회적 책임경영 목표를 수립하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc001_01"><input type="radio" class="radio-soc" id="soc001_01" name="soc001" value="01" disabled> 단기 및 중장기 목표 수립</label>
+     <label for="soc001_02"><input type="radio" class="radio-soc" id="soc001_02" name="soc001" value="02" disabled> 단기 목표 수립</label>
+     <label for="soc001_03"><input type="radio" class="radio-soc" id="soc001_03" name="soc001" value="03" disabled> 목표 수립하지 않았으나 사회적 책임경영 미션/비젼/지향점 제시</label>
+     <label for="soc001_04"><input type="radio" class="radio-soc" id="soc001_04" name="soc001" value="04" disabled> 목표 미수립 및 방행 미제시</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">2</span> 사회적 책임과 관련한 기업 인증 사실이 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="soc002_01"><input type="radio" class="radio-soc" id="soc002_01" name="soc002" value="01" disabled> 그렇다</label>
+    <label for="soc002_02"><input type="radio" class="radio-soc" id="soc002_02" name="soc002" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">3</span> 개인정보보호 유출 및 방지와 관련한 규정을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc003_01"><input type="radio" class="radio-soc" id="soc003_01" name="soc003" value="01" disabled> 그렇다</label>
+     <label for="soc003_02"><input type="radio" class="radio-soc" id="soc003_02" name="soc003" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">4</span> 개인정보보호 유출 및 방지와 관련한 정책을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc004_01"><input type="radio" class="radio-soc" id="soc004_01" name="soc004" value="01" disabled> 그렇다</label>
+     <label for="soc004_02"><input type="radio" class="radio-soc" id="soc004_02" name="soc004" value="02" disabled> 그렇지 않다</label>
+</div>
+<div  id="soc004_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">4-1</span> 개인정보보호 정책 운영실적이 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc004_1_01"><input type="radio" class="radio-env" id="soc004_1_01" name="soc004_1" value="01" disabled> 그렇다</label>
+     <label for="soc004_1_02"><input type="radio" class="radio-env" id="soc004_1_02" name="soc004_1" value="02" disabled> 그렇지 않다</label>
+     <label for="soc004_1_03"><input type="radio" class="radio-env" id="soc004_1_03" name="soc004_1" value="03" disabled> 해당사항 없음</label>
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">5</span> 개인정보보호 규제를 위한 모니터링을 실시합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc005_01"><input type="radio" class="radio-soc" id="soc005_01" name="soc005" value="01" disabled> 정기적으로 연 1회이상 모니터링을 실시하며, 모니터링 결과를 분석하여 개선활동을 실시</label>
+     <label for="soc005_02"><input type="radio" class="radio-soc" id="soc005_02" name="soc005" value="02" disabled> 정기적으로 연 1회이상 모니터링을 실시</label>
+     <label for="soc005_03"><input type="radio" class="radio-soc" id="soc005_03" name="soc005" value="03" disabled> 모니터링 실시 이력 보유</label>
+     <label for="soc005_04"><input type="radio" class="radio-soc" id="soc005_04" name="soc005" value="04" disabled> 미실시</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">6</span> 귀사는 당해년도 개인정보보호 규제 위반으로 인한 시정명령, 경고, 과태료 등 처벌 사실이 존재합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc006_01"><input type="radio" class="radio-soc" id="soc006_01" name="soc006" value="01" disabled> 그렇다</label>
+     <label for="soc006_02"><input type="radio" class="radio-soc" id="soc006_02" name="soc006" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">7</span> 인권 및 노동 관련하여 문서화된 규정이나 기준을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box check-lbl mt10">
+     <label class="mr20" for="soc007_01"><input type="checkbox" id="soc007_01" name="soc007" value="01" disabled> 강제노동(ex. 구성원의 자유 의사에 어긋나는 근로를 강요하지 않는다)</label><br>
+     <label class="mr20" for="soc007_02"><input type="checkbox" id="soc007_02" name="soc007" value="02" disabled> 아동노동(ex. 아동노동을 금지하며 15세 미만의 아동 및 청소년을 고용하지 않는다)</label><br>
+     <label class="mr20" for="soc007_03"><input type="checkbox" id="soc007_03" name="soc007" value="03" disabled> 차별 및 괴롭힘 금지(ex. 성별, 인종, 국적, 종교 등에 따라 고용 및 근로조건을 차별하지 않는다)</label><br>
+     <label class="mr20" for="soc007_04"><input type="checkbox" id="soc007_04" name="soc007" value="04" disabled> 인도적 대우(ex. 구성원을 존중하며 인권침해를 하지 않는다)</label><br>
+     <label class="mr20" for="soc007_05"><input type="checkbox" id="soc007_05" name="soc007" value="05" disabled> 근로시간(ex. 정규 근로시간 및 초과근로 시간은 법규에서 정하는 기준을 따른다)</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">8</span> 임직원을 대상으로 인권 교육을 실시하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc008_01"><input type="radio" class="radio-soc" id="soc008_01" name="soc008" value="01" disabled> 그렇다</label>
+     <label for="soc008_02"><input type="radio" class="radio-soc" id="soc008_02" name="soc008" value="02" disabled> 그렇지 않다</label>
+</div>
+<div  id="soc008_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">8-1</span> 교육의 실시 주기 및 실시 대상</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	<strong>실시주기</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="soc008_1_1" id="" value="" type="text" class="width-90 height-22" maxlength="15" disabled>
+	&nbsp;&nbsp;&nbsp;
+	<strong>실시범위</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="soc008_1_2" id="" value="" type="text" class="width-125 height-22" maxlength="15" disabled>
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">9</span> 근로계약서를 작성하여 임직원에게 제공하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc009_01"><input type="radio" class="radio-soc" id="soc009_01" name="soc009" value="01" disabled> 근로계약서를 작성하여 제공하며, 이해관계자의 커뮤니케이션을 통해 근로계약서 개선사항을 반영</label>
+     <label for="soc009_02"><input type="radio" class="radio-soc" id="soc009_02" name="soc009" value="02" disabled> 근로계약서를 작성하여 임직원에게 제공</label>
+	 <label for="soc009_03"><input type="radio" class="radio-soc" id="soc009_03" name="soc009" value="03" disabled> 근로계약서를 작성하나 임직원에게 미제공</label>
+     <label for="soc009_04"><input type="radio" class="radio-soc" id="soc009_04" name="soc009" value="04" disabled> 근로계약서 미작성</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">10</span>외국인 노동자를 고용하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	  <label for="soc010_01"><input type="radio" class="radio-soc" id="soc010_01" name="soc010" value="01" disabled> 그렇다</label>
+      <label for="soc010_02"><input type="radio" class="radio-soc" id="soc010_02" name="soc010" value="02" disabled> 그렇지 않다</label>
+</div>
+<div  id="soc010_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">10-1</span> 외국인 노동자 근로계약서를 작성하여 임직원에게 제공하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	 <label for="soc010_1_01"><input type="radio" class="radio-env" id="soc010_1_01" name="soc010_1" value="01" disabled> 근로계약서를 작성하여 제공하며, 이해관계자의 커뮤니케이션을 통해 근로계약서 개선사항을 반영</label>
+     <label for="soc010_1_02"><input type="radio" class="radio-env" id="soc010_1_02" name="soc010_1" value="02" disabled> 근로계약서를 작성하여 임직원에게 제공</label>
+     <label for="soc010_1_03"><input type="radio" class="radio-env" id="soc010_1_03" name="soc010_1" value="03" disabled> 근로계약서를 작성하나 임직원에게 미제공</label>
+     <label for="soc010_1_04"><input type="radio" class="radio-env" id="soc010_1_04" name="soc010_1" value="04" disabled> 외국인 근로자 고용하고 있으나, 해당 국가 언어로된 근로계약서 없음</label>
+     <label for="soc010_1_05"><input type="radio" class="radio-env" id="soc010_1_05" name="soc010_1" value="05" disabled> 외국인근로자 미고용</label>
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">11</span> 성별 근로자 수는 어떠합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <div class="form-box">
+		{{#esgrptEmplStat}}
+		{{#isEqual qstCd 'SOC011'}}
+        <div class="layer-xs-12">
+            <strong>남(명) :</strong>
+            <input name="11_emplMCnt" id="" value="{{emplMCnt}}" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+        </div>
+        <div class="layer-xs-12">
+            &nbsp;&nbsp;&nbsp;<strong>여(명) :</strong>
+        	<input name="11_emplWCnt" id="" value="{{emplWCnt}}" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+        </div>
+		{{/isEqual}}
+		{{/esgrptEmplStat}}
+    </div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">12</span> 장애인 의무고용을 준수하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <div class="form-box">
+		{{#esgrptEmplStat}}
+		{{#isEqual qstCd 'SOC012'}}
+        <div class="layer-xs-12">
+            <strong>고용중(명) :</strong>
+            <input name="12_emplDisabldCnt" id="" value="{{emplDisabldCnt}}" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+        </div>
+        <div class="layer-xs-12">
+            &nbsp;&nbsp;&nbsp;<strong>고용계획(명) :</strong>
+        	<input name="12_exptDisabldCnt" id="" value="{{exptDisabldCnt}}" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+        </div>
+		{{/isEqual}}
+		{{/esgrptEmplStat}}
+    </div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">13</span> 작업장 내 위험시설·물질 관련 보건/안전 위해요소 관리 등 안전보건관리규정 또는 정책을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc013_01"><input type="radio" class="radio-env" id="soc013_01" name="soc013" value="01" disabled> 그렇다</label>
+     <label for="soc013_02"><input type="radio" class="radio-env" id="soc013_02" name="soc013" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">14</span> 기업의 최고안전관리책임자의 직위는 무엇입니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc014_01"><input type="radio" class="radio-soc" id="soc014_01" name="soc014" value="01" disabled> 대표이사</label>
+     <label for="soc014_02"><input type="radio" class="radio-soc" id="soc014_02" name="soc014" value="02" disabled> 임원</label>
+     <label for="soc014_03"><input type="radio" class="radio-soc" id="soc014_03" name="soc014" value="03" disabled> 기타</label>
+     <label for="soc014_04"><input type="radio" class="radio-soc" id="soc014_04" name="soc014" value="04" disabled> 미지정</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">15</span> 기업의 안전보건 업무를 전담하고 있는 독립조직 또는 전문인력을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc015_01"><input type="radio" class="radio-soc" id="soc015_01" name="soc015" value="01" disabled> 그렇다</label>
+     <label for="soc015_02"><input type="radio" class="radio-soc" id="soc015_02" name="soc015" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">16</span> 산업재해 관리체계를 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc016_01"><input type="radio" class="radio-soc" id="soc016_01" name="soc016" value="01" disabled> 그렇다</label>
+     <label for="soc016_02"><input type="radio" class="radio-soc" id="soc016_02" name="soc016" value="02" disabled> 그렇지 않다</label>
+</div>
+<div  id="soc016_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">16-1</span> 산업재해 관리체계 작동여부를 주기적으로 점검하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	 <label for="soc016_1_01"><input type="radio" class="radio-env" id="soc016_1_01" name="soc016_1" value="01" disabled> 그렇다</label>
+     <label for="soc016_1_02"><input type="radio" class="radio-env" id="soc016_1_02" name="soc016_1" value="02" disabled> 그렇지 않다</label>
+     <label for="soc016_1_03"><input type="radio" class="radio-env" id="soc016_1_03" name="soc016_1" value="03" disabled> 해당사항 없음</label>
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">17</span> 직업성 질환 예방 관리체계를 구축하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="soc017_01"><input type="radio" class="radio-soc" id="soc017_01" name="soc017" value="01" disabled> 그렇다</label>
+    <label for="soc017_02"><input type="radio" class="radio-soc" id="soc017_02" name="soc017" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">18</span> 임직원을 대상으로 보건/안전 교육 및 훈련을 실시하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="soc018_01"><input type="radio" class="radio-soc" id="soc018_01" name="soc018" value="01" disabled> 그렇다</label>
+    <label for="soc018_02"><input type="radio" class="radio-soc" id="soc018_02" name="soc018" value="02" disabled> 그렇지 않다</label>
+</div>
+<div  id="soc018_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">18-1</span> 교육의 실시 주기 및 실시 대상</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	<strong>실시주기</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="soc018_1_1" id="" value="" type="text" class="width-90 height-22" maxlength="15" disabled>
+	&nbsp;&nbsp;&nbsp;
+	<strong>실시범위</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="soc018_1_2" id="" value="" type="text" class="width-125 height-22" maxlength="15" disabled>
+
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">19</span> 보건안전 예방을 위한 물리적 시설을 구비하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+   	 <label for="soc019_01"><input type="radio" class="radio-env" id="soc019_01" name="soc019" value="01" disabled> 그렇다</label>
+     <label for="soc019_02"><input type="radio" class="radio-env" id="soc019_02" name="soc019" value="02" disabled> 그렇지 않다</label>
+     <label for="soc019_03"><input type="radio" class="radio-env" id="soc019_03" name="soc019" value="03" disabled> 해당사항 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">20</span> 보건안전 예방을 위한 보호구를 제공하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="soc020_01"><input type="radio" class="radio-soc" id="soc020_01" name="soc020" value="01" disabled> 임직원 및 협력사 근로자에게 위험 예방을 위한 보호구를 제공</label>
+    <label for="soc020_02"><input type="radio" class="radio-soc" id="soc020_02" name="soc020" value="02" disabled> 임직원에게 위험 예방을 위한 보호구를 제공</label>
+    <label for="soc020_03"><input type="radio" class="radio-soc" id="soc020_03" name="soc020" value="03" disabled> 보호구 미지급</label>
+    <label for="soc020_04"><input type="radio" class="radio-soc" id="soc020_04" name="soc020" value="04" disabled> 해당사항 없음</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">21</span> 근무손실일이 발생한 재해(LTIR) 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="soc021_01"><input type="radio" class="radio-soc" id="soc021_01" name="soc021" value="01" disabled> 그렇다</label>
+    <label for="soc021_02"><input type="radio" class="radio-soc" id="soc021_02" name="soc021" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">22</span> 최근 3개년 산업재해율은 어떠합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <div class="form-box">
+        <div class="layer-xs-12">
+            <strong>3년 전(%) :</strong>
+            <input name="22_thrYAgo" id="" value="0" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+        </div>
+        <div class="layer-xs-12">
+			&nbsp;&nbsp;&nbsp;<strong>재작년(%) :</strong>
+        	<input name="22_twoYAgo" id="" value="0" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+        </div>
+        <div class="layer-xs-12">
+			&nbsp;&nbsp;&nbsp;<strong>작년(%) :</strong>
+        	<input name="22_oneYAgo" id="" value="0" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+        </div>
+    </div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">23</span> 산업안전보건과 관련하여 정부나 공공기관, 산업안전 평가기관 등의 요구에 대응한 문서가 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="soc023_01"><input type="radio" class="radio-soc" id="soc023_01" name="soc023" value="01" disabled> 전체 사업장에 안전 보건 관련 정부, 공공기관 등 제3자 대응 문서를 보유</label>
+    <label for="soc023_02"><input type="radio" class="radio-soc" id="soc023_02" name="soc023" value="02" disabled> 일부 사업장에 안전 보건 관련 정부, 공공기관 등 제3자 대응 문서를 보유</label>
+	<label for="soc023_03"><input type="radio" class="radio-soc" id="soc023_03" name="soc023" value="03" disabled> 미보유</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">24</span> 안전보건경영시스템을 구축하고 있는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc024_01"><input type="radio" class="radio-soc" id="soc024_01" name="soc024" value="01" disabled> 그렇다
+        <div class="table-container mt10 mb10" id="soc024_form_01" style="display:none">
+            <table class="table situation-table" id="soc024_item_01">
+                <colgroup>
+                    <col width="5%">
+                    <col width="18%">
+                    <col width="14%">
+                    <col width="">
+                    <col width="15%">
+                    <col width="17%">
+                    <col width="10%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>순번</th>
+                        <th>항목</th>
+                        <th>상태</th>
+                        <th>인증명</th>
+                        <th>인증번호</th>
+                        <th>유효기간</th>
+                    </tr>
+                </thead>
+                <tbody id="soc024-list-id">
+							{{#esgrptCrtiStat}}
+							{{#isEqual qstCd 'SOC024'}}
+								<tr id="soc024_crtiStatRow{{crtiSeq}}">
+									<td>{{crtiSeq}}</td>
+									<td>{{crtiKindCdNm}}</td>
+									<td>{{crtiStatCdNm}}</td>
+									<td>{{crtiNm}}</td>
+									<td>{{crtiNo}}</td>
+									<td class="dateinput">{{crtiValiEymd}}</td>
+								</tr>
+							{{/isEqual}}
+							{{/esgrptCrtiStat}}
+							</tbody>
+            </table>
+         </div>
+    </label>
+    <label for="soc024_02"><input type="radio" class="radio-soc" id="soc024_02" name="soc024" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">25</span> 취업규칙을 작성하여 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	<label for="soc025_01"><input type="radio" class="radio-soc" id="soc025_01" name="soc025" value="01" disabled> 그렇다</label>
+	<label for="soc025_02"><input type="radio" class="radio-soc" id="soc025_02" name="soc025" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">26</span> 근로자의 결사의 자유를 존중하는 정책을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc026_01"><input type="radio" class="radio-soc" id="soc026_01" name="soc026" value="01" disabled> 그렇다</label>
+     <label for="soc026_02"><input type="radio" class="radio-soc" id="soc026_02" name="soc026" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">27</span> 노사협의회를 구성하여 운영하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc027_01"><input type="radio" class="radio-soc" id="soc027_01" name="soc027" value="01" disabled> 노사협의회를 구성하고 정기적으로 운영</label>
+     <label for="soc027_02"><input type="radio" class="radio-soc" id="soc027_02" name="soc027" value="02" disabled> 노사협의회를 구성하였으나, 운영은 비정기적</label>
+     <label for="soc027_03"><input type="radio" class="radio-soc" id="soc027_03" name="soc027" value="03" disabled> 노사협의회를 구성하였으나, 최근 3개년간 미운영</label>
+     <label for="soc027_04"><input type="radio" class="radio-soc" id="soc027_04" name="soc027" value="04" disabled> 노사협의회 미구성</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">28</span> 임직원의 근로시간 및 초과근로 시간을 관리하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="soc028_01"><input type="radio" class="radio-soc" id="soc028_01" name="soc028" value="01" disabled> 근로시간 및 초과근로 시간 관리</label>
+    <label for="soc028_02"><input type="radio" class="radio-soc" id="soc028_02" name="soc028" value="02" disabled> 근로시간 관리하나 초과근로 시간 미관리</label>
+    <label for="soc028_03"><input type="radio" class="radio-soc" id="soc028_03" name="soc028" value="03" disabled> 근로시간 미관리</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">29</span> 법정 근로시간 및 최저임금 등을 준수하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box check-lbl mt10">
+     <div class="layer-xs-12">
+            <span style="width:150px; display:inline-block; margin:3px;"><strong>주당 52시간의 근무제도</strong></span>
+            <label for="soc029_1_01"><input type="radio" class="radio-soc" id="soc029_1_01" name="soc029_1" value="01" disabled> 준수</label>
+    		<label for="soc029_1_02"><input type="radio" class="radio-soc" id="soc029_1_02" name="soc029_1" value="02" disabled> 미준수</label>
+            <br>
+            <span style="width:150px; display:inline-block; margin:3px;"><strong>법으로 규정된 휴게시간</strong></span>
+            <label for="soc029_2_01"><input type="radio" class="radio-soc" id="soc029_2_01" name="soc029_2" value="01" disabled> 준수</label>
+    		<label for="soc029_2_02"><input type="radio" class="radio-soc" id="soc029_2_02" name="soc029_2" value="02" disabled> 미준수</label>
+			<br>
+            <span style="width:150px; display:inline-block; margin:3px;"><strong>법으로 규정된 임금</strong></span>
+            <label for="soc029_3_01"><input type="radio" class="radio-soc" id="soc029_3_01" name="soc029_3" value="01" disabled> 준수</label>
+    		<label for="soc029_3_02"><input type="radio" class="radio-soc" id="soc029_3_02" name="soc029_3" value="02" disabled> 미준수</label>
+			<br>
+            <span style="width:150px; display:inline-block; margin:3px;"><strong>법으로 규정된 4대보험</strong></span>
+            <label for="soc029_4_01"><input type="radio" class="radio-soc" id="soc029_4_01" name="soc029_4" value="01" disabled> 준수</label>
+    		<label for="soc029_4_02"><input type="radio" class="radio-soc" id="soc029_4_02" name="soc029_4" value="02" disabled> 미준수</label>
+     </div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">30</span>인재 육성(커리어 개발 등) 차원의 교육을 실시하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc030_01"><input type="radio" class="radio-soc" id="soc030_01" name="soc030" value="01" disabled> 전직원 (정규직, 계약직 및 협력사 근로자)을 대상으로 인재 육성 교육을 실시</label>
+     <label for="soc030_02"><input type="radio" class="radio-soc" id="soc030_02" name="soc030" value="02" disabled> 전체 정규직 직원을 대상으로 인재 육성 교육을 실시</label>
+     <label for="soc030_03"><input type="radio" class="radio-soc" id="soc030_03" name="soc030" value="03" disabled> 일부 정규직 직원을 대상으로 인재 육성 교육을 실시</label>
+     <label for="soc030_04"><input type="radio" class="radio-soc" id="soc030_04" name="soc030" value="04" disabled> 미실시</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">31</span> 근로자의 고충 처리 의견을 수렴하기 위한 절차를 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc031_01"><input type="radio" class="radio-soc" id="soc031_01" name="soc031" value="01" disabled> 고충처리 위원을 두고 있으며, 고충 관련 피드백을 수렴할 수 있는 공식적인 절차를 보유</label>
+     <label for="soc031_02"><input type="radio" class="radio-soc" id="soc031_02" name="soc031" value="02" disabled> 고충처리 위원 선임</label>
+     <label for="soc031_03"><input type="radio" class="radio-soc" id="soc031_03" name="soc031" value="03" disabled> 고충처리 위원 미선임</label>
+</div>
+<!-- 32번 -->
+<div class="cnt-tbl-title mt50"><span class="process-num2">32</span> 근로기준법 및 노동조합 및 노동관계조정법 위반으로 인한 시정명령,경고,과태료 등 처벌 사실이 존재합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc032_01"><input type="radio" class="radio-soc" id="soc032_01" name="soc032" value="01" disabled> 최근 3년 내 처벌사실 없음</label>
+     <label for="soc032_02"><input type="radio" class="radio-soc" id="soc032_02" name="soc032" value="02" disabled> 최근 1년 내 처벌사실 없음</label>
+     <label for="soc032_03"><input type="radio" class="radio-soc" id="soc032_03" name="soc032" value="03" disabled> 최근 1년 내 처벌사실 존재</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">33</span> 업무환경 및 근무조건 개선을 위한 근로자 1인당 복리후생 지원 규모를 측정하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc033_01"><input type="radio" class="radio-soc" id="soc033_01" name="soc033" value="01" disabled> 근로자 대상의 복리후생비를 산정하여 공시</label>
+     <label for="soc033_02"><input type="radio" class="radio-soc" id="soc033_02" name="soc033" value="02" disabled> 근로자 대상으로 복리후생을 제공하고 있으며, 총 지출 비용을 측정</label>
+     <label for="soc033_03"><input type="radio" class="radio-soc" id="soc033_03" name="soc033" value="03" disabled> 근로자 대상으로 복리후생을 제공하고 있으며, 총 지출 비용을 미측정</label>
+     <label for="soc033_04"><input type="radio" class="radio-soc" id="soc033_04" name="soc033" value="04" disabled> 복리후생 미제공</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">34</span> 근로자를 위한 복지제도가 구비되어 있는가?</div>
+<div class="clear-both"></div>
+<div class="radio-box check-lbl mt10">
+     <label class="mr20" for="soc034_01"><input type="checkbox" id="soc034_01" name="soc034" value="01" disabled> 출산휴가</label>
+     <label class="mr20" for="soc034_02"><input type="checkbox" id="soc034_02" name="soc034" value="02" disabled> 유산/사산휴가</label>
+     <label class="mr20" for="soc034_03"><input type="checkbox" id="soc034_03" name="soc034" value="03" disabled> 육아휴직</label>
+     <label class="mr20" for="soc034_04"><input type="checkbox" id="soc034_04" name="soc034" value="04" disabled> 보건(생리)휴가</label>
+     <label class="mr20" for="soc034_05"><input type="checkbox" id="soc034_05" name="soc034" value="05" disabled> 육아시간(생후 1년 미만 유아에 대해 1일 2회 각 30분 이상 근무시간 중 수유시간 보장)</label>
+     <label class="mr20" for="soc034_06"><input type="checkbox" id="soc034_06" name="soc034" value="06" disabled> 임신기/육아기 근로시간 단축</label>
+     <label class="mr20" for="soc034_07"><input type="checkbox" id="soc034_07" name="soc034" value="07" disabled> 가족돌봄휴직/휴가</label>
+     <label class="mr20" for="soc034_08"><input type="checkbox" id="soc034_08" name="soc034" value="08" disabled> 배우자 출산휴가</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">35</span> 분쟁광물 사용 금지 관련 정책을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc035_01"><input type="radio" class="radio-soc" id="soc035_01" name="soc035" value="01" disabled> 그렇다</label>
+     <label for="soc035_02"><input type="radio" class="radio-soc" id="soc035_02" name="soc035" value="02" disabled> 그렇지 않다</label>
+     <label for="soc035_03"><input type="radio" class="radio-soc" id="soc035_03" name="soc035" value="03" disabled> 해당사항 없음</label>
+
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">36</span> 분쟁광물 금지 규정 위반으로 인한 시정명령,경고,과태료 등 처벌 사실이 존재합니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc036_01"><input type="radio" class="radio-soc" id="soc036_01" name="soc036" value="01" disabled> 최근 3년 내 처벌사실 없음</label>
+     <label for="soc036_02"><input type="radio" class="radio-soc" id="soc036_02" name="soc036" value="02" disabled> 최근 1년 내 처벌사실 없음</label>
+     <label for="soc036_03"><input type="radio" class="radio-soc" id="soc036_03" name="soc036" value="03" disabled> 최근 1년 내 처벌사실 존재</label>
+
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">37</span> 협력사의 ESG 요구사항 및 관리 정책을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="soc037_01"><input type="radio" class="radio-soc" id="soc037_01" name="soc037" value="01" disabled> 협력사 ESG 요구 정책을 보유하고 있으며 리스크 진단 및 현장실사 행위 실시 후 개선방향 규정을 보유</label>
+     <label for="soc037_02"><input type="radio" class="radio-soc" id="soc037_02" name="soc037" value="02" disabled> 협력사 ESG 요구 정책을 보유하고 있으나, 비대면 방식의 점검 행위의 규정을 보유</label>
+     <label for="soc037_03"><input type="radio" class="radio-soc" id="soc037_03" name="soc037" value="03" disabled> 협력사 ESG 요구사항 관련 정책을 보유하고 있으나, 해당 협력사의 리스크 관리 점검 정책은 미보유</label>
+     <label for="soc037_04"><input type="radio" class="radio-soc" id="soc037_04" name="soc037" value="04" disabled> 관련 정책 및 점검정책 미보유</label>
+</div>
+
+		<!-- 지배구조(Governance) -->
+		<div class="step-cont-box">
+			<div class="step-title" style="margin-bottom:20px"><span>STEP 4</span>지배구조(Governance)</div>
+
+			<div class="cnt-tbl-title mt50"><span class="process-num2">1</span> 사업활동 및 실적을 공개하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov001_01"><input type="radio" id="gov001_01" name="gov001" value="01" disabled> 정기적으로 공시(금융감독원 Dart 사이트 공시 포함)</label>
+     <label for="gov001_02"><input type="radio" id="gov001_02" name="gov001" value="02" disabled> 최근 3년 내 공시 이력 보유</label>
+     <label for="gov001_03"><input type="radio" id="gov001_03" name="gov001" value="03" disabled> 주요 재무지표 및 실적 등을 홈페이지, 회사 소개자료 등에 개재</label>
+     <label for="gov001_04"><input type="radio" id="gov001_04" name="gov001" value="04" disabled> 미공개</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">2</span> ESG에 특화된 CEO 메시지, 정책 성명서 등을 통해 ESG 경영의지를 표명하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov002_01"><input type="radio" id="gov002_01" name="gov002" value="01" disabled> 기업의 ESG경영/지속가능경영/CSR 준수 의지를 표명</label>
+     <label for="gov002_02"><input type="radio" id="gov002_02" name="gov002" value="02" disabled> 기업의 법률 준수 의지(준법경영 의지)를 표명</label>
+     <label for="gov002_03"><input type="radio" id="gov002_03" name="gov002" value="03" disabled> 미공시</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">3</span>  환경/사회 관련 정보를 이해관계자에게 공개하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov003_01"><input type="radio" id="gov003_01" name="gov003" value="01" disabled> 회사 홈페이지 게시 및 ESG보고서 등 별도 보고서를 발간하여 외부 이해관계자에 공개</label>
+     <label for="gov003_02"><input type="radio" id="gov003_02" name="gov003" value="02" disabled> 회사 홈페이지에 게시</label>
+     <label for="gov003_03"><input type="radio" id="gov003_03" name="gov003" value="03" disabled> 미공시</label>
+
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">4</span> ESG 리스크를 식별 및 평가하기 위한 규정을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov004_01"><input type="radio" id="gov004_01" name="gov004" value="01" disabled> 그렇다</label>
+     <label for="gov004_02"><input type="radio" id="gov004_02" name="gov004" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">5</span> ESG 논의를 위한 경영시스템에 대하여 경영진 차원의 별도 기구/조직을 통해 점검하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov005_01"><input type="radio" id="gov005_01" name="gov005" value="01" disabled> 정기적으로 연 1회이상 모니터링을 실시하며, 결과를 분석하여 개선활동을 실시</label>
+     <label for="gov005_02"><input type="radio" id="gov005_02" name="gov005" value="02" disabled> 별도의 기구/조직 구성 및 연 1회이상 정기적 모니터링 실시</label>
+     <label for="gov005_03"><input type="radio" id="gov005_03" name="gov005" value="03" disabled> 별도의 기구/조직 구성 및 모니터링 실시이력 보유</label>
+     <label for="gov005_04"><input type="radio" id="gov005_04" name="gov005" value="04" disabled> 미실시</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">6</span> 임직원을 대상으로 ESG 관련 교육을 실시하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov006_01"><input type="radio" class="radio-gov" id="gov006_01" name="gov006" value="01" disabled> 그렇다</label>
+     <label for="gov006_02"><input type="radio" class="radio-gov" id="gov006_02" name="gov006" value="02" disabled> 그렇지 않다</label>
+</div>
+<div id="gov006_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">6-1</span> 교육의 실시 주기 및 실시 대상</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <strong>실시주기</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="gov006_1_1" id="" value="" type="text" class="width-90 height-22" maxlength="15" disabled>
+	&nbsp;&nbsp;&nbsp;
+	<strong>실시범위</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="gov006_1_2" id="" value="" type="text" class="width-125 height-22" maxlength="15" disabled>
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">7</span> 환경/사회적 목표에 대한 성과를 평가하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov007_01"><input type="radio" id="gov007_01" name="gov007" value="01" disabled> 환경/사회적 목표달성을 KPI를 통해 측정하여 공시</label>
+     <label for="gov007_02"><input type="radio" id="gov007_02" name="gov007" value="02" disabled> 환경/사회적 목표달성을 KPI를 통해 측정하고 내부보고를 실시(미공시)</label>
+     <label for="gov007_03"><input type="radio" id="gov007_03" name="gov007" value="03" disabled> 환경/사회적 목표달성을 측정할 수 있는 KPI를 보유하고 있으나 측정 및 평가는 미실시</label>
+     <label for="gov007_04"><input type="radio" id="gov007_04" name="gov007" value="04" disabled> 미평가</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">8</span> 독립적인 내부 감사 조직 및 보고 체계를 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov008_01"><input type="radio" id="gov008_01" name="gov008" value="01" disabled> 독립적인 내부 감사 조직 및 감사위원회에 보고가능한 거버넌스 체계를 보유</label>
+     <label for="gov008_02"><input type="radio" id="gov008_02" name="gov008" value="02" disabled> 독립적인 내부 감사 조직을 보유</label>
+     <label for="gov008_03"><input type="radio" id="gov008_03" name="gov008" value="03" disabled> 미보유</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">9</span> 윤리경영 정책(뇌물/부패/갈취/횡령금지 등)을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov009_01"><input type="radio" id="gov009_01" name="gov009" value="01" disabled> 국제 가이드라인에 기반한 윤리경영 정책 수립 및 공시</label>
+     <label for="gov009_02"><input type="radio" id="gov009_02" name="gov009" value="02" disabled> 윤리규범(윤리강령 등)을 수립하였으나 내용을 미공시</label>
+     <label for="gov009_03"><input type="radio" id="gov009_03" name="gov009" value="03" disabled> 윤리경영 정책 또는 규범을 수립하지 않았으나, 윤리경영에 대한 경영진의 의지를 표명</label>
+     <label for="gov009_04"><input type="radio" id="gov009_04" name="gov009" value="04" disabled> 미수립</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">10</span> 임직원 윤리서약서를 작성하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <label for="gov010_01"><input type="radio" class="radio-gov" id="gov010_01" name="gov010" value="01" disabled> 그렇다
+         <div class="form-box" id="gov010_form_01" style="display:none">
+            <div class="layer-xs-12">
+                <strong>작성범위</strong>
+				&nbsp;&nbsp;&nbsp;
+    			<input name="gov010_1" id="" value="" type="text" class="width-125 height-22" maxlength="15" disabled>
+        	</div>
+        </div>
+    </label>
+    <label for="gov010_02"><input type="radio" class="radio-gov" id="gov010_02" name="gov010" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">11</span> 윤리정책 준수 여부를 모니터링하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov011_01"><input type="radio" class="radio-gov" id="gov011_01" name="gov011" value="01" disabled> 연 1회이상 정기적 모니터링 후 결과에 따른 취약 분야 과제 발굴 및 개선 활동 실시</label>
+     <label for="gov011_02"><input type="radio" class="radio-gov" id="gov011_02" name="gov011" value="02" disabled> 연 1회이상 정기적 모니터링 실시</label>
+     <label for="gov011_03"><input type="radio" class="radio-gov" id="gov011_03" name="gov011" value="03" disabled> 비정기적 모니터링 실시</label>
+     <label for="gov011_04"><input type="radio" class="radio-gov" id="gov011_04" name="gov011" value="04" disabled> 미실시</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">12</span> 임직원을 대상으로 ESG 관련 교육을 실시하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov012_01"><input type="radio" class="radio-gov" id="gov012_01" name="gov012" value="01" disabled> 그렇다</label>
+    <label for="gov012_02"><input type="radio" class="radio-gov" id="gov012_02" name="gov012" value="02" disabled> 그렇지 않다</label>
+</div>
+<div id="gov012_form_01" style="display:none;">
+<div class="cnt-tbl-title mt50"><span class="process-num2" style="width:auto;">12-1</span> 교육의 실시 주기 및 실시 대상</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+    <strong>실시주기</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="gov012_1_1" id="" value="" type="text" class="width-90 height-22" maxlength="15" disabled>
+ &nbsp;&nbsp;&nbsp;
+	<strong>실시범위</strong>
+	&nbsp;&nbsp;&nbsp;
+    <input name="gov012_1_2" id="" value="" type="text" class="width-125 height-22" maxlength="15" disabled>
+	</div>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">13</span> 윤리적 이슈가 발생할 경우 신고가능한 채널을 보유하고 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov013_01"><input type="radio" class="radio-gov" id="gov013_01" name="gov013" value="01" disabled> 익명의 신고 채널을 운영하며 내부고발자에 대한 보복금지를 위한 규정을 보유</label>
+     <label for="gov013_02"><input type="radio" class="radio-gov" id="gov013_02" name="gov013" value="02" disabled> 익명성을 보장하는 제 3자 신고체계를 보유</label>
+     <label for="gov013_03"><input type="radio" class="radio-gov" id="gov013_03" name="gov013" value="03" disabled> 신고채널의 보유</label>
+     <label for="gov013_04"><input type="radio" class="radio-gov" id="gov013_04" name="gov013" value="04" disabled> 미보유</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">14</span> 최근 10년 내 모범납세자로 선정된 이력이 있습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+	&nbsp;&nbsp;&nbsp;<strong>년도</strong>&nbsp;
+	<input name="14_exTaxYear" id="" value="" type="text" class="width-90 height-22 text-right number" maxlength="5" disabled>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">15</span> 부패방지경영시스템을 도입하였습니까?</div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov015_01"><input type="radio" id="gov015_01" name="gov015" value="01" disabled> 그렇다</label>
+     <label for="gov015_02"><input type="radio" id="gov015_02" name="gov015" value="02" disabled> 그렇지 않다</label>
+</div>
+<div class="cnt-tbl-title mt50"><span class="process-num2">16</span>  윤리경영 위반으로 인한 시정명령,경고,과태료 등 처벌 사실이 존재합니까? </div>
+<div class="clear-both"></div>
+<div class="radio-box q-box">
+     <label for="gov016_01"><input type="radio" id="gov016_01" name="gov016" value="01" disabled> 최근 3년 내 처벌사실 없음</label>
+     <label for="gov016_02"><input type="radio" id="gov016_02" name="gov016" value="02" disabled> 최근 1년 내 처벌사실 없음</label>
+     <label for="gov016_03"><input type="radio" id="gov016_03" name="gov016" value="03" disabled> 최근 1년 내 처벌사실 존재</label>
+</div>
+
+		</div>
+		<!-- btn -->
+		<div class="link-box pdfbtn">
+			<a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i>맨 위로</a>
+			<a href="#" class="printHtml"><i class="fa fa-print" aria-hidden="true"></i> 출력</a>
+			<a href="#" class="downloadPdfFromHTML"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF 저장</a>
+			<!-- <a href="#" class="savePDF" onclick="javascript:savePDF();"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> PDF 저장(ML Report)</a> -->
+		</div>
+		<!--// btn -->
+	</script>
+
+<script>
+	$(document).ready(
+			function() {
+				$('[name=bizCnts]').css('height',
+						$('[name=bizCnts]').prop('scrollHeight'));
+			});
+</script>

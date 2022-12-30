@@ -1,0 +1,31 @@
+안녕하세요,
+담당자 이지호 프로입니다.
+
+
+emailParser 폴더는
+
+1. emailParser.zip 	: python 프로젝트 압축 파일
+2. packages	: 설치해야 하는 packages의 whl, gz 파일
+3. 부록.txt
+
+이렇게 구성되어 있습니다.
+
+1번의 파이썬 프로젝트 실행을 위해 오프라인 환경에서 패키지를 다운받아야 하는데,
+그 방법은 아래와 같습니다.
+
+********************************************************
+[오프라인 환경에서 패키지 설치]
+
+package 디렉토리로 이동하여 아래의 명령어 실행
+
+pip가 없다면)
+python pip-22.1.2-py3-none-any.whl/pip install --no-index --find-links ./ -r ./requirements.txt
+
+pip가 이미 설치되어 있다면)
+pip install --no-index --find-links ./ -r ./requirements.txt
+********************************************************
+
+emailParser 프로젝트 실행은 
+
+"main.py" 코드로 실행되며, 입출력과 관련한 파일 경로 및 이름 수정은 config.ini로 하시면 됩니다.
+설명은 config 파일 설명.txt에 자세하게 적어두었습니다.
